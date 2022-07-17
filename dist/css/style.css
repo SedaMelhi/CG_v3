@@ -453,3 +453,56 @@ body {
   font-family: 'ROMANUS';
   font-size: 1.4rem;
 }
+
+.middle {
+  height: 100%;
+  width: 100%;
+  background: url("../img/art-юкъер.png") center/cover no-repeat;
+  margin-top: calc(100vh - 180px);
+  padding: 0 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.middle__wrap {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.middle__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 340px;
+  margin: 0 auto;
+  font-family: 'Norse';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  line-height: 3.14rem;
+  text-transform: uppercase;
+}
+
+.middle__description {
+  margin-top: 31px;
+  font-family: 'Inconsolata';
+  font-weight: 500;
+  font-size: 1.14rem;
+  line-height: 150%;
+  text-align: center;
+}

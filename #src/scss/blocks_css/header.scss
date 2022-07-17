@@ -231,7 +231,6 @@
         object-fit: cover;
         object-position: center;
         margin-top: calc(100vh - 180px);
-        
     }
     .btn{
         align-self: flex-end;
@@ -299,3 +298,37 @@
     font-size: 1.4rem;
 }
 
+.middle{
+    height: 100%;
+    width: 100%;
+    background: url("../img/art-юкъер.png") center/cover no-repeat;
+    margin-top: calc(100vh - 180px);
+    padding: 0 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__wrap{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        width: 340px;
+        margin: 0 auto;
+        font-family: 'Norse';
+        align-items: center;
+        font-size: 2rem;
+        line-height: 3.14rem;
+        text-transform: uppercase;
+    }
+    &__description{
+        margin-top: 31px;
+        font-family: 'Inconsolata';
+        font-weight: 500;
+        font-size: 1.14rem;
+        line-height: 150%;
+        text-align: center;
+    }
+}
