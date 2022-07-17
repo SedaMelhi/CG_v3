@@ -1,40 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap");
+@charset "UTF-8";
 
 @font-face {
-  font-family: "Poppins";
-  src: url(../fonts/Poppins-Regular.woff2);
-  src: url(../fonts/Poppins-Regular.woff2) format(woff2);
+  font-family: "Inika";
+  src: url(../fonts/Inika-Regular.ttf);
+  src: url(../fonts/Inika-Regular.ttf) format(ttf);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url(../fonts/Poppins-Medium.woff2);
-  src: url(../fonts/Poppins-Medium.woff2) format(woff2);
-  font-weight: 500;
+  font-family: "ROMANUS";
+  src: url(../fonts/ROMANUS.otf);
+  src: url(../fonts/ROMANUS.otf) format(otf);
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url(../fonts/Poppins-SemiBold.woff2);
-  src: url(../fonts/Poppins-SemiBold.woff2) format(woff2);
-  font-weight: 600;
+  font-family: "Inconsolata";
+  src: url(../fonts/Inconsolata-Medium.ttf);
+  src: url(../fonts/Inconsolata-Medium.ttf) format(ttf);
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url(../fonts/Poppins-Bold.woff2);
-  src: url(../fonts/Poppins-Bold.woff2) format(woff2);
-  font-weight: 700;
+  font-family: "Norse";
+  src: url(../fonts/Norse.otf);
+  src: url(../fonts/Norse.otf) format(otf);
+  font-weight: 400;
   font-style: normal;
 }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --content: calc(100% - 160px);
+  --top: 138px;
+  --width: calc(100% - 135px);
 }
 
 body,
@@ -59,4 +66,390 @@ ul {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Inika';
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0c0c0c;
+}
+
+.bottom {
+  width: 100%;
+  height: 27px;
+  background-color: #0c0c0c;
+  position: fixed;
+  right: 0;
+  top: calc(100vh - 22px);
+  z-index: 5;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 4;
+}
+
+.main2 {
+  width: 100%;
+  height: 200vh;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 100vh;
+}
+
+.container {
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  z-index: -1;
+}
+
+.nav {
+  padding: 6px 6px 0;
+  height: 111px;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+}
+
+.nav-wrap {
+  position: fixed;
+  background-color: #0c0c0c;
+  width: 100%;
+  padding: 27px 56px 0;
+  z-index: 3;
+}
+
+.nav__border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  border: 1px solid #fff;
+}
+
+.border {
+  position: fixed;
+  background-color: #0c0c0c;
+  width: calc(100% - 112px);
+  top: var(--top);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: var(--content);
+}
+
+.border_first {
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  padding: 0 6px 6px;
+}
+
+.border_second {
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  /* IE и Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.border_second::-webkit-scrollbar {
+  display: none;
+}
+
+.section {
+  height: calc(100% - 6px);
+  width: 100%;
+}
+
+.menu {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.menu__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu__item > a {
+  margin: 0 9px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 7px;
+}
+
+.line {
+  position: absolute;
+  width: 29px;
+  height: 1px;
+  background-color: #fff;
+  margin: 1px 0;
+  right: -7px;
+}
+
+.line_top {
+  top: -5px;
+}
+
+.line_bottom {
+  bottom: -5px;
+}
+
+.line_small-bottom {
+  width: 21px;
+  right: -3px;
+  bottom: -3px;
+}
+
+.line_small-top {
+  width: 21px;
+  right: -3px;
+  top: -3px;
+}
+
+.column {
+  width: 17px;
+  height: calc(100% - 10px);
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  height: calc(100% - 20px);
+}
+
+.content__item {
+  height: 100%;
+  width: 100%;
+  padding: 9px 9px 0;
+}
+
+.content .column {
+  height: calc(100% - 19px);
+}
+
+.content .line_top {
+  top: -8px;
+}
+
+.content .line_small-top {
+  top: -6px;
+}
+
+.content .line_bottom {
+  bottom: -11px;
+}
+
+.content .line_small-bottom {
+  bottom: -8px;
+}
+
+/**
+.arch{
+    height: 100%;
+    opacity: 0.8; 
+    img{
+        border: 1px solid #FFFFFF;
+        filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.25));
+        border-radius: 228px 228px 12px 12px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+*/
+
+.arch {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.25);
+          box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.25);
+  border-radius: 1800px 1800px 12px 12px;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE и Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.arch::-webkit-scrollbar {
+  display: none;
+}
+
+.arch img {
+  border-radius: 1800px 1800px 12px 12px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-top: calc(100vh - 180px);
+}
+
+.arch .btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  position: fixed;
+  z-index: 2;
+}
+
+.dark-wrap {
+  width: calc(100% - 14px);
+  height: calc(100% - 7px);
+  position: absolute;
+  background-color: rgba(12, 12, 12, 0.5);
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 48px;
+}
+
+.header__description {
+  font-family: 'Inconsolata';
+  font-size: 1.25rem;
+  line-height: 150%;
+  max-width: 817px;
+}
+
+.header__title {
+  font-family: 'ROMANUS';
+  font-size: calc(var(--index) * 6);
+  text-shadow: 0px 0px 4px #fff;
+  margin-bottom: 10px;
+}
+
+.mint {
+  position: relative;
+  width: 234px;
+  height: 100px;
+  background: url(../img/svg/StarBig.svg) center/85% no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'ROMANUS';
+  font-size: 1.6rem;
+  color: #000;
+  margin: 21px 0 27px;
+}
+
+.connect {
+  font-family: 'ROMANUS';
+  font-size: 1.4rem;
 }
