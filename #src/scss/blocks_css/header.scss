@@ -1,12 +1,4 @@
-.bottom{
-    width: 100%;
-    height: 27px;
-    background-color: rgba(12, 12, 12, 1);
-    position: fixed;
-    right: 0;
-    top: calc(100vh - 22px);
-    z-index: 5;
-}
+
 .main{
     width: 100%;
     height: 100vh;
@@ -230,7 +222,7 @@
         opacity: 0.8;
         object-fit: cover;
         object-position: center;
-        margin-top: calc(100vh - 180px);
+        //margin-top: calc(100vh - 180px);
     }
     .btn{
         align-self: flex-end;
@@ -257,7 +249,17 @@
     border-bottom-right-radius: 17px;
 }
 
-
+.noise{
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.1;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: url(../img/noise.gif);
+}
 .header{
     text-align: center;
     text-transform: uppercase;
