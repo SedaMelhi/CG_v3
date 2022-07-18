@@ -79,8 +79,8 @@
 
 :root {
   --index: calc(1vw + 1vh);
-  --content: calc(100% - 160px);
-  --top: 138px;
+  --content: calc(100% - 150px);
+  --top: 126px;
   --width: calc(100% - 135px);
 }
 
@@ -155,7 +155,7 @@ body {
   position: fixed;
   background-color: #0c0c0c;
   width: 100%;
-  padding: 27px 56px 0;
+  padding: 15px 56px 0;
   z-index: 3;
 }
 
@@ -313,7 +313,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #0c0c0c;
-  height: calc(100% - 20px);
+  height: calc(100% - 10px);
 }
 
 .content__item {
