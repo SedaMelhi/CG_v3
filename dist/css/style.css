@@ -129,7 +129,7 @@ body {
 .main2 {
   width: 100%;
   margin: 0 auto;
-  margin-top: calc(300vh - 180px);
+  margin-top: 400vh;
 }
 
 .container {
@@ -652,4 +652,87 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 40px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 190px;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  margin: 52px auto 0;
+  padding-bottom: 80px;
+}
+
+.cards .card {
+  width: calc(100% / 2.6);
+  padding-bottom: calc(100% / 2.6);
+  background: #020202;
+  border: 1px solid #FFFFFF;
+  border-radius: 12px;
+  position: absolute;
+}
+
+.cards .card:nth-child(1) {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.cards .card:nth-child(2) {
+  -webkit-transform: translateX(40%);
+      -ms-transform: translateX(40%);
+          transform: translateX(40%);
+}
+
+.cards .card:nth-child(3) {
+  -webkit-transform: translateX(80%);
+      -ms-transform: translateX(80%);
+          transform: translateX(80%);
+}
+
+.cards .card:nth-child(4) {
+  -webkit-transform: translateX(120%);
+      -ms-transform: translateX(120%);
+          transform: translateX(120%);
+}
+
+.cards .card:nth-child(5) {
+  -webkit-transform: translateX(160%);
+      -ms-transform: translateX(160%);
+          transform: translateX(160%);
+}
+
+@media screen and (max-width: 1400px) {
+  .cards {
+    width: 290px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .cards {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  html {
+    font-size: 13px;
+  }
+
+  .cards {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 13px;
+  }
+
+  .cards {
+    width: 180px;
+  }
 }
