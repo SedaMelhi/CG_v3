@@ -1,3 +1,4 @@
+
 .expect{
     min-height: calc(100vh - 180px);
     padding: 0 28px;
@@ -6,6 +7,12 @@
     align-items: center;
     justify-content: center;  
     margin-top: 40px;
+    position: relative;
+    &__hidden{
+        transition: .5s linear;
+        transform: translateY(50%);
+        opacity: 0;
+    }
 }
 
 .cards{
@@ -36,6 +43,7 @@
         text-align: center;
         text-transform: uppercase;
         background: #020202;
+        box-shadow: 0px 0px 10px #fff0;
         $num: 0%;
         @for $i from 1 to 6 {
             $z: 6 - $i;
@@ -60,6 +68,7 @@
             align-items: center;
         }
     }
+    
     &:hover .card{
         $num: -19%;
         @for $i from 1 to 6 {
@@ -67,6 +76,30 @@
                 transform: translateX(#{$num}); 
             }
             $num: $num + 50%;
+        }
+    }
+    &__hidden{
+        transition: .5s linear;
+        transform: translateY(-50%);
+        animation: hidden 0.2s forwards 1s;
+        opacity: 0;
+        .card{
+            box-shadow: 0px 0px 10px #ffff;
+            @for $i from 1 to 6 {
+                $z: $i;
+                &:nth-child(#{$i}){
+                    z-index: #{$z};
+                }
+            }
+        }
+        &:hover .card{
+            $num: 0;
+            @for $i from 1 to 6 {
+                &:nth-child(#{$i}){
+                    transform: translateX(#{$num});
+                }
+                $num: $num + 40%;
+            }
         }
     }
 }
@@ -96,4 +129,71 @@
     .cards{
         width: 180px;
     }
+}
+
+.artists{
+    pointer-events: visiblePainted;
+    z-index: 10;
+    display: none;
+    transition: .7s;
+    position: absolute;
+    top: 0;
+    &__close{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 38px;
+        cursor: pointer;
+        margin-top: 35px;
+    }
+    &__wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        width: 276px;
+        gap: 36px;
+        justify-items: center;
+    }
+    &__visible{
+        display: block;
+        opacity: 0;
+        transform: translateY(70%);
+        animation: show 0.5s forwards linear .1s;
+        
+    }
+}
+@keyframes show{
+    0%{
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.artist{
+    width: 120px;
+    height: 152px;
+    background: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 12px;
+    z-index: 10;
+    &__image{
+        height: 120px;     
+        border-radius: 12px;  
+    }
+    @for $i from 1 to 7 {
+        &:nth-child(#{$i}) &__image{
+            background: #020202 url(../img/avatar#{$i}.png) center/cover no-repeat ;
+        }
+    }
+    
+    
+}
+
+.arch__middle_anim{
+    transition: 0.6s;
+    transition-delay: 0s;
+    border-radius: 0;
 }
