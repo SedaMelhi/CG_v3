@@ -138,7 +138,7 @@ body {
   position: sticky;
   width: 100%;
   top: 0px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .nav {
@@ -358,76 +358,6 @@ body {
 }
 */
 
-.arch {
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.25);
-          box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.25);
-  border-radius: 1800px 1800px 12px 12px;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  /* IE и Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-.arch::-webkit-scrollbar {
-  display: none;
-}
-
-.arch img {
-  border-radius: 1800px 1800px 12px 12px;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.arch .btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-bottom: 10px;
-  border: 1px solid #FFFFFF;
-  border-radius: 6px;
-  text-transform: uppercase;
-  padding: 6px 8px;
-  position: fixed;
-  z-index: 2;
-}
-
-.arch .networks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-bottom: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-}
-
-.arch .networks .home {
-  border-radius: 6px;
-  border: 1px solid #FFFFFF;
-  padding: 6px 8px;
-  margin: 0 60px;
-  font-size: 1rem;
-}
-
 .dark-wrap {
   width: calc(100% - 14px);
   height: calc(100% - 7px);
@@ -512,6 +442,57 @@ body {
   font-size: 1.4rem;
 }
 
+.arch {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.25);
+          box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.25);
+  border-radius: 1800px 1800px 12px 12px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE и Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.arch::-webkit-scrollbar {
+  display: none;
+}
+
+.arch img {
+  border-radius: 1800px 1800px 12px 12px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.arch .btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  position: fixed;
+  z-index: 6;
+}
+
+.arch__middle {
+  pointer-events: none;
+}
+
 .middle {
   height: 100vh;
   width: 100%;
@@ -547,6 +528,7 @@ body {
   font-size: 2rem;
   line-height: 3.14rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .middle__title h1 {
@@ -560,4 +542,37 @@ body {
   font-size: 1.14rem;
   line-height: 150%;
   text-align: center;
+}
+
+.content__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  z-index: 100;
+}
+
+.networks .home {
+  border-radius: 6px;
+  border: 1px solid #FFFFFF;
+  padding: 6px 8px;
+  margin: 0 60px;
+  font-size: 1rem;
 }
