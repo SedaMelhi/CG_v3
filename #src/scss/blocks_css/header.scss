@@ -317,10 +317,18 @@
         line-height: 150%;
         text-align: center;
     }
+    &__opacity{
+        .project{
+            position: static;
+            top: 0;
+            opacity: 0;
+            min-height: calc(100vh - 180px);
+        }
+    }
     &__bg{
         background: url("../img/art-юкъер1.png") 620% center/90% no-repeat;
         position: sticky;
-        height: calc(100vh - 180px);
+        min-height: calc(100vh - 180px);
         width: 100%;
         margin-top: calc(100vh - 180px);
         z-index: 10;
@@ -361,7 +369,8 @@
 }
 
 .project{
-    height: 100vh;
+    min-height: 100vh;
+    overflow: visible;
     position: absolute;
     top: calc(100vh - 180px);
     width: 100%; 
@@ -372,10 +381,12 @@
     padding: 0 28px; 
 }
 .medusa{
-    height: 100vh;
+    min-height: calc(100vh - 180px);
     display: flex;
+    overflow: visible;
     flex-direction: column;
     align-items: center;
     justify-content: center;  
     padding: 0 28px; 
+    margin-top: 80px;
 }

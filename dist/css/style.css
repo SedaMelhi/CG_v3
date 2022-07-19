@@ -528,11 +528,18 @@ body {
   text-align: center;
 }
 
+.middle__opacity .project {
+  position: static;
+  top: 0;
+  opacity: 0;
+  min-height: calc(100vh - 180px);
+}
+
 .middle__bg {
   background: url("../img/art-юкъер1.png") 620% center/90% no-repeat;
   position: -webkit-sticky;
   position: sticky;
-  height: calc(100vh - 180px);
+  min-height: calc(100vh - 180px);
   width: 100%;
   margin-top: calc(100vh - 180px);
   z-index: 10;
@@ -587,7 +594,8 @@ body {
 }
 
 .project {
-  height: 100vh;
+  min-height: 100vh;
+  overflow: visible;
   position: absolute;
   top: calc(100vh - 180px);
   width: 100%;
@@ -608,10 +616,11 @@ body {
 }
 
 .medusa {
-  height: 100vh;
+  min-height: calc(100vh - 180px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: visible;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -623,10 +632,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 28px;
+  margin-top: 80px;
 }
 
 .expect {
-  height: calc(100vh - 180px);
+  min-height: calc(100vh - 180px);
   padding: 0 28px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -641,4 +651,5 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 40px;
 }
