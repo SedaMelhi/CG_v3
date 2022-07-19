@@ -144,6 +144,36 @@
         margin-bottom: 38px;
         cursor: pointer;
         margin-top: 35px;
+        animation: show-up .8s linear;
+        svg{
+            animation: rotate .8s linear;
+        }
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0);
+        }
+        25%{
+            transform: rotate(180deg);
+        }
+        50%{
+            transform: rotate(360deg);
+        }
+        75%{
+            transform: rotate(180deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes show-up {
+        0%{
+            transform: translateY(100vh);
+        }
+        
+        100%{
+            transform: translateY(0);
+        }
     }
     &__wrap{
         display: grid;
