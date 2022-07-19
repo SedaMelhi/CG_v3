@@ -668,47 +668,125 @@ body {
   z-index: 100;
   cursor: pointer;
   pointer-events: visiblePainted;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .cards .card {
   width: calc(100% / 2.6);
   padding-bottom: calc(100% / 2.6);
-  background: #020202;
   border: 1px solid #FFFFFF;
   border-radius: 12px;
   position: absolute;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
   z-index: 100;
   cursor: pointer;
+  font-family: 'Inconsolata';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #020202;
 }
 
 .cards .card:nth-child(1) {
   -webkit-transform: translateX(0%);
       -ms-transform: translateX(0%);
           transform: translateX(0%);
+  z-index: 5;
 }
 
 .cards .card:nth-child(2) {
   -webkit-transform: translateX(40%);
       -ms-transform: translateX(40%);
           transform: translateX(40%);
+  z-index: 4;
 }
 
 .cards .card:nth-child(3) {
   -webkit-transform: translateX(80%);
       -ms-transform: translateX(80%);
           transform: translateX(80%);
+  z-index: 3;
 }
 
 .cards .card:nth-child(4) {
   -webkit-transform: translateX(120%);
       -ms-transform: translateX(120%);
           transform: translateX(120%);
+  z-index: 2;
 }
 
 .cards .card:nth-child(5) {
   -webkit-transform: translateX(160%);
       -ms-transform: translateX(160%);
           transform: translateX(160%);
+  z-index: 1;
+}
+
+.cards .card:nth-child(2) {
+  background: #020202 url(../img/avatar1.png) center/cover;
+}
+
+.cards .card:nth-child(3) {
+  background: #020202 url(../img/avatar2.png) center/cover;
+}
+
+.cards .card:nth-child(4) {
+  background: #020202 url(../img/avatar3.png) center/cover;
+}
+
+.cards .card:nth-child(5) {
+  background: #020202 url(../img/avatar4.png) center/cover;
+}
+
+.cards .card__text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards:hover .card:nth-child(1) {
+  -webkit-transform: translateX(-15%);
+      -ms-transform: translateX(-15%);
+          transform: translateX(-15%);
+}
+
+.cards:hover .card:nth-child(2) {
+  -webkit-transform: translateX(35%);
+      -ms-transform: translateX(35%);
+          transform: translateX(35%);
+}
+
+.cards:hover .card:nth-child(3) {
+  -webkit-transform: translateX(85%);
+      -ms-transform: translateX(85%);
+          transform: translateX(85%);
+}
+
+.cards:hover .card:nth-child(4) {
+  -webkit-transform: translateX(135%);
+      -ms-transform: translateX(135%);
+          transform: translateX(135%);
+}
+
+.cards:hover .card:nth-child(5) {
+  -webkit-transform: translateX(185%);
+      -ms-transform: translateX(185%);
+          transform: translateX(185%);
 }
 
 @media screen and (max-width: 1400px) {

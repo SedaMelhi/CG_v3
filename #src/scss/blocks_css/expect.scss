@@ -19,21 +19,54 @@
     z-index: 100;
     cursor: pointer;
     pointer-events: visiblePainted;
+    transition: 0.2s linear;
     .card{
         width: calc(100% / 2.6);
         padding-bottom: calc(100% / 2.6);
-        background: #020202;
         border: 1px solid #FFFFFF;
         border-radius: 12px;
         position: absolute;
+        transition: 0.3s linear;
         z-index: 100;
         cursor: pointer;
+        font-family: 'Inconsolata';
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        background: #020202;
         $num: 0%;
         @for $i from 1 to 6 {
+            $z: 6 - $i;
             &:nth-child(#{$i}){
                 transform: translateX(#{$num});
+                z-index: #{$z};
+                
             }
             $num: $num + 40%;
+        }
+        @for $i from 1 to 5 {
+            &:nth-child(#{$i+1}){
+                background: #020202 url(../img/avatar#{$i}.png) center/cover;
+            }
+        }
+        &__text{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &:hover .card{
+        $num: -15%;
+        @for $i from 1 to 6 {
+            &:nth-child(#{$i}){
+                transform: translateX(#{$num}); 
+            }
+            $num: $num + 50%;
         }
     }
 }
