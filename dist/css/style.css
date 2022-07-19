@@ -760,33 +760,33 @@ body {
 }
 
 .cards:hover .card:nth-child(1) {
-  -webkit-transform: translateX(-15%);
-      -ms-transform: translateX(-15%);
-          transform: translateX(-15%);
+  -webkit-transform: translateX(-19%);
+      -ms-transform: translateX(-19%);
+          transform: translateX(-19%);
 }
 
 .cards:hover .card:nth-child(2) {
-  -webkit-transform: translateX(35%);
-      -ms-transform: translateX(35%);
-          transform: translateX(35%);
+  -webkit-transform: translateX(31%);
+      -ms-transform: translateX(31%);
+          transform: translateX(31%);
 }
 
 .cards:hover .card:nth-child(3) {
-  -webkit-transform: translateX(85%);
-      -ms-transform: translateX(85%);
-          transform: translateX(85%);
+  -webkit-transform: translateX(81%);
+      -ms-transform: translateX(81%);
+          transform: translateX(81%);
 }
 
 .cards:hover .card:nth-child(4) {
-  -webkit-transform: translateX(135%);
-      -ms-transform: translateX(135%);
-          transform: translateX(135%);
+  -webkit-transform: translateX(131%);
+      -ms-transform: translateX(131%);
+          transform: translateX(131%);
 }
 
 .cards:hover .card:nth-child(5) {
-  -webkit-transform: translateX(185%);
-      -ms-transform: translateX(185%);
-          transform: translateX(185%);
+  -webkit-transform: translateX(181%);
+      -ms-transform: translateX(181%);
+          transform: translateX(181%);
 }
 
 @media screen and (max-width: 1400px) {

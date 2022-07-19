@@ -61,7 +61,7 @@
         }
     }
     &:hover .card{
-        $num: -15%;
+        $num: -19%;
         @for $i from 1 to 6 {
             &:nth-child(#{$i}){
                 transform: translateX(#{$num}); 
