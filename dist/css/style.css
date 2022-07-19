@@ -659,11 +659,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 190px;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   width: 320px;
   margin: 0 auto;
   margin: 52px auto 0;
   padding-bottom: 80px;
+  z-index: 100;
+  cursor: pointer;
+  pointer-events: visiblePainted;
 }
 
 .cards .card {
@@ -673,6 +677,8 @@ body {
   border: 1px solid #FFFFFF;
   border-radius: 12px;
   position: absolute;
+  z-index: 100;
+  cursor: pointer;
 }
 
 .cards .card:nth-child(1) {
