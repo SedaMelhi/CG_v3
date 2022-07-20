@@ -653,6 +653,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 40px;
+  font-family: 'Inconsolata';
   position: relative;
   padding-bottom: 50px;
   -webkit-transition: .5s ease-in-out;
@@ -1166,16 +1167,42 @@ body {
   z-index: 10;
 }
 
+.artist:nth-child(1) .artist__number {
+  -webkit-animation: scale 0.3s forwards linear 0.76667s;
+          animation: scale 0.3s forwards linear 0.76667s;
+}
+
+.artist:nth-child(2) .artist__number {
+  -webkit-animation: scale 0.3s forwards linear 0.83333s;
+          animation: scale 0.3s forwards linear 0.83333s;
+}
+
+.artist:nth-child(3) .artist__number {
+  -webkit-animation: scale 0.3s forwards linear 0.9s;
+          animation: scale 0.3s forwards linear 0.9s;
+}
+
+.artist:nth-child(4) .artist__number {
+  -webkit-animation: scale 0.3s forwards linear 0.96667s;
+          animation: scale 0.3s forwards linear 0.96667s;
+}
+
 .artist__image {
   height: 120px;
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 7px;
 }
 
 .artist__title {
   height: 0px;
-  font-family: 'Inconsolata';
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.28rem;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -1198,6 +1225,40 @@ body {
     height: 30px;
     opacity: 1;
     color: #000000ff;
+  }
+}
+
+.artist__number {
+  width: 24px;
+  height: 23px;
+  background: #FFFFFF;
+  color: #000;
+  line-height: 23px;
+  text-align: center;
+  font-size: 1.14rem;
+  font-weight: 600;
+  border-radius: 50%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+@-webkit-keyframes scale {
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
