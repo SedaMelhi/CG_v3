@@ -1,6 +1,6 @@
 
 .expect{
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 100px);
     padding: 0 28px;
     display: flex;
     flex-direction: column;
@@ -167,7 +167,7 @@
         display: flex;
         justify-content: center;
         margin-bottom: 38px;
-        margin-top: 20px;
+        
         cursor: pointer;
         animation: show-up .6s ease-in-out 0.5s;
         svg{

@@ -129,7 +129,7 @@ body {
 .main2 {
   width: 100%;
   margin: 0 auto;
-  margin-top: 400vh;
+  margin-top: calc(400vh - 240px);
 }
 
 .container {
@@ -540,7 +540,7 @@ body {
   position: static;
   top: 0;
   opacity: 0;
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - 100px);
 }
 
 .middle__bg {
@@ -606,7 +606,7 @@ body {
   min-height: 100vh;
   overflow: visible;
   position: absolute;
-  top: calc(100vh - 180px);
+  top: calc(100vh - 100px);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -625,7 +625,7 @@ body {
 }
 
 .medusa {
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -645,7 +645,7 @@ body {
 }
 
 .expect {
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - 100px);
   padding: 0 28px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -965,7 +965,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 38px;
-  margin-top: 20px;
   cursor: pointer;
   -webkit-animation: show-up .6s ease-in-out 0.5s;
           animation: show-up .6s ease-in-out 0.5s;

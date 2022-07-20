@@ -2,7 +2,7 @@ let archs = document.querySelectorAll(".arch"),
     content = document.querySelector(".border_second");
 
 content.addEventListener("scroll", function() {
-  archs.forEach(arch => arch.scrollTop = content.scrollTop);
+  archs[1].scrollTop = content.scrollTop;
 });
 
 let artists = document.querySelector(".artists"),
@@ -16,7 +16,7 @@ cards.addEventListener("click", function() {
   archs[1].classList.toggle("arch__middle_anim");
   cards.classList.toggle("cards__hidden")
   cards.classList.toggle("cards__visible")
-
+  
   expect.classList.toggle("expect__hidden")
   expect.classList.toggle("expect__visible")
 
