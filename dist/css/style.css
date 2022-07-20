@@ -368,8 +368,8 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  border-bottom-left-radius: 17px;
-  border-bottom-right-radius: 17px;
+  -webkit-box-shadow: 1px 1px 80px black inset;
+          box-shadow: 1px 1px 80px black inset;
 }
 
 .noise {
@@ -415,6 +415,7 @@ body {
   font-size: calc(var(--index) * 6);
   text-shadow: 0px 0px 4px #fff;
   margin-bottom: 10px;
+  padding-top: 50px;
 }
 
 .mint {
@@ -491,6 +492,13 @@ body {
 
 .arch__middle {
   pointer-events: none;
+  border-radius: 1800px 1800px 15% 15%;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .middle {
