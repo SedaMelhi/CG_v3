@@ -8,6 +8,7 @@
     justify-content: center;  
     margin-top: 40px;
     position: relative;
+    padding-bottom: 150px;
     &__hidden{
         transition: .5s linear;
         transform: translateY(50%);
@@ -17,13 +18,12 @@
 
 .cards{
     display: flex;
-    height: 190px;
+    
     position: sticky;
-    width: 320px;
+    width: 290px;
     margin: 0 auto;
     margin: 52px auto 0;
-    padding-bottom: 80px;
-    z-index: 100;
+    z-index: 10;
     cursor: pointer;
     pointer-events: visiblePainted;
     transition: 0.2s linear;
@@ -70,12 +70,12 @@
     }
     
     &:hover .card{
-        $num: -19%;
+        $num: -25%;
         @for $i from 1 to 6 {
             &:nth-child(#{$i}){
                 transform: translateX(#{$num}); 
             }
-            $num: $num + 50%;
+            $num: $num + 52.5%;
         }
     }
     &__hidden{
@@ -83,15 +83,7 @@
         transform: translateY(-50%);
         animation: hidden 0.2s forwards 1s;
         opacity: 0;
-        .card{
-            box-shadow: 0px 0px 10px #ffff;
-            @for $i from 1 to 6 {
-                $z: $i;
-                &:nth-child(#{$i}){
-                    z-index: #{$z};
-                }
-            }
-        }
+        
         &:hover .card{
             $num: 0;
             @for $i from 1 to 6 {
@@ -103,11 +95,7 @@
         }
     }
 }
-@media screen and(max-width: 1400px) {
-    .cards{
-        width: 290px;
-    }
-}
+
 
 @media screen and(max-width: 1280px) {
     .cards{
@@ -137,6 +125,7 @@
     display: none;
     transition: .7s;
     position: absolute;
+    padding-bottom: 80px;
     top: 0;
     &__close{
         display: flex;
@@ -225,5 +214,5 @@
 .arch__middle_anim{
     transition: 0.6s;
     transition-delay: 0s;
-    border-radius: 0;
+    border-radius: 2%;
 }
