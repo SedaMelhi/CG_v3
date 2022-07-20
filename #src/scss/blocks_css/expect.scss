@@ -9,10 +9,14 @@
     margin-top: 40px;
     position: relative;
     padding-bottom: 150px;
+    transition: .5s ease-in-out;
     &__hidden{
-        transition: .5s linear;
+        transition: .5s ease-in-out;
         transform: translateY(50%);
         opacity: 0;
+        &_none{
+            display: none;
+        }
     }
 }
 
@@ -79,11 +83,7 @@
         }
     }
     &__hidden{
-        transition: .5s linear;
-        transform: translateY(-50%);
-        animation: hidden 0.2s forwards 1s;
-        opacity: 0;
-        
+        animation: hidden .5s forwards;
         &:hover .card{
             $num: 0;
             @for $i from 1 to 6 {
@@ -95,7 +95,16 @@
         }
     }
 }
-
+@keyframes hidden{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
 
 @media screen and(max-width: 1280px) {
     .cards{
@@ -133,9 +142,9 @@
         margin-bottom: 38px;
         cursor: pointer;
         margin-top: 35px;
-        animation: show-up .8s linear;
+        animation: show-up .8s ease-in-out 0.35s;
         svg{
-            animation: rotate .8s linear;
+            animation: rotate .8s ease-in-out 0.35s;
         }
     }
     @keyframes rotate {
@@ -176,7 +185,7 @@
         display: block;
         opacity: 0;
         transform: translateY(70%);
-        animation: show 0.5s forwards linear .1s;
+        animation: show 0.5s forwards ease-in-out 0.35s;
         
     }
 }
