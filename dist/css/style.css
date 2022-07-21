@@ -444,10 +444,6 @@ body {
 }
 
 .arch {
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.25);
-          box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.25);
-  border-radius: 1800px 1800px 15% 15%;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -468,6 +464,9 @@ body {
 }
 
 .arch img {
+  border: 1px solid white;
+  -webkit-filter: drop-shadow(0 0 3px white);
+          filter: drop-shadow(0 0 3px white);
   border-radius: 1800px 1800px 80px 80px;
   width: 100%;
   height: 100%;
@@ -499,6 +498,12 @@ body {
   -webkit-transition-delay: 0s;
        -o-transition-delay: 0s;
           transition-delay: 0s;
+  border: 1px solid #FFFFFF;
+}
+
+.arch__middle.img {
+  -webkit-filter: drop-shadow(0 0 3px white);
+          filter: drop-shadow(0 0 3px white);
 }
 
 .middle {
@@ -550,7 +555,7 @@ body {
   min-height: calc(100vh - 180px);
   width: 100%;
   margin-top: calc(100vh - 180px);
-  z-index: 10;
+  z-index: 0;
   top: 0;
 }
 
@@ -1325,6 +1330,15 @@ body {
 
 .mint .middle__description {
   text-align: left;
+}
+
+.mint .middle__description a {
+  pointer-events: visiblePainted;
+}
+
+.mint svg {
+  -webkit-filter: drop-shadow(2px 2px 5px white);
+          filter: drop-shadow(2px 2px 5px white);
 }
 
 @media screen and (max-width: 1280px) {
