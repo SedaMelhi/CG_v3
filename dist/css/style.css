@@ -129,6 +129,7 @@ body {
 .main2 {
   width: 100%;
   margin: 0 auto;
+  margin-top: calc(500vh - 580px);
 }
 
 .container {
@@ -417,7 +418,7 @@ body {
   padding-top: 50px;
 }
 
-.mint {
+.mint-btn {
   position: relative;
   width: 234px;
   height: 100px;
@@ -1299,6 +1300,31 @@ body {
        -o-transition-delay: 0s;
           transition-delay: 0s;
   border-radius: 2%;
+}
+
+.mint {
+  min-height: calc(100vh - 100px);
+  padding: 0 28px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  font-family: 'Inconsolata';
+  text-align: left;
+}
+
+.mint .middle__description {
+  text-align: left;
 }
 
 @media screen and (max-width: 1280px) {

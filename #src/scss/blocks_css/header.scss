@@ -7,6 +7,7 @@
 .main2{
     width: 100%;
     margin: 0 auto;
+    margin-top: calc(500vh - 580px);
 }
 .container{
     height: 100%;
@@ -235,7 +236,7 @@
         padding-top: 50px;
     }
 }
-.mint{
+.mint-btn{
     position: relative;
     width: 234px;
     height: 100px;

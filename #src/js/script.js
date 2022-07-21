@@ -2,10 +2,7 @@ let archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main2"),
     content = document.querySelector(".border_second");
 
-main.style.marginTop = `${archs[1].scrollHeight}px`
-window.addEventListener('resize', function(){
-  main.style.marginTop = `${archs[1].scrollHeight}px`
-})
+
 
 content.addEventListener("scroll", function() {
   archs[1].scrollTop = content.scrollTop;
@@ -28,7 +25,7 @@ content.addEventListener("click", function(event) {
   if(event.target == cards ||arr.includes(event.target)){
     try {
       top2.scrollIntoViewIfNeeded(false);
-      archs[1].scrollTop -= 70;
+      archs[1].scrollTop -= 30;
     } catch (error) {
       top2.scrollIntoView({block: "center"});
       archs[1].scrollTop += (archs[1].clientHeight/2) - 70;
