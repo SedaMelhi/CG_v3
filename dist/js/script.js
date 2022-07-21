@@ -2,7 +2,12 @@ let archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main2"),
     content = document.querySelector(".border_second");
 
+main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`
 
+window.addEventListener("resize", function() {
+  console.log('ok')
+  main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`
+})
 
 content.addEventListener("scroll", function() {
   archs[1].scrollTop = content.scrollTop;

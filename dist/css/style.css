@@ -129,7 +129,10 @@ body {
 .main2 {
   width: 100%;
   margin: 0 auto;
-  margin-top: calc(500vh - 580px);
+}
+
+.main2__opacity > div {
+  width: 33%;
 }
 
 .container {
@@ -362,7 +365,7 @@ body {
   width: calc(100% - 14px);
   height: calc(100% - 7px);
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 3;
   top: 0;
   left: 0;
@@ -1336,6 +1339,49 @@ body {
 .mint svg {
   -webkit-filter: drop-shadow(2px 2px 5px white);
           filter: drop-shadow(2px 2px 5px white);
+}
+
+.middle-dark {
+  width: 100%;
+  height: 100vh;
+}
+
+.map {
+  min-height: calc(100vh - 160px);
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 1px 1px 80px black inset;
+          box-shadow: 1px 1px 80px black inset;
+  padding: 42px 35px 42px;
+}
+
+.map__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 36px;
+}
+
+.map__item {
+  border: 1px solid #FFFFFF;
+  border-radius: 12px;
+  padding: 22px 20px;
+  margin-bottom: 42px;
+}
+
+.map__item:nth-child(2) {
+  margin: 0 42px 42px;
+}
+
+.map__item:nth-child(4) {
+  margin-right: 42px;
 }
 
 @media screen and (max-width: 1280px) {
