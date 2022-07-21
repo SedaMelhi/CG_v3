@@ -1,7 +1,16 @@
 let archs = document.querySelectorAll(".arch"),
+    main = document.querySelector(".main2"),
     content = document.querySelector(".border_second");
 
+main.style.marginTop = `${archs[1].scrollHeight}px`
+window.addEventListener('resize', function(){
+  main.style.marginTop = `${archs[1].scrollHeight}px`
+})
+
 content.addEventListener("scroll", function() {
+  archs[1].scrollTop = content.scrollTop;
+});
+content.addEventListener("wheel", function() {
   archs[1].scrollTop = content.scrollTop;
 });
 
@@ -12,7 +21,6 @@ let artists = document.querySelector(".artists"),
     close = document.querySelector(".artists__close");
 
 artists.style.display = "none";
-
 
 content.addEventListener("click", function(event) {
   let arr = new Array(...cards.childNodes)

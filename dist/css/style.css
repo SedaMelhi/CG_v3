@@ -129,7 +129,6 @@ body {
 .main2 {
   width: 100%;
   margin: 0 auto;
-  margin-top: calc(400vh - 240px);
 }
 
 .container {
@@ -953,7 +952,6 @@ body {
 }
 
 .artists {
-  pointer-events: visiblePainted;
   z-index: 10;
   -webkit-transition: .7s;
   -o-transition: .7s;
@@ -971,6 +969,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 38px;
+  pointer-events: visiblePainted;
   cursor: pointer;
   -webkit-animation: show-up .6s ease-in-out 0.5s;
           animation: show-up .6s ease-in-out 0.5s;

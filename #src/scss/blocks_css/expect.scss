@@ -162,7 +162,7 @@
 }
 
 .artists{
-    pointer-events: visiblePainted;
+    
     z-index: 10;
     transition: .7s;
     position: absolute;
@@ -172,7 +172,7 @@
         display: flex;
         justify-content: center;
         margin-bottom: 38px;
-        
+        pointer-events: visiblePainted;
         cursor: pointer;
         animation: show-up .6s ease-in-out 0.5s;
         svg{
