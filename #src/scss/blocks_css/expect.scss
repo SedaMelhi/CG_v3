@@ -1,7 +1,7 @@
 
 .expect{
     min-height: calc(100vh - 100px);
-    padding: 0 28px;
+    padding: 0 28px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,6 @@
     margin-top: 40px;
     font-family: 'Inconsolata';
     position: relative;
-    padding-bottom: 50px;
     transition: .5s ease-in-out; 
     &__hidden{
         transition: .5s ease-in-out;
@@ -32,6 +31,12 @@
         transform: translateY(0);
         opacity: 1;
     }
+}
+.top{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
 }
 .cards{
     display: flex;
@@ -274,6 +279,7 @@
         display: flex;
         justify-content: flex-end;
         padding: 7px;  
+        background: #020202;
     }
    
     &__title{
@@ -314,7 +320,7 @@
             transform: scale(1);
         }
     }
-    @for $i from 1 to 7 {
+    @for $i from 1 to 5 {
         &:nth-child(#{$i}) &__image{
             background: #020202 url(../img/avatar#{$i}.png) center/cover no-repeat ;
         }

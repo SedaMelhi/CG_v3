@@ -8,11 +8,29 @@ content.addEventListener("scroll", function() {
 let artists = document.querySelector(".artists"),
     cards = document.querySelector(".cards"),
     expect = document.querySelector(".expect__text"),
+    top2 = document.querySelector(".top"),
     close = document.querySelector(".artists__close");
 
 artists.style.display = "none";
 
+
+content.addEventListener("click", function(event) {
+  let arr = new Array(...cards.childNodes)
+ 
+  if(event.target == cards ||arr.includes(event.target)){
+    try {
+      top2.scrollIntoViewIfNeeded(false);
+      archs[1].scrollTop -= 70;
+    } catch (error) {
+      top2.scrollIntoView({block: "center"});
+      archs[1].scrollTop += (archs[1].clientHeight/2) - 70;
+    }
+  }
+});
+
 cards.addEventListener("click", function() {
+  
+
   archs[1].classList.toggle("arch__middle_anim");
   cards.classList.toggle("cards__hidden")
   cards.classList.toggle("cards__visible")
