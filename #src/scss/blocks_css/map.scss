@@ -9,7 +9,7 @@
     position: relative;
     z-index: 7;
     background-color: rgba(0, 0, 0, 0.9);
-    box-shadow: 1px 1px 80px rgb(0, 0, 0) inset;
+    box-shadow: 1px 1px 80px rgb(0, 0, 0);
     padding: 42px;
     .middle__title{
         margin-bottom: 36px;
@@ -98,7 +98,7 @@
     }
     &__circle{
         width: 100%;
-        padding-bottom: 70%;
+        padding-bottom: 60%;
         background: rgba(5, 255, 0, 0.35);
         filter: blur(50px);
         border-radius: 50%;
