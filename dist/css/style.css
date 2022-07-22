@@ -550,7 +550,7 @@ body {
 }
 
 .middle__bg {
-  background: url("../img/art-юкъер1.png") 620% center/cover no-repeat;
+  background: url("../img/art-юкъер1.png") center/cover no-repeat;
   position: -webkit-sticky;
   position: sticky;
   min-height: calc(100vh - 180px);
@@ -1462,8 +1462,8 @@ body {
 }
 
 .map__circle {
-  width: 100%;
-  padding-bottom: 60%;
+  width: 80%;
+  padding-bottom: 80%;
   background: rgba(5, 255, 0, 0.35);
   -webkit-filter: blur(50px);
           filter: blur(50px);
@@ -1473,6 +1473,8 @@ body {
   -webkit-transition: 0.7s linear;
   -o-transition: 0.7s linear;
   transition: 0.7s linear;
+  left: 10%;
+  top: 10%;
 }
 
 @-webkit-keyframes green-text {
