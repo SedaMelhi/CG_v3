@@ -19,9 +19,6 @@ content.addEventListener("scroll", function() {
     document.querySelector(".noise").style.zIndex = "5";
   }
 });
-content.addEventListener("wheel", function() {
-  archs[1].scrollTop = content.scrollTop;
-});
 
 let artists = document.querySelector(".artists"),
     cards = document.querySelector(".cards"),
