@@ -550,7 +550,7 @@ body {
 }
 
 .middle__bg {
-  background: url("../img/art-юкъер1.png") center/cover no-repeat;
+  background: url("../img/art-юкъер1.png") center/contain no-repeat;
   position: -webkit-sticky;
   position: sticky;
   min-height: calc(100vh - 180px);
