@@ -1,16 +1,23 @@
 let archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main2"),
-    content = document.querySelector(".border_second");
+    content = document.querySelector(".border_second"),
+    map = document.querySelector(".map");
 
 main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`
 
 window.addEventListener("resize", function() {
-  console.log('ok')
   main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`
 })
 
 content.addEventListener("scroll", function() {
   archs[1].scrollTop = content.scrollTop;
+  //////////////для map//////////////
+  const posTop = map.getBoundingClientRect().top;
+  if((posTop + (map.clientHeight - 140) <= window.innerHeight && posTop >= 0) || posTop <= 0) {
+    document.querySelector(".noise").style.zIndex = "0";
+  }else{
+    document.querySelector(".noise").style.zIndex = "5";
+  }
 });
 content.addEventListener("wheel", function() {
   archs[1].scrollTop = content.scrollTop;
@@ -73,3 +80,18 @@ close.addEventListener("click", function() {
 
   setTimeout(() => artists.style.display = "none", 800)
 });
+
+
+
+let balls = document.querySelectorAll(".map__circle");
+
+map.addEventListener("mousemove", function(e) {
+   balls.forEach(ball => {
+      let x = ball.getBoundingClientRect().x
+      let y = ball.getBoundingClientRect().y
+      ball.style.left = e.pageX  - ball.offsetWidth / 2 -  x + 'px';
+      ball.style.top = e.pageY - ball.offsetHeight /2 - y + 'px';
+   })
+})
+
+
