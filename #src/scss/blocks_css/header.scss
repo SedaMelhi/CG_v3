@@ -94,14 +94,32 @@
     flex-direction: column;
     height: 100%;
     align-items: center;
-    position: relative;
+    position: relative; 
+    svg{
+        fill: #fff;
+    }
     &__item{
-        width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        padding: 4px 8px;
+        border-radius: 6px;
         > a{
             margin: 0 9px;
         }
+    }
+    &__active{
+        background: #FFFFFF;
+        box-shadow: 0px 0px 4px #FFFFFF;
+        transition: 0.3s ease-in-out;
+        a{
+            color: #000;
+        }
+        svg{
+            fill: #000;
+        }
+        
+        
     }
 }
 
@@ -198,6 +216,7 @@
     width: calc(100% - 14px);
     height: calc(100% - 7px);
     position: absolute;
+    pointer-events: none;
     z-index: 3;
     top: 0;
     left: 0;
@@ -229,9 +248,11 @@
         font-size: 1.25rem;
         line-height: 150%;
         max-width: 817px;
+        pointer-events: visiblePainted;
     }
     &__title{
         font-family: 'ROMANUS';
+        pointer-events: visiblePainted;
         font-size: calc(var(--index) * 6); //12rem
         text-shadow: 0px 0px 4px #fff;
         margin-bottom: 10px;
@@ -240,6 +261,7 @@
 }
 .mint-btn{
     position: relative;
+    pointer-events: visiblePainted;
     width: 234px;
     height: 100px;
     background: url(../img/svg/StarBig.svg) center/85% no-repeat;
@@ -255,6 +277,7 @@
 .connect{
     font-family: 'ROMANUS';
     font-size: 1.4rem;
+    pointer-events: visiblePainted;
 }
 .arch{  
     width: 100%;
@@ -336,6 +359,9 @@
         margin-top: calc(100vh - 180px);
         z-index: 0;
         top: 0;
+        &_top{
+            margin-top: 0;
+        }
         &::before{
             width: 100%;
             height: 100%;
@@ -380,7 +406,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;  
-    padding: 0 28px; 
+    padding: 100px 28px 20px; 
 }
 .medusa{
     min-height: calc(100vh - 180px);
@@ -389,6 +415,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;  
-    padding: 0 28px; 
+    padding: 100px 28px 20px; 
     margin-top: 80px;
 }
+
+

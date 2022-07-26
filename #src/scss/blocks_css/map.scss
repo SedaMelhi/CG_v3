@@ -26,6 +26,7 @@
         border-radius: 12px;
         margin-bottom: 42px;
         position: relative;
+        
         overflow: hidden;
         cursor: pointer;
         &:nth-child(1){
@@ -43,8 +44,10 @@
         &:nth-child(5){
             width: 48.25%;
         }
+        .map__block{
+            background-color: rgba(12, 12, 12, 0.9);
+        }
         &:hover .map__block{
-            background-color: rgba(0, 0, 0, 0.9);
             transition: 0.2s linear;
         }
         &:hover .map__hover{

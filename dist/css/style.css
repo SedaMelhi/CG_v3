@@ -243,18 +243,43 @@ body {
   position: relative;
 }
 
+.menu svg {
+  fill: #fff;
+}
+
 .menu__item {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
 .menu__item > a {
   margin: 0 9px;
+}
+
+.menu__active {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 4px #FFFFFF;
+          box-shadow: 0px 0px 4px #FFFFFF;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.menu__active a {
+  color: #000;
+}
+
+.menu__active svg {
+  fill: #000;
 }
 
 .vertical-line {
@@ -365,6 +390,7 @@ body {
   width: calc(100% - 14px);
   height: calc(100% - 7px);
   position: absolute;
+  pointer-events: none;
   z-index: 3;
   top: 0;
   left: 0;
@@ -408,10 +434,12 @@ body {
   font-size: 1.25rem;
   line-height: 150%;
   max-width: 817px;
+  pointer-events: visiblePainted;
 }
 
 .header__title {
   font-family: 'ROMANUS';
+  pointer-events: visiblePainted;
   font-size: calc(var(--index) * 6);
   text-shadow: 0px 0px 4px #fff;
   margin-bottom: 10px;
@@ -420,6 +448,7 @@ body {
 
 .mint-btn {
   position: relative;
+  pointer-events: visiblePainted;
   width: 234px;
   height: 100px;
   background: url(../img/svg/StarBig.svg) center/85% no-repeat;
@@ -441,6 +470,7 @@ body {
 .connect {
   font-family: 'ROMANUS';
   font-size: 1.4rem;
+  pointer-events: visiblePainted;
 }
 
 .arch {
@@ -558,6 +588,10 @@ body {
   top: 0;
 }
 
+.middle__bg_top {
+  margin-top: 0;
+}
+
 .middle__bg::before {
   width: 100%;
   height: 100%;
@@ -622,7 +656,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 28px;
+  padding: 100px 28px 20px;
 }
 
 .medusa {
@@ -641,13 +675,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 28px;
+  padding: 100px 28px 20px;
   margin-top: 80px;
 }
 
 .expect {
   min-height: calc(100vh - 180px);
-  padding: 0 28px 50px;
+  padding: 100px 28px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1398,8 +1432,11 @@ body {
   width: 48.25%;
 }
 
+.map__item .map__block {
+  background-color: rgba(12, 12, 12, 0.9);
+}
+
 .map__item:hover .map__block {
-  background-color: rgba(0, 0, 0, 0.9);
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -1532,14 +1569,36 @@ body {
 .page {
   position: absolute;
   top: 0;
+  height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.65);
   left: 0;
   z-index: 3;
 }
 
+.page__border {
+  position: relative;
+  height: calc(100% - 10px);
+  padding-bottom: 30px;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(145, 145, 145, 0.4);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  /* IE и Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.page__border::-webkit-scrollbar {
+  display: none;
+}
+
 .page .networks {
   position: static;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
