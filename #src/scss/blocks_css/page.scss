@@ -1,0 +1,16 @@
+.noise__opacity{
+    z-index: 0;
+}
+.page{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.9);
+    left: 0;
+    z-index: 3;
+    .networks{
+        position: static;
+        justify-content: center;
+        padding-bottom: 35px;
+    }
+}

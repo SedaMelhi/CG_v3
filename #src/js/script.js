@@ -12,13 +12,14 @@ window.addEventListener("resize", function() {
 content.addEventListener("scroll", function() {
   archs[1].scrollTop = content.scrollTop;
   //////////////для map//////////////
-  const posTop = map.getBoundingClientRect().top;
-  if((posTop + (map.clientHeight - 140) <= window.innerHeight && posTop >= 0) || posTop <= 0) {
-    document.querySelector(".noise").style.zIndex = "0";
-  }else{
-    document.querySelector(".noise").style.zIndex = "5";
-  }
+  // const posTop = map.getBoundingClientRect().top;
+  // if((posTop + (map.clientHeight - 140) <= window.innerHeight && posTop >= 0) || posTop <= 0) {
+  //   document.querySelector(".noise").style.zIndex = "0";
+  // }else{
+  //   document.querySelector(".noise").style.zIndex = "5";
+  // }
 });
+
 
 let artists = document.querySelector(".artists"),
     cards = document.querySelector(".cards"),
@@ -77,6 +78,7 @@ close.addEventListener("click", function() {
 
   setTimeout(() => artists.style.display = "none", 800)
 });
+
 
 
 
