@@ -1572,8 +1572,8 @@ body {
   }
 }
 
-.noise__opacity {
-  z-index: 0;
+.border_index {
+  z-index: 6;
 }
 
 .page {
