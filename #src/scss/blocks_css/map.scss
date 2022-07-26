@@ -3,22 +3,24 @@
     height: 100vh;
 }
 .map{
-    min-height: calc(100vh - 160px);
     font-family: 'Inconsolata';
     width: 100%;
     position: relative;
     z-index: 7;
-    
-    padding: 42px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100% - 50px);
+    padding: 40px 42px 0;
     .middle__title{
-        margin-bottom: 36px;
+        margin-bottom: 50px;
     }
     &__wrap{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 36px;
-        max-width: 1214px;
+        max-width: 1280px;
         margin: 0 auto;
     }
     &__item{
@@ -45,7 +47,7 @@
             width: 48.25%;
         }
         .map__block{
-            background-color: rgba(12, 12, 12, 0.9);
+            background-color: rgba(12, 12, 12, 0.85);
         }
         &:hover .map__block{
             transition: 0.2s linear;
