@@ -86,27 +86,31 @@ close.addEventListener("click", function() {
 const menu_items = document.querySelectorAll(".menu__item a");
 const menu = document.querySelector(".menu")
 
-let href = window.location.href.substring(window.location.href.search("#")+1)
-const scrollTarget = document.getElementById(href);
-const topOffset = menu.offsetHeight;
-const elementPosition = scrollTarget.getBoundingClientRect().top;
-const offsetPosition = elementPosition - topOffset;
-menu_items.forEach(item => {
-       
-  if (item.parentNode.classList[1] == "menu__active"){
-    item.parentNode.classList.remove("menu__active")
-  }
-  if(item.hash.substring(1) == href){
-    item.parentNode.classList.add("menu__active")
-  }
-  
-})
+let href;
+if(window.location.href.search("#") > 0){
+  href = window.location.href.substring(window.location.href.search("#")+1)
+  const scrollTarget = document.getElementById(href);
+  const topOffset = menu.offsetHeight;
+  const elementPosition = scrollTarget.getBoundingClientRect().top;
+  const offsetPosition = elementPosition - topOffset;
+  menu_items.forEach(item => {
+        
+    if (item.parentNode.classList[1] == "menu__active"){
+      item.parentNode.classList.remove("menu__active")
+    }
+    if(item.hash.substring(1) == href){
+      item.parentNode.classList.add("menu__active")
+    }
+    
+  })
+  setTimeout(() => content.scrollTop = offsetPosition, 500)
+}
 
 
-console.log(content.scrollTop)
-setTimeout(() => content.scrollTop = offsetPosition, 500)
+
+
+
 menu_items.forEach(item => item.addEventListener("click", function (e) {
-      let href;
       if(this.getAttribute('href')[0] == "#"){
           e.preventDefault();
           href = this.getAttribute('href').substring(1);
