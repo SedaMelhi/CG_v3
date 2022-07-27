@@ -47,19 +47,20 @@
             width: 48.25%;
         }
         .map__block{
-            background-color: rgba(12, 12, 12, 0.85);
+            background-color: rgba(12, 12, 12, 1);
         }
         &:hover .map__block{
             transition: 0.2s linear;
         }
         &:hover .map__hover{
-            opacity: 1;
+            opacity: 0.12;
             transition: 0.1s ease-out;
             transition-delay: 0.2s;
         }
         &:hover .map__circle{
             opacity: 1;
             transition: .2s linear;
+            z-index: 0;
         }
     }
     &__hover{
@@ -67,7 +68,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: 1;
         width: 100%;
         height: 100%;
         background: url(../img/image.png) center/cover;
