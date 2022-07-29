@@ -507,6 +507,18 @@ body {
      object-position: center;
 }
 
+.arch .btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  position: fixed;
+  z-index: 6;
+}
+
 .arch__middle {
   pointer-events: none;
   border-radius: 1800px 1800px 15% 15%;
@@ -607,7 +619,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: 10px;
@@ -616,13 +627,14 @@ body {
           align-items: center;
   text-transform: uppercase;
   font-size: 1.6rem;
-  z-index: 16;
   mix-blend-mode: difference;
 }
 
 .networks .home {
   border-radius: 6px;
   border: 1px solid #FFFFFF;
+  background-color: #fff;
+  color: #000;
   padding: 6px 8px;
   margin: 0 60px;
   font-size: 1rem;
@@ -697,15 +709,19 @@ body {
   background-color: rgba(192, 192, 192, 0.7);
 }
 
-footer > .btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-bottom: 10px;
-  border: 1px solid #FFFFFF;
-  border-radius: 6px;
-  text-transform: uppercase;
-  padding: 6px 8px;
-  z-index: 6;
+.footer {
+  position: fixed;
+  top: calc(100% - 85px);
+  z-index: 30;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .expect {
