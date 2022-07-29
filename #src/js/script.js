@@ -1,22 +1,33 @@
+
 let archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main2"),
     content = document.querySelector(".border_second"),
     map = document.querySelector(".map");
 
-main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`
-
+main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+document.querySelectorAll(".arch__hidden").forEach(arch => {
+  arch.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+})
+console.log(document.querySelector(".arch__hidden"))
 window.addEventListener("resize", function() {
-  main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`
+  main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+  document.querySelectorAll(".arch__hidden").forEach(arch => {
+    arch.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+  })
 })
 
 content.addEventListener("scroll", function() {
+  archs[0].scrollTop = content.scrollTop;
   archs[1].scrollTop = content.scrollTop;
+  archs[2].scrollTop = content.scrollTop;
   ////////////для map//////////////
   const posTop = map.getBoundingClientRect().top;
   if((posTop + (map.clientHeight - 140) <= window.innerHeight && posTop >= 0) || posTop <= 0) {
     document.querySelector(".noise").style.zIndex = "0";
+    
   }else{
     document.querySelector(".noise").style.zIndex = "5";
+    document.querySelector(".arch__hidden").classList.remove("arch__visible")
   }
 });
 
@@ -143,3 +154,5 @@ menu_items.forEach(item => item.addEventListener("click", function (e) {
           behavior: 'smooth'
       });
 }))
+
+

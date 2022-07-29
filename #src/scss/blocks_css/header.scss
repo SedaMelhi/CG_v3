@@ -260,7 +260,6 @@
     }
 }
 .mint-btn{
-    position: relative;
     pointer-events: visiblePainted;
     width: 234px;
     height: 100px;
@@ -282,25 +281,43 @@
 .arch{  
     width: 100%;
     height: 100%;
-    display: flex;
     justify-content: center;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE и Edge */
     scrollbar-width: none;  /* Firefox */
+    position: relative;
+    border-radius: 1800px 1800px 15% 15%;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 3px #fff;
+    pointer-events: none;
     &::-webkit-scrollbar {
         display: none;
     }
     img{
-        border: 1px solid rgb(255, 255, 255);
-        filter: drop-shadow(0 0 3px white);
-        border-radius: 1800px 1800px 80px 80px;
         width: 100%;
         height: 100%;
         opacity: 0.8;
         object-fit: cover;
         object-position: center;
+        position: sticky;
+        top: 0;
+        z-index: 2;
         //margin-top: calc(100vh - 180px);
     }
+    &__hidden{
+        pointer-events: visiblePainted;
+        box-shadow: 0px -71px 124px 135px #000;
+        transition: 0.8s;
+        background-color: #000;
+        z-index: 20;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        opacity: 1;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+    
     .btn{
         align-self: flex-end;
         margin-bottom: 10px;
@@ -309,13 +326,19 @@
         text-transform: uppercase;
         padding: 6px 8px;
         position: fixed;
-        z-index: 6;
+        z-index: 30;
+        top:  calc(100% - 85px);
+        pointer-events: visiblePainted;
+        left: 17%;
+    }
+    .pix{
+        left: auto;
+        right: 15%;
     }
     &__middle{
-        pointer-events: none;
-        border-radius: 1800px 1800px 15% 15%;
         transition: 2s;
         transition-delay: 0s;
+        border-radius: 1800px 1800px 15% 15%;
         border: 1px solid #FFFFFF;
         box-shadow: 0px 0px 3px #fff;
         z-index: 3;
@@ -387,7 +410,6 @@
     align-items: center;
     text-transform: uppercase;
     font-size: 1.6rem;
-    mix-blend-mode: difference;
     .home{
         border-radius: 6px;
         border: 1px solid #FFFFFF;
@@ -396,6 +418,7 @@
         padding: 6px 8px;
         margin: 0 60px;
         font-size: 1rem;
+        
     }
 }
 

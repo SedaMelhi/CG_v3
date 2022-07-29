@@ -447,7 +447,6 @@ body {
 }
 
 .mint-btn {
-  position: relative;
   pointer-events: visiblePainted;
   width: 234px;
   height: 100px;
@@ -476,9 +475,6 @@ body {
 .arch {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -487,6 +483,12 @@ body {
   /* IE и Edge */
   scrollbar-width: none;
   /* Firefox */
+  position: relative;
+  border-radius: 1800px 1800px 15% 15%;
+  border: 1px solid #FFFFFF;
+  -webkit-box-shadow: 0px 0px 3px #fff;
+          box-shadow: 0px 0px 3px #fff;
+  pointer-events: none;
 }
 
 .arch::-webkit-scrollbar {
@@ -494,10 +496,6 @@ body {
 }
 
 .arch img {
-  border: 1px solid white;
-  -webkit-filter: drop-shadow(0 0 3px white);
-          filter: drop-shadow(0 0 3px white);
-  border-radius: 1800px 1800px 80px 80px;
   width: 100%;
   height: 100%;
   opacity: 0.8;
@@ -505,6 +503,28 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.arch__hidden {
+  pointer-events: visiblePainted;
+  -webkit-box-shadow: 0px -71px 124px 135px #000;
+          box-shadow: 0px -71px 124px 135px #000;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  background-color: #000;
+  z-index: 20;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  opacity: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .arch .btn {
@@ -516,18 +536,25 @@ body {
   text-transform: uppercase;
   padding: 6px 8px;
   position: fixed;
-  z-index: 6;
+  z-index: 30;
+  top: calc(100% - 85px);
+  pointer-events: visiblePainted;
+  left: 17%;
+}
+
+.arch .pix {
+  left: auto;
+  right: 15%;
 }
 
 .arch__middle {
-  pointer-events: none;
-  border-radius: 1800px 1800px 15% 15%;
   -webkit-transition: 2s;
   -o-transition: 2s;
   transition: 2s;
   -webkit-transition-delay: 0s;
        -o-transition-delay: 0s;
           transition-delay: 0s;
+  border-radius: 1800px 1800px 15% 15%;
   border: 1px solid #FFFFFF;
   -webkit-box-shadow: 0px 0px 3px #fff;
           box-shadow: 0px 0px 3px #fff;
@@ -627,7 +654,6 @@ body {
           align-items: center;
   text-transform: uppercase;
   font-size: 1.6rem;
-  mix-blend-mode: difference;
 }
 
 .networks .home {
@@ -1441,7 +1467,7 @@ body {
 }
 
 .map .middle__title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .map__wrap {
@@ -1632,7 +1658,7 @@ body {
 }
 
 .page .title {
-  font-size: calc(var(--index) * 1.9);
+  font-size: calc(var(--index) * 6);
 }
 
 .page__border {
