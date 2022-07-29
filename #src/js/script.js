@@ -7,10 +7,10 @@ const archs = document.querySelectorAll(".arch"),
     archHidden = document.querySelectorAll(".arch__hidden"),
     empty = document.querySelector(".middle-dark")
 
-main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
 
 archHidden.forEach(arch => {
-  arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+  arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
 })
 
 
@@ -19,10 +19,10 @@ window.addEventListener("resize", function() {
   archs[1].scrollTop = content.scrollTop;
   archs[2].scrollTop = content.scrollTop;
   
-  main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+  main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
 
   archHidden.forEach(arch => {
-    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight -30}px`;
   })
 })
 
