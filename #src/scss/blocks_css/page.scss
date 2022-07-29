@@ -3,33 +3,18 @@
 }
 
 .page{
-    position: absolute;
-    top: 0;
     height: 100%;
     width: 100%;
-    
-    left: 0;
     z-index: 3;
-    
+    .title{
+        font-size: calc(var(--index) * 1.9); //12rem
+    }
     &__border{
         position: relative;
         height: calc(100% - 10px);
         padding-bottom: 30px;
         width: calc(100% - 80px);
         margin: 0 auto;
-        border-bottom: 1px solid rgba($color: rgb(145, 145, 145), $alpha: .4);
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-        -ms-overflow-style: none;  /* IE и Edge */
-        scrollbar-width: none;  /* Firefox */
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-    .networks{
-        position: static;
-        align-self: flex-end;
-        justify-content: center;
-        padding-bottom: 35px;
+        //border-bottom: 1px solid rgba($color: rgb(145, 145, 145), $alpha: .4);
     }
 }

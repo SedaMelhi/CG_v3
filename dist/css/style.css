@@ -159,7 +159,7 @@ body {
   background-color: #000;
   width: 100%;
   padding: 15px 56px 0;
-  z-index: 3;
+  z-index: -1;
 }
 
 .nav__border {
@@ -507,18 +507,6 @@ body {
      object-position: center;
 }
 
-.arch .btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-bottom: 10px;
-  border: 1px solid #FFFFFF;
-  border-radius: 6px;
-  text-transform: uppercase;
-  padding: 6px 8px;
-  position: fixed;
-  z-index: 6;
-}
-
 .arch__middle {
   pointer-events: none;
   border-radius: 1800px 1800px 15% 15%;
@@ -619,7 +607,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  position: fixed;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: 10px;
@@ -677,6 +665,47 @@ body {
           justify-content: center;
   padding: 100px 28px 20px;
   margin-top: 80px;
+}
+
+.bottom {
+  background-color: #000;
+  width: 100%;
+  height: 10px;
+  position: fixed;
+  top: calc(100% - 42px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: calc(100% - 149px);
+  z-index: 25;
+}
+
+.bottom-line {
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(100% - 10px);
+  height: 1px;
+  -webkit-box-shadow: 0 0 3px #fff;
+          box-shadow: 0 0 3px #fff;
+  z-index: 100;
+  width: calc(100% - 30px);
+  border-radius: 15%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0 auto;
+  background-color: rgba(192, 192, 192, 0.7);
+}
+
+footer > .btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  z-index: 6;
 }
 
 .expect {
@@ -1396,7 +1425,7 @@ body {
 }
 
 .map .middle__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .map__wrap {
@@ -1405,9 +1434,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 36px;
   max-width: 1280px;
   margin: 0 auto;
@@ -1416,7 +1445,7 @@ body {
 .map__item {
   border: 1px solid #FFFFFF;
   border-radius: 12px;
-  margin-bottom: 42px;
+  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -1424,10 +1453,12 @@ body {
 
 .map__item:nth-child(1) {
   width: 31%;
+  margin-right: 20px;
 }
 
 .map__item:nth-child(2) {
   width: 31%;
+  margin-right: 20px;
 }
 
 .map__item:nth-child(3) {
@@ -1435,11 +1466,12 @@ body {
 }
 
 .map__item:nth-child(4) {
-  width: 48.25%;
+  width: 47.25%;
+  margin-right: 20px;
 }
 
 .map__item:nth-child(5) {
-  width: 48.25%;
+  width: 47.25%;
 }
 
 .map__item .map__block {
@@ -1578,12 +1610,13 @@ body {
 }
 
 .page {
-  position: absolute;
-  top: 0;
   height: 100%;
   width: 100%;
-  left: 0;
   z-index: 3;
+}
+
+.page .title {
+  font-size: calc(var(--index) * 1.9);
 }
 
 .page__border {
@@ -1592,27 +1625,11 @@ body {
   padding-bottom: 30px;
   width: calc(100% - 80px);
   margin: 0 auto;
-  border-bottom: 1px solid rgba(145, 145, 145, 0.4);
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  /* IE и Edge */
-  scrollbar-width: none;
-  /* Firefox */
 }
 
-.page__border::-webkit-scrollbar {
-  display: none;
-}
-
-.page .networks {
-  position: static;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 35px;
+.vision {
+  height: 70vh;
+  width: 100%;
 }
 
 @media screen and (max-width: 1280px) {

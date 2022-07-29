@@ -11,13 +11,13 @@ window.addEventListener("resize", function() {
 
 content.addEventListener("scroll", function() {
   archs[1].scrollTop = content.scrollTop;
-  //////////////для map//////////////
-  // const posTop = map.getBoundingClientRect().top;
-  // if((posTop + (map.clientHeight - 140) <= window.innerHeight && posTop >= 0) || posTop <= 0) {
-  //   document.querySelector(".noise").style.zIndex = "0";
-  // }else{
-  //   document.querySelector(".noise").style.zIndex = "5";
-  // }
+  ////////////для map//////////////
+  const posTop = map.getBoundingClientRect().top;
+  if((posTop + (map.clientHeight - 140) <= window.innerHeight && posTop >= 0) || posTop <= 0) {
+    document.querySelector(".noise").style.zIndex = "0";
+  }else{
+    document.querySelector(".noise").style.zIndex = "5";
+  }
 });
 
 
@@ -108,6 +108,16 @@ if(window.location.href.search("#") > 0){
 
 
 
+let balls = document.querySelectorAll(".map__circle");
+
+map.addEventListener("mousemove", function(e) {
+   balls.forEach(ball => {
+      let x = ball.getBoundingClientRect().x
+      let y = ball.getBoundingClientRect().y
+      ball.style.left = e.pageX  - ball.offsetWidth / 2 -  x + 'px';
+      ball.style.top = e.pageY - ball.offsetHeight /2 - y + 'px';
+   })
+})
 
 
 menu_items.forEach(item => item.addEventListener("click", function (e) {
@@ -132,6 +142,4 @@ menu_items.forEach(item => item.addEventListener("click", function (e) {
           top: offsetPosition,
           behavior: 'smooth'
       });
-  
-  
 }))

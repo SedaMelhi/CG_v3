@@ -13,12 +13,12 @@
     min-height: calc(100% - 50px);
     padding: 40px 42px 0;
     .middle__title{
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     &__wrap{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         margin-top: 36px;
         max-width: 1280px;
         margin: 0 auto;
@@ -26,25 +26,28 @@
     &__item{
         border: 1px solid #FFFFFF;
         border-radius: 12px;
-        margin-bottom: 42px;
+        margin-bottom: 20px;
         position: relative;
         
         overflow: hidden;
         cursor: pointer;
         &:nth-child(1){
             width: 31%;
+            margin-right: 20px;
         }
         &:nth-child(2){
             width: 31%;
+            margin-right: 20px;
         }
         &:nth-child(3){
             width: 31%;
         }
         &:nth-child(4){
-            width: 48.25%;
+            width: 47.25%;
+            margin-right: 20px;
         }
         &:nth-child(5){
-            width: 48.25%;
+            width: 47.25%;
         }
         .map__block{
             background-color: rgba(12, 12, 12, 1);
