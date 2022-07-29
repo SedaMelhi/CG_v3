@@ -1,18 +1,28 @@
-
-let archs = document.querySelectorAll(".arch"),
+const archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main2"),
     content = document.querySelector(".border_second"),
-    map = document.querySelector(".map");
+    map = document.querySelector(".map"),
+    menu_items = document.querySelectorAll(".menu__item a"),
+    menu = document.querySelector(".menu"),
+    archHidden = document.querySelectorAll(".arch__hidden"),
+    empty = document.querySelector(".middle-dark")
 
-main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
-document.querySelectorAll(".arch__hidden").forEach(arch => {
-  arch.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+
+archHidden.forEach(arch => {
+  arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
 })
-console.log(document.querySelector(".arch__hidden"))
+
+
 window.addEventListener("resize", function() {
-  main.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
-  document.querySelectorAll(".arch__hidden").forEach(arch => {
-    arch.style.marginTop = `${archs[1].scrollHeight - document.querySelector(".middle-dark").scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+  archs[0].scrollTop = content.scrollTop;
+  archs[1].scrollTop = content.scrollTop;
+  archs[2].scrollTop = content.scrollTop;
+  
+  main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+
+  archHidden.forEach(arch => {
+    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
   })
 })
 
@@ -29,6 +39,43 @@ content.addEventListener("scroll", function() {
     document.querySelector(".noise").style.zIndex = "5";
     document.querySelector(".arch__hidden").classList.remove("arch__visible")
   }
+  
+  const sections = [
+    document.getElementById("project"), 
+    document.getElementById("medusa"), 
+    document.getElementById("expect"),
+    document.getElementById("roadmap"),
+    document.querySelector(".dark-wrap")
+  ]
+  
+  sections.forEach(section => {
+    let sectionsTop = section.getBoundingClientRect().top;
+    if(sectionsTop + (section.clientHeight/2) <= window.innerHeight && sectionsTop >= 0) {
+      menu_items.forEach(item => {  
+        if(item.hash.substring(1) == section.id){
+          item.parentNode.classList.add("menu__active")
+        }
+        if(item.hash.substring(1) != section.id){
+          item.parentNode.classList.remove("menu__active")
+        }
+      })
+    }
+  })
+ 
+  // const medusa = document.getElementById("medusa").getBoundingClientRect().top;
+  // if((medusa + (document.getElementById("medusa").clientHeight - 140) <= window.innerHeight && medusa >= 0) || medusa <= 0) {
+    
+  //   menu_items.forEach(item => {  
+  //     if (item.parentNode.classList[1] == "menu__active"){
+  //       item.parentNode.classList.remove("menu__active")
+  //     }
+  //     if(item.hash.substring(1) == "medusa"){
+  //       item.parentNode.classList.add("menu__active")
+  //     }
+  //     console.log(item.hash.substring(1))
+  //   })
+  // }
+
 });
 
 
@@ -94,8 +141,7 @@ close.addEventListener("click", function() {
 
 
 
-const menu_items = document.querySelectorAll(".menu__item a");
-const menu = document.querySelector(".menu")
+
 
 let href;
 if(window.location.href.search("#") > 0){
