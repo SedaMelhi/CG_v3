@@ -8,6 +8,8 @@ const archs = document.querySelectorAll(".arch"),
     empty = document.querySelector(".middle-dark")
 
 main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
+//medusa.getBoundingClientRect().top;
+
 
 archHidden.forEach(arch => {
   arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
@@ -55,6 +57,7 @@ content.addEventListener("scroll", function() {
     document.getElementById("medusa"), 
     document.getElementById("expect"),
     document.getElementById("roadmap"),
+    document.getElementById("team"),
     document.querySelector(".dark-wrap")
   ]
   
@@ -153,27 +156,26 @@ close.addEventListener("click", function() {
 
 
 
-let href;
-if(window.location.href.search("#") > 0){
-  href = window.location.href.substring(window.location.href.search("#")+1)
-  const scrollTarget = document.getElementById(href);
-  const topOffset = menu.offsetHeight;
-  const elementPosition = scrollTarget.getBoundingClientRect().top;
-  const offsetPosition = elementPosition - topOffset;
-  menu_items.forEach(item => {
-        
-    if (item.parentNode.classList[1] == "menu__active"){
-      item.parentNode.classList.remove("menu__active")
-    }
-    if(item.hash.substring(1) == href){
-      item.parentNode.classList.add("menu__active")
-    }
-    
-  })
-  setTimeout(() => content.scrollTop = offsetPosition, 500)
-}
 
 
+menu_items.forEach(item => item.addEventListener("click", function (e) {
+  
+      e.preventDefault();
+
+      let href = this.getAttribute('href').substring(1);
+  
+      const scrollTarget = document.getElementById(href);
+      const topOffset = menu.offsetHeight;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+  
+      content.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+      
+  
+}))
 
 let balls = document.querySelectorAll(".map__circle");
 
@@ -187,28 +189,5 @@ map.addEventListener("mousemove", function(e) {
 })
 
 
-menu_items.forEach(item => item.addEventListener("click", function (e) {
-      if(this.getAttribute('href')[0] == "#"){
-          e.preventDefault();
-          href = this.getAttribute('href').substring(1);
-      }else{
-        return 0;
-      }
-      menu_items.forEach(item => {
-       
-        if (item.parentNode.classList[1] == "menu__active"){
-          item.parentNode.classList.remove("menu__active")
-        }
-      })
-      this.parentNode.classList.add("menu__active")
-      const scrollTarget = document.getElementById(href);
-      const topOffset = menu.offsetHeight;
-      const elementPosition = scrollTarget.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - topOffset;
-      content.scrollBy({
-          top: offsetPosition,
-          behavior: 'smooth'
-      });
-}))
 
 
