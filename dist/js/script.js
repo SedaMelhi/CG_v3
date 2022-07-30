@@ -39,7 +39,17 @@ content.addEventListener("scroll", function() {
     document.querySelector(".noise").style.zIndex = "5";
     document.querySelector(".arch__hidden").classList.remove("arch__visible")
   }
-  
+  ////////////для art//////////////
+  const art = document.querySelector(".art")
+  const artTop = art.getBoundingClientRect().top;
+  if(artTop + (art.clientHeight - 140) <= window.innerHeight && artTop >= 0) {
+    document.querySelectorAll(".art-img")[0].classList.add("art-img-visible")
+    document.querySelectorAll(".art-img")[1].classList.add("art-img-visible")
+  }else{
+    document.querySelectorAll(".art-img")[0].classList.remove("art-img-visible")
+    document.querySelectorAll(".art-img")[1].classList.remove("art-img-visible")
+  }
+  //////////////menu////////////
   const sections = [
     document.getElementById("project"), 
     document.getElementById("medusa"), 

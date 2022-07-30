@@ -1,4 +1,62 @@
 .vision{
-    height: 70vh;
+    min-height: calc(100vh - 180px);
     width: 100%;
+    position: relative;
+}
+
+.stars{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    top: -50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 0;
+    svg{
+        path{
+            fill: #fff;
+            fill-opacity: 1;
+        }
+        @for $i from 1 to 14{
+            $time: $i;
+            & path:nth-child(#{$i}){
+               animation: light 3s ease-in infinite #{$time}s;
+            }
+        }
+    }
+}
+
+@keyframes light{
+    0%{ 
+        fill-opacity: 0;
+    }
+    50%{
+        fill-opacity: 0.6;
+    }
+    100%{
+        fill-opacity: 0;
+    }
+}
+
+.art{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    margin-top: 250px;
+    justify-content: center;
+    &__image{
+        margin: 0 9px;
+        margin-bottom: 18px;
+        background-color: #000;
+        border-radius: 12px;
+        width: 135px;
+        img{
+            width: 100%;
+            transition: 0.3s linear;
+            transform: translateY(0px);
+        }
+    }
 }

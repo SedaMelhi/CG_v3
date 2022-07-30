@@ -120,6 +120,72 @@ body {
   background-color: #000;
 }
 
+.noise {
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.06;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: url(../img/noise.gif);
+}
+
+.art-img {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+  width: 42%;
+}
+
+.art-img img {
+  width: 100%;
+}
+
+.art-img_left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-150px);
+      -ms-transform: translateY(-150px);
+          transform: translateY(-150px);
+}
+
+.art-img_right {
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding-bottom: 60px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform: translateY(150px);
+      -ms-transform: translateY(150px);
+          transform: translateY(150px);
+}
+
+.art-img-visible {
+  opacity: 0.8;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .main {
   width: 100%;
   height: 100vh;
@@ -397,18 +463,6 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-}
-
-.noise {
-  height: 100vh;
-  width: 100vw;
-  opacity: 0.06;
-  position: fixed;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  background: url(../img/noise.gif);
 }
 
 .header {
@@ -1667,11 +1721,159 @@ body {
   padding-bottom: 30px;
   width: calc(100% - 80px);
   margin: 0 auto;
+  z-index: 1;
 }
 
 .vision {
-  height: 70vh;
+  min-height: calc(100vh - 180px);
   width: 100%;
+  position: relative;
+}
+
+.stars {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.stars svg path {
+  fill: #fff;
+  fill-opacity: 1;
+}
+
+.stars svg path:nth-child(1) {
+  -webkit-animation: light 3s ease-in infinite 1s;
+          animation: light 3s ease-in infinite 1s;
+}
+
+.stars svg path:nth-child(2) {
+  -webkit-animation: light 3s ease-in infinite 2s;
+          animation: light 3s ease-in infinite 2s;
+}
+
+.stars svg path:nth-child(3) {
+  -webkit-animation: light 3s ease-in infinite 3s;
+          animation: light 3s ease-in infinite 3s;
+}
+
+.stars svg path:nth-child(4) {
+  -webkit-animation: light 3s ease-in infinite 4s;
+          animation: light 3s ease-in infinite 4s;
+}
+
+.stars svg path:nth-child(5) {
+  -webkit-animation: light 3s ease-in infinite 5s;
+          animation: light 3s ease-in infinite 5s;
+}
+
+.stars svg path:nth-child(6) {
+  -webkit-animation: light 3s ease-in infinite 6s;
+          animation: light 3s ease-in infinite 6s;
+}
+
+.stars svg path:nth-child(7) {
+  -webkit-animation: light 3s ease-in infinite 7s;
+          animation: light 3s ease-in infinite 7s;
+}
+
+.stars svg path:nth-child(8) {
+  -webkit-animation: light 3s ease-in infinite 8s;
+          animation: light 3s ease-in infinite 8s;
+}
+
+.stars svg path:nth-child(9) {
+  -webkit-animation: light 3s ease-in infinite 9s;
+          animation: light 3s ease-in infinite 9s;
+}
+
+.stars svg path:nth-child(10) {
+  -webkit-animation: light 3s ease-in infinite 10s;
+          animation: light 3s ease-in infinite 10s;
+}
+
+.stars svg path:nth-child(11) {
+  -webkit-animation: light 3s ease-in infinite 11s;
+          animation: light 3s ease-in infinite 11s;
+}
+
+.stars svg path:nth-child(12) {
+  -webkit-animation: light 3s ease-in infinite 12s;
+          animation: light 3s ease-in infinite 12s;
+}
+
+.stars svg path:nth-child(13) {
+  -webkit-animation: light 3s ease-in infinite 13s;
+          animation: light 3s ease-in infinite 13s;
+}
+
+@-webkit-keyframes light {
+  0% {
+    fill-opacity: 0;
+  }
+
+  50% {
+    fill-opacity: 0.6;
+  }
+
+  100% {
+    fill-opacity: 0;
+  }
+}
+
+@keyframes light {
+  0% {
+    fill-opacity: 0;
+  }
+
+  50% {
+    fill-opacity: 0.6;
+  }
+
+  100% {
+    fill-opacity: 0;
+  }
+}
+
+.art {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 250px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.art__image {
+  margin: 0 9px;
+  margin-bottom: 18px;
+  background-color: #000;
+  border-radius: 12px;
+  width: 135px;
+}
+
+.art__image img {
+  width: 100%;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 @media screen and (max-width: 1280px) {
