@@ -393,7 +393,7 @@
         text-align: center;
     }
     &__bg{
-        background: url("../img/art-юкъер1.png") 620% center/90% no-repeat;
+        background: url("../img/art-юкъер1.png") center/90% no-repeat;
         position: sticky;
         min-height: calc(100vh - 180px);
         width: 100%;
@@ -403,17 +403,7 @@
         &_top{
             margin-top: 0;
         }
-        &::before{
-            width: 100%;
-            height: 100%;
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: url("../img/art-юкъер1.png") 620% center/90% no-repeat;
-            transform: scale(-1, 1);
-        }
+        
         
     }
 }
