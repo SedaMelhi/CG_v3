@@ -20,9 +20,12 @@
 .main2{
     width: 100%;
     margin: 0 auto;
-    &__opacity{
+    .arch-opacity{
+        visibility: hidden;
+       
         > div{
-            width: 33%;
+            width: calc(33% - 28px);
+            margin: 0 auto;
         }
     }
 }

@@ -1,6 +1,6 @@
 .team{
     min-height: calc(100vh - 180px);
-    padding-top: 150px;
+    margin-top: 150px;
     &__wrap{
         display: flex;
         flex-wrap: wrap;
@@ -21,7 +21,15 @@
         text-align: center;
         text-transform: uppercase;
         color: #000;
-        line-height: 28px;
+        line-height: 30px;
+        pointer-events: visiblePainted;
+        cursor: pointer;
+        .team__image{
+            background: url(../img/team/0.webp) center/cover no-repeat;
+        }
+        &:hover{
+            transform: rotateZ(360deg);
+        }
     }
     &__image{
         width: calc(100% - 2px);

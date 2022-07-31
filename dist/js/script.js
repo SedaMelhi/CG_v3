@@ -1,5 +1,5 @@
 const archs = document.querySelectorAll(".arch"),
-    main = document.querySelector(".main2"),
+    main = document.querySelector(".main__content"),
     content = document.querySelector(".border_second"),
     map = document.querySelector(".map"),
     menu_items = [...document.querySelectorAll(".menu__item a"), document.querySelector(".home")],
@@ -8,10 +8,9 @@ const archs = document.querySelectorAll(".arch"),
     empty = document.querySelector(".middle-dark");
 console.log(menu_items)
 window.addEventListener("load", function(){
-  main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
-
+  
   archHidden.forEach(arch => {
-    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight + 100}px`;
+    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
   })
 
   document.querySelector(".empty").style.height = `${main.scrollHeight}px`;
@@ -29,17 +28,9 @@ window.addEventListener("resize", function() {
   archs[1].scrollTop = content.scrollTop;
   archs[2].scrollTop = content.scrollTop;
   let diff = (archs[1].scrollHeight - main.scrollHeight) - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight
-  let top = + main.style.marginTop.substring(0, main.style.marginTop.length - 2)
-  console.log(diff)
-  diff = (archs[1].scrollHeight - main.scrollHeight) - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30
-  top = + main.style.marginTop.substring(0, main.style.marginTop.length - 2)
-
-  main.style.marginTop = `${diff + 30}px`;
-
-  document.querySelector(".empty").style.height = `${main.scrollHeight}px`;
-    
+  document.querySelector(".empty").style.height = `${main.scrollHeight }px`;
   archHidden.forEach(arch => {
-    arch.style.marginTop = `${diff + 100}px`;
+    arch.style.marginTop = `${diff}px`;
   })
 })
 

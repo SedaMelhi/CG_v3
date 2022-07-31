@@ -144,8 +144,13 @@ body {
   margin: 0 auto;
 }
 
-.main2__opacity > div {
-  width: 33%;
+.main2 .arch-opacity {
+  visibility: hidden;
+}
+
+.main2 .arch-opacity > div {
+  width: calc(33% - 28px);
+  margin: 0 auto;
 }
 
 .container {
@@ -1436,6 +1441,7 @@ body {
 .map {
   font-family: 'Inconsolata';
   width: 100%;
+  margin-top: 100px;
   position: relative;
   z-index: 7;
   display: -webkit-box;
@@ -1876,7 +1882,7 @@ body {
 
 .team {
   min-height: calc(100vh - 180px);
-  padding-top: 150px;
+  margin-top: 150px;
 }
 
 .team__wrap {
@@ -1905,7 +1911,19 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #000;
-  line-height: 28px;
+  line-height: 30px;
+  pointer-events: visiblePainted;
+  cursor: pointer;
+}
+
+.team__item .team__image {
+  background: url(../img/team/0.webp) center/cover no-repeat;
+}
+
+.team__item:hover {
+  -webkit-transform: rotateZ(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotateZ(360deg);
 }
 
 .team__image {

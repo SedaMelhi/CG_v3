@@ -199,11 +199,20 @@
                 <div class="bottom"></div>
                 
                 <div class="main2">
+                    <div class="arch-opacity">
+                                        @@include('blocks/_project.html')
+                                        @@include('blocks/_medusa.html')
+                                        @@include('blocks/_expect.html')
+                                        @@include('blocks/_mint.html')
+                                        @@include('blocks/_empty.html')
+                    </div>
                     <div class="bottom-line"></div>
-                    @@include('blocks/_map.html')
-                    @@include('blocks/_vision.html')
-                    @@include('blocks/_team.html')
-                    @@include('blocks/_faq.html')
+                    <div class="main__content">
+                        @@include('blocks/_map.html')
+                        @@include('blocks/_vision.html')
+                        @@include('blocks/_team.html')
+                        @@include('blocks/_faq.html')
+                    </div>
                 </div>
             </div>
         </div>
