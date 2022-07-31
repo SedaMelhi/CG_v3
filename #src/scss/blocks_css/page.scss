@@ -8,7 +8,21 @@
     z-index: 3;
     .title{
         font-size: calc(var(--index) * 1.9); //12rem
-        
+        &__wrap{
+            display: flex;
+            justify-content: center;
+            font-family: 'Norse';
+            align-items: center;
+            font-size: 1.7rem;
+            line-height: 3.14rem;
+            text-transform: uppercase;
+            text-align: center;
+            h1{
+                margin: 0 22px;
+            }
+            padding-top: 70px;
+            margin-bottom: 70px;
+        }
     }
     &__border{
         position: relative;

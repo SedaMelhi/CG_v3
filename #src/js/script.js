@@ -2,31 +2,48 @@ const archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main2"),
     content = document.querySelector(".border_second"),
     map = document.querySelector(".map"),
-    menu_items = document.querySelectorAll(".menu__item a"),
+    menu_items = [...document.querySelectorAll(".menu__item a"), document.querySelector(".home")],
     menu = document.querySelector(".menu"),
     archHidden = document.querySelectorAll(".arch__hidden"),
-    empty = document.querySelector(".middle-dark")
+    empty = document.querySelector(".middle-dark");
+console.log(menu_items)
+window.addEventListener("load", function(){
+  main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
 
-main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
-//medusa.getBoundingClientRect().top;
+  archHidden.forEach(arch => {
+    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight + 100}px`;
+  })
 
-
-archHidden.forEach(arch => {
-  arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
+  document.querySelector(".empty").style.height = `${main.scrollHeight}px`;
 })
+
+//medusa.getBoundingClientRect().top;
+//middle
+
+//
+
 
 
 window.addEventListener("resize", function() {
   archs[0].scrollTop = content.scrollTop;
   archs[1].scrollTop = content.scrollTop;
   archs[2].scrollTop = content.scrollTop;
-  
-  main.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30}px`;
+  let diff = (archs[1].scrollHeight - main.scrollHeight) - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight
+  let top = + main.style.marginTop.substring(0, main.style.marginTop.length - 2)
+  console.log(diff)
+  diff = (archs[1].scrollHeight - main.scrollHeight) - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight - 30
+  top = + main.style.marginTop.substring(0, main.style.marginTop.length - 2)
 
+  main.style.marginTop = `${diff + 30}px`;
+
+  document.querySelector(".empty").style.height = `${main.scrollHeight}px`;
+    
   archHidden.forEach(arch => {
-    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight -30}px`;
+    arch.style.marginTop = `${diff + 100}px`;
   })
 })
+
+let menuClick = false
 
 content.addEventListener("scroll", function() {
   archs[0].scrollTop = content.scrollTop;
@@ -34,7 +51,8 @@ content.addEventListener("scroll", function() {
   archs[2].scrollTop = content.scrollTop;
   ////////////для map//////////////
   const posTop = map.getBoundingClientRect().top;
-  if((posTop + (map.clientHeight - 140) <= window.innerHeight && posTop >= 0) || posTop <= 0) {
+  if((posTop + (map.clientHeight / 2) <= window.innerHeight && posTop >= 0) || (posTop <= 0 && posTop >= -(map.clientHeight / 2))) {
+    console.log(posTop)
     document.querySelector(".noise").style.zIndex = "0";
     
   }else{
@@ -62,36 +80,27 @@ content.addEventListener("scroll", function() {
   ]
   
   sections.forEach(section => {
-    let sectionsTop = section.getBoundingClientRect().top;
-    if(sectionsTop + (section.clientHeight/2) <= window.innerHeight && sectionsTop >= 0) {
-      menu_items.forEach(item => {  
-        if(item.hash.substring(1) == section.id){
-          item.parentNode.classList.add("menu__active")
-        }
-        if(item.hash.substring(1) != section.id){
-          item.parentNode.classList.remove("menu__active")
-        }
-      })
+    if(! menuClick){
+      scrollSection(section)
     }
   })
- 
-  // const medusa = document.getElementById("medusa").getBoundingClientRect().top;
-  // if((medusa + (document.getElementById("medusa").clientHeight - 140) <= window.innerHeight && medusa >= 0) || medusa <= 0) {
-    
-  //   menu_items.forEach(item => {  
-  //     if (item.parentNode.classList[1] == "menu__active"){
-  //       item.parentNode.classList.remove("menu__active")
-  //     }
-  //     if(item.hash.substring(1) == "medusa"){
-  //       item.parentNode.classList.add("menu__active")
-  //     }
-  //     console.log(item.hash.substring(1))
-  //   })
-  // }
+  
 
 });
 
-
+function scrollSection(section){
+  let sectionsTop = section.getBoundingClientRect().top;
+  if(sectionsTop + (section.clientHeight/2) <= window.innerHeight && sectionsTop >= 0) {
+    menu_items.forEach(item => {  
+      if(item.hash.substring(1) == section.id && item.hash.substring(1) != "home"){
+        item.parentNode.classList.add("menu__active")
+      }
+      if(item.hash.substring(1) != section.id){
+        item.parentNode.classList.remove("menu__active")
+      }
+    })
+  }
+}
 let artists = document.querySelector(".artists"),
     cards = document.querySelector(".cards"),
     expect = document.querySelector(".expect__text"),
@@ -156,26 +165,27 @@ close.addEventListener("click", function() {
 
 
 
+let href;
+if(window.location.href.search("#") > 0){
+  href = window.location.href.substring(window.location.href.search("#")+1)
+  const scrollTarget = document.getElementById(href);
+  const topOffset = menu.offsetHeight;
+  const elementPosition = scrollTarget.getBoundingClientRect().top;
+  const offsetPosition = elementPosition - topOffset;
+  menu_items.forEach(item => {
+        
+    if (item.parentNode.classList[1] == "menu__active"){
+      item.parentNode.classList.remove("menu__active")
+    }
+    if(item.hash.substring(1) == href){
+      item.parentNode.classList.add("menu__active")
+    }
+    
+  })
+  setTimeout(() => content.scrollTop = offsetPosition, 500)
+}
 
 
-menu_items.forEach(item => item.addEventListener("click", function (e) {
-  
-      e.preventDefault();
-
-      let href = this.getAttribute('href').substring(1);
-  
-      const scrollTarget = document.getElementById(href);
-      const topOffset = menu.offsetHeight;
-      const elementPosition = scrollTarget.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - topOffset;
-  
-      content.scrollBy({
-          top: offsetPosition,
-          behavior: 'smooth'
-      });
-      
-  
-}))
 
 let balls = document.querySelectorAll(".map__circle");
 
@@ -189,5 +199,35 @@ map.addEventListener("mousemove", function(e) {
 })
 
 
+
+
+menu_items.forEach(item => item.addEventListener("click", function (e) {
+      if(this.getAttribute('href')[0] == "#"){
+          e.preventDefault();
+          href = this.getAttribute('href').substring(1);
+      }else{
+        return 0;
+      }
+      menu_items.forEach(item => {
+       
+        if (item.parentNode.classList[1] == "menu__active"){
+          item.parentNode.classList.remove("menu__active")
+        }
+      })
+      if(item.hash.substring(1) != "home"){
+        this.parentNode.classList.add("menu__active")
+      }
+      
+      const scrollTarget = document.getElementById(href);
+      const topOffset = menu.offsetHeight;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+      menuClick = true
+      content.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+      setTimeout(() => menuClick = false, 600)
+}))
 
 

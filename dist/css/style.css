@@ -1433,11 +1433,6 @@ body {
   height: calc(100vh - 180px);
 }
 
-#roadmap .middle__title {
-  padding-top: 70px;
-  margin-bottom: 70px;
-}
-
 .map {
   font-family: 'Inconsolata';
   width: 100%;
@@ -1645,6 +1640,29 @@ body {
 
 .page .title {
   font-size: calc(var(--index) * 1.9);
+}
+
+.page .title__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Norse';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem;
+  line-height: 3.14rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 70px;
+  margin-bottom: 70px;
+}
+
+.page .title__wrap h1 {
+  margin: 0 22px;
 }
 
 .page__border {
@@ -1867,7 +1885,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 960px;
+  max-width: 960px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
