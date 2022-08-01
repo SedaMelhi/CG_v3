@@ -7,9 +7,7 @@ window.addEventListener("load", function(){
       menu = document.querySelector(".menu"),
       archHidden = document.querySelectorAll(".arch__hidden"),
       empty = document.querySelector(".middle-dark");
-  archHidden.forEach(arch => {
-    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
-  })
+  
 
   document.querySelector(".empty").style.height = `${main.scrollHeight}px`;
   
@@ -19,11 +17,7 @@ window.addEventListener("resize", function() {
   archs[0].scrollTop = content.scrollTop;
   archs[1].scrollTop = content.scrollTop;
   archs[2].scrollTop = content.scrollTop;
-  let diff = (archs[1].scrollHeight - main.scrollHeight) - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight
-  document.querySelector(".empty").style.height = `${main.scrollHeight }px`;
-  archHidden.forEach(arch => {
-    arch.style.marginTop = `${diff}px`;
-  })
+  
 })
 
 let menuClick = false

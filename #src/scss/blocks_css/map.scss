@@ -112,9 +112,8 @@
     &__circle{
         width: 70%;
         height: 70%;
-        background: rgba(5, 255, 0, 0.35);
+        background-image: radial-gradient(rgba(5, 255, 0, 1), rgba(5, 255, 0, 0));
         filter: blur(50px);
-        box-shadow: 0px 0px 40px 10px rgba(5, 255, 0,  0.35);
         border-radius: 50%;
         position: absolute;
         opacity: 0;

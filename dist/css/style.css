@@ -515,23 +515,6 @@ body {
   z-index: 1;
 }
 
-.arch__hidden {
-  -webkit-box-shadow: 0px -71px 124px 135px #000;
-          box-shadow: 0px -71px 124px 135px #000;
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
-  background-color: #000;
-  z-index: 20;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  opacity: 1;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
 .arch__middle {
   -webkit-transition: 2s;
   -o-transition: 2s;
@@ -1592,11 +1575,10 @@ body {
 .map__circle {
   width: 70%;
   height: 70%;
-  background: rgba(5, 255, 0, 0.35);
+  background-image: -o-radial-gradient(#05ff00, rgba(5, 255, 0, 0));
+  background-image: radial-gradient(#05ff00, rgba(5, 255, 0, 0));
   -webkit-filter: blur(50px);
           filter: blur(50px);
-  -webkit-box-shadow: 0px 0px 40px 10px rgba(5, 255, 0, 0.35);
-          box-shadow: 0px 0px 40px 10px rgba(5, 255, 0, 0.35);
   border-radius: 50%;
   position: absolute;
   opacity: 0;
