@@ -1917,7 +1917,7 @@ body {
 }
 
 .team__item .team__image {
-  background: url(../img/team/0.webp) center/cover no-repeat;
+  background: url(../img/team/img3.png) center/70% #000 no-repeat;
 }
 
 .team__item:hover {
