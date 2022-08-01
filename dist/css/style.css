@@ -1531,20 +1531,6 @@ body {
   z-index: 0;
 }
 
-.map__hover {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: url(../img/image.png) center/cover;
-  background-blend-mode: overlay, normal;
-  -webkit-backdrop-filter: blur(150px);
-          backdrop-filter: blur(150px);
-}
-
 .map__text {
   margin-bottom: 18px;
 }
