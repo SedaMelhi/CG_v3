@@ -123,7 +123,7 @@ body {
 .noise {
   height: 100vh;
   width: 100vw;
-  opacity: 0.06;
+  opacity: 0.05;
   position: fixed;
   pointer-events: none;
   top: 0;
@@ -1516,14 +1516,14 @@ body {
 
 .map__item:hover .map__circle {
   opacity: 1;
-  -webkit-transition: .2s ease-in-out;
-  -o-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
   z-index: 0;
 }
 
 .map__hover {
-  opacity: 0.07;
+  opacity: 0.1;
   position: absolute;
   top: 0;
   left: 0;
@@ -1582,14 +1582,13 @@ body {
 }
 
 .map__circle {
-  width: 70%;
-  height: 70%;
-  background-image: -o-radial-gradient(rgba(5, 255, 0, 0.4), rgba(5, 255, 0, 0));
-  background-image: radial-gradient(rgba(5, 255, 0, 0.4), rgba(5, 255, 0, 0));
+  width: 60%;
+  padding-bottom: 100%;
+  background: rgba(5, 255, 0, 0.35);
   -webkit-filter: blur(50px);
           filter: blur(50px);
-  -webkit-box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.6);
-          box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.35);
+          box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.35);
   position: absolute;
   opacity: 0;
   -webkit-transition: 0.7s ease-in-out;
@@ -1597,6 +1596,7 @@ body {
   transition: 0.7s ease-in-out;
   left: 10%;
   top: 10%;
+  border-radius: 50%;
 }
 
 @-webkit-keyframes green-text {
@@ -1682,6 +1682,7 @@ body {
   -o-transition: 0.8s ease-in-out;
   transition: 0.8s ease-in-out;
   width: 640px;
+  display: none;
 }
 
 .art-img img {
@@ -1720,6 +1721,7 @@ body {
 
 .art-img-visible {
   opacity: 0.8;
+  display: block;
   -webkit-filter: blur(0px);
           filter: blur(0px);
   -webkit-transform: translateY(0);

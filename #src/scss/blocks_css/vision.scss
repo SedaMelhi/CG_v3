@@ -5,6 +5,7 @@
     opacity: 0;
     transition: 0.8s ease-in-out;
     width: 640px; 
+    display: none;
     img{
         width: 100%;
     }
@@ -26,6 +27,7 @@
     }
     &-visible{
         opacity: 0.8;
+        display: block;
         filter: blur(0px);
         transform: translateY(0);
     }
