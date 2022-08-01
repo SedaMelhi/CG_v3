@@ -285,8 +285,6 @@ body {
 
 .menu__active {
   background: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 4px #FFFFFF;
-          box-shadow: 0px 0px 4px #FFFFFF;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -447,7 +445,6 @@ body {
   font-family: 'ROMANUS';
   pointer-events: visiblePainted;
   font-size: calc(var(--index) * 6);
-  text-shadow: 0px 0px 4px #fff;
   margin-bottom: 10px;
   padding-top: 50px;
 }
@@ -491,8 +488,6 @@ body {
   position: relative;
   border-radius: 1800px 1800px 15% 15%;
   border: 1px solid #FFFFFF;
-  -webkit-box-shadow: 0px 0px 3px #fff;
-          box-shadow: 0px 0px 3px #fff;
   pointer-events: none;
   z-index: 5;
 }
@@ -517,8 +512,6 @@ body {
 }
 
 .arch__hidden {
-  -webkit-box-shadow: 0px -71px 124px 135px #000;
-          box-shadow: 0px -71px 124px 135px #000;
   -webkit-transition: 0.8s;
   -o-transition: 0.8s;
   transition: 0.8s;
@@ -542,16 +535,12 @@ body {
           transition-delay: 0s;
   border-radius: 1800px 1800px 15% 15%;
   border: 1px solid #FFFFFF;
-  -webkit-box-shadow: 0px 0px 3px #fff;
-          box-shadow: 0px 0px 3px #fff;
   z-index: 3;
 }
 
 .arch__border {
   border-radius: 1800px 1800px 15% 15%;
   border: 1px solid #FFFFFF;
-  -webkit-box-shadow: 0px 0px 3px #fff;
-          box-shadow: 0px 0px 3px #fff;
   z-index: 3;
 }
 
@@ -695,8 +684,6 @@ body {
   position: sticky;
   top: calc(100% - 10px);
   height: 1px;
-  -webkit-box-shadow: 0 0 3px #fff;
-          box-shadow: 0 0 3px #fff;
   z-index: 100;
   width: calc(100% - 30px);
   border-radius: 15%;
@@ -857,8 +844,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   background: #020202;
-  -webkit-box-shadow: 0px 0px 10px #fff0;
-          box-shadow: 0px 0px 10px #fff0;
 }
 
 .cards .card:nth-child(1) {
@@ -968,11 +953,6 @@ body {
   -webkit-transition-delay: 0.35s;
        -o-transition-delay: 0.35s;
           transition-delay: 0.35s;
-}
-
-.cards__hidden .card {
-  -webkit-box-shadow: 0px 0px 5px #fff;
-          box-shadow: 0px 0px 5px #fff;
 }
 
 .cards__hidden:hover .card {
@@ -1428,11 +1408,6 @@ body {
   pointer-events: visiblePainted;
 }
 
-.mint svg {
-  -webkit-filter: drop-shadow(2px 2px 5px white);
-          filter: drop-shadow(2px 2px 5px white);
-}
-
 .middle-dark {
   width: 100%;
   height: calc(100vh - 180px);
@@ -1592,46 +1567,6 @@ body {
   transition: 0.7s linear;
   left: 10%;
   top: 10%;
-}
-
-@-webkit-keyframes green-text {
-  0% {
-    -webkit-filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-            filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-    color: #D8FFD8;
-  }
-
-  50% {
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.7));
-            filter: drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.7));
-    color: #fff;
-  }
-
-  100% {
-    -webkit-filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-            filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-    color: #D8FFD8;
-  }
-}
-
-@keyframes green-text {
-  0% {
-    -webkit-filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-            filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-    color: #D8FFD8;
-  }
-
-  50% {
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.7));
-            filter: drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 0px rgba(5, 255, 0, 0.7));
-    color: #fff;
-  }
-
-  100% {
-    -webkit-filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-            filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-    color: #D8FFD8;
-  }
 }
 
 .border_index {
