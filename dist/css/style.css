@@ -226,7 +226,6 @@ body {
   width: 100%;
   position: relative;
   overflow-y: scroll;
-  scroll-behavior: smooth;
   -ms-overflow-style: none;
   /* IE и Edge */
   scrollbar-width: none;
