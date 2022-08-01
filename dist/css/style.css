@@ -226,6 +226,7 @@ body {
   width: 100%;
   position: relative;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   /* IE и Edge */
   scrollbar-width: none;
@@ -488,6 +489,7 @@ body {
   scrollbar-width: none;
   /* Firefox */
   position: relative;
+  -webkit-overflow-scrolling: touch;
   border-radius: 1200px 1200px 10% 10%;
   border: 1px solid #FFFFFF;
   -webkit-box-shadow: 0px 0px 3px #fff;
@@ -513,6 +515,23 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.arch__hidden {
+  -webkit-box-shadow: 0px -71px 124px 135px #000;
+          box-shadow: 0px -71px 124px 135px #000;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  background-color: #000;
+  z-index: 20;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  opacity: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .arch__middle {
@@ -1573,20 +1592,19 @@ body {
 }
 
 .map__circle {
-  width: 70%;
-  height: 70%;
-  background-image: -o-radial-gradient(#05ff00, rgba(5, 255, 0, 0));
-  background-image: radial-gradient(#05ff00, rgba(5, 255, 0, 0));
+  width: 100%;
+  height: 100%;
+  background-image: -o-radial-gradient(rgba(5, 255, 0, 0.6), rgba(5, 255, 0, 0));
+  background-image: radial-gradient(rgba(5, 255, 0, 0.6), rgba(5, 255, 0, 0));
   -webkit-filter: blur(50px);
           filter: blur(50px);
-  border-radius: 50%;
   position: absolute;
   opacity: 0;
   -webkit-transition: 0.7s linear;
   -o-transition: 0.7s linear;
   transition: 0.7s linear;
-  left: 10%;
-  top: 10%;
+  left: 0%;
+  top: 0%;
 }
 
 @-webkit-keyframes green-text {
