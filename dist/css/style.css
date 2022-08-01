@@ -705,7 +705,7 @@ body {
   -o-transition: 0.3s;
   transition: 0.3s;
   margin: 0 auto;
-  background-color: rgba(192, 192, 192, 0.7);
+  background-color: rgba(192, 192, 192, 0.5);
 }
 
 .footer {
@@ -1516,10 +1516,24 @@ body {
 
 .map__item:hover .map__circle {
   opacity: 1;
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .7s ease-in-out;
+  -o-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
   z-index: 0;
+}
+
+.map__hover {
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url(../img/image.png) center/cover;
+  background-blend-mode: overlay, normal;
+  -webkit-backdrop-filter: blur(150px);
+          backdrop-filter: blur(150px);
 }
 
 .map__text {
