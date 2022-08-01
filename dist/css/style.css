@@ -1586,9 +1586,9 @@ body {
   padding: 22px 20px 0;
   height: 100%;
   width: 100%;
-  -webkit-transition: 0.7s linear;
-  -o-transition: 0.7s linear;
-  transition: 0.7s linear;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
 }
 
 .map__circle {
