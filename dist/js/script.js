@@ -1,26 +1,18 @@
-const archs = document.querySelectorAll(".arch"),
-    main = document.querySelector(".main__content"),
-    content = document.querySelector(".border_second"),
-    map = document.querySelector(".map"),
-    menu_items = [...document.querySelectorAll(".menu__item a"), document.querySelector(".home")],
-    menu = document.querySelector(".menu"),
-    archHidden = document.querySelectorAll(".arch__hidden"),
-    empty = document.querySelector(".middle-dark");
-console.log(menu_items)
 window.addEventListener("load", function(){
-  
+  const archs = document.querySelectorAll(".arch"),
+      main = document.querySelector(".main__content"),
+      content = document.querySelector(".border_second"),
+      map = document.querySelector(".map"),
+      menu_items = [...document.querySelectorAll(".menu__item a"), document.querySelector(".home")],
+      menu = document.querySelector(".menu"),
+      archHidden = document.querySelectorAll(".arch__hidden"),
+      empty = document.querySelector(".middle-dark");
   archHidden.forEach(arch => {
     arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
   })
 
   document.querySelector(".empty").style.height = `${main.scrollHeight}px`;
-})
-
-//medusa.getBoundingClientRect().top;
-//middle
-
-//
-
+  
 
 
 window.addEventListener("resize", function() {
@@ -220,5 +212,13 @@ menu_items.forEach(item => item.addEventListener("click", function (e) {
       });
       setTimeout(() => menuClick = false, 600)
 }))
+
+
+
+})
+
+
+
+
 
 
