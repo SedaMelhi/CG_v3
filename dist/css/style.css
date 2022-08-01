@@ -1509,9 +1509,9 @@ body {
 }
 
 .map__item:hover .map__block {
-  -webkit-transition: 0.3s linear;
-  -o-transition: 0.3s linear;
-  transition: 0.3s linear;
+  -webkit-transition: 0.7s linear;
+  -o-transition: 0.7s linear;
+  transition: 0.7s linear;
 }
 
 .map__item:hover .map__hover {
@@ -1568,8 +1568,8 @@ body {
   color: #D8FFD8;
   -webkit-animation: green-text infinite 5s linear;
           animation: green-text infinite 5s linear;
-  -webkit-filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-          filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
+  -webkit-filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
+          filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
 }
 
 .map__green .map__title {
@@ -1586,9 +1586,9 @@ body {
   padding: 22px 20px 0;
   height: 100%;
   width: 100%;
-  -webkit-transition: 0.3s linear;
-  -o-transition: 0.3s linear;
-  transition: 0.3s linear;
+  -webkit-transition: 0.7s linear;
+  -o-transition: 0.7s linear;
+  transition: 0.7s linear;
 }
 
 .map__circle {
@@ -1600,9 +1600,9 @@ body {
           filter: blur(50px);
   position: absolute;
   opacity: 0;
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
   left: 0%;
   top: 0%;
 }
