@@ -52,16 +52,27 @@
             background-color: rgba(12, 12, 12, 1);
         }
         &:hover .map__block{
-            transition: 0.4s linear;
+            transition: 0.7s linear;
         }
        
         &:hover .map__circle{
             opacity: 1;
-            transition: 0.2s linear;
+            transition: .2s ease-in-out;
             z-index: 0;
         }
     }
-
+    &__hover{
+        opacity: 0.07;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: url(../img/image.png) center/cover;
+        background-blend-mode: overlay, normal;
+        backdrop-filter: blur(150px);
+    }
     &__text{
         margin-bottom: 18px;
     }
@@ -92,18 +103,17 @@
         padding: 22px 20px 0;
         height: 100%;
         width: 100%;
-        transition: 0.4s ease-in-out;
+        transition: 0.7s ease-in-out;
     }
     &__circle{
-        width: 80%;
-        padding-bottom: 80%;
-        background: rgba(5, 255, 0, 0.35);
+        width: 70%;
+        height: 70%;
+        background-image: radial-gradient(rgba(5, 255, 0, 0.4), rgba(5, 255, 0, 0));
         filter: blur(50px);
-        box-shadow: 0px 0px 60px 30px rgba(5, 255, 0, 0.35);
-        border-radius: 50%;
+        box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.6);
         position: absolute;
         opacity: 0;
-        transition: 0.7s linear;
+        transition: 0.7s ease-in-out;
         left: 10%;
         top: 10%;
     }
