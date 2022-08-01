@@ -63,9 +63,10 @@
             opacity: 1;
             transition: .2s linear;
             z-index: 0;
+            
         }
     }
-    
+   
     &__text{
         margin-bottom: 18px;
     }
@@ -100,7 +101,7 @@
     }
     &__circle{
         width: 80%;
-        padding-bottom: 80%;
+        height: 80%;
         background: rgba(5, 255, 0, 0.35);
         filter: blur(50px);
         border-radius: 50%;

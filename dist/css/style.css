@@ -1578,7 +1578,7 @@ body {
 
 .map__circle {
   width: 80%;
-  padding-bottom: 80%;
+  height: 80%;
   background: rgba(5, 255, 0, 0.35);
   -webkit-filter: blur(50px);
           filter: blur(50px);
