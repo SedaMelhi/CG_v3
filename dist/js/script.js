@@ -35,7 +35,6 @@ content.addEventListener("scroll", function() {
   ////////////для map//////////////
   const posTop = map.getBoundingClientRect().top;
   if((posTop + (map.clientHeight / 2) <= window.innerHeight && posTop >= 0) || (posTop <= 0 && posTop >= -(map.clientHeight / 2))) {
-    console.log(posTop)
     document.querySelector(".noise").style.zIndex = "0";
     
   }else{
@@ -167,7 +166,6 @@ if(window.location.href.search("#") > 0){
   })
   setTimeout(() => content.scrollTop = offsetPosition, 500)
 }
-
 
 
 

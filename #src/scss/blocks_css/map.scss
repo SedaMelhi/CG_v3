@@ -52,16 +52,16 @@
             background-color: rgba(12, 12, 12, 1);
         }
         &:hover .map__block{
-            transition: 0.2s linear;
+            transition: 0.3s linear;
         }
         &:hover .map__hover{
             opacity: 0.12;
-            transition: 0.1s ease-out;
+            transition: 0.2s ease-in-out;
             transition-delay: 0.2s;
         }
         &:hover .map__circle{
             opacity: 1;
-            transition: .2s linear;
+            transition: .5s ease-in-out;
             z-index: 0;
         }
     }
@@ -95,7 +95,7 @@
     &__green{
         color: #D8FFD8;
         animation: green-text infinite 5s linear;
-        filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
+        filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
         .map__title{
             animation: green-text infinite 5s linear;
         }
@@ -110,14 +110,14 @@
         transition: 0.3s linear;
     }
     &__circle{
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 70%;
         background-image: radial-gradient(rgba(5, 255, 0, 0.6), rgba(5, 255, 0, 0));
         filter: blur(50px);
-       
+        
         position: absolute;
         opacity: 0;
-        transition: 0.7s linear;
+        transition: 0.3s ease-in-out;
         left: 0%;
         top: 0%;
     }
