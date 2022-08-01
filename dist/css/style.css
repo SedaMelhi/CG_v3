@@ -1682,7 +1682,7 @@ body {
   -o-transition: 0.8s ease-in-out;
   transition: 0.8s ease-in-out;
   width: 640px;
-  display: none;
+  visibility: hidden;
 }
 
 .art-img img {
@@ -1721,7 +1721,7 @@ body {
 
 .art-img-visible {
   opacity: 0.8;
-  display: block;
+  visibility: visible;
   -webkit-filter: blur(0px);
           filter: blur(0px);
   -webkit-transform: translateY(0);
