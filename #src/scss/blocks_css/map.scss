@@ -54,29 +54,14 @@
         &:hover .map__block{
             transition: 0.7s linear;
         }
-        &:hover .map__hover{
-            opacity: 0.12;
-            transition: 0.2s ease-in-out;
-            transition-delay: 0.2s;
-        }
+       
         &:hover .map__circle{
             opacity: 1;
             transition: .5s ease-in-out;
             z-index: 0;
         }
     }
-    &__hover{
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background: url(../img/image.png) center/cover;
-        background-blend-mode: overlay, normal;
-        backdrop-filter: blur(150px);
-    }
+   
     &__text{
         margin-bottom: 18px;
     }
@@ -110,8 +95,8 @@
         transition: 0.7s ease-in-out;
     }
     &__circle{
-        width: 70%;
-        height: 70%;
+        width: 100%;
+        height: 100%;
         background-image: radial-gradient(rgba(5, 255, 0, 0.6), rgba(5, 255, 0, 0));
         filter: blur(50px);
         
