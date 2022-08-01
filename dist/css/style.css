@@ -1567,6 +1567,18 @@ body {
   color: #D8FFD8;
   -webkit-animation: green-text infinite 5s linear;
           animation: green-text infinite 5s linear;
+  -webkit-filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
+          filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
+}
+
+.map__green .map__title {
+  -webkit-animation: green-text infinite 5s linear;
+          animation: green-text infinite 5s linear;
+}
+
+.map__green .map__description {
+  -webkit-animation: green-text infinite 5s linear;
+          animation: green-text infinite 5s linear;
 }
 
 .map__block {
@@ -1592,6 +1604,34 @@ body {
   transition: 0.7s linear;
   left: 10%;
   top: 10%;
+}
+
+@-webkit-keyframes green-text {
+  0% {
+    color: #fff;
+  }
+
+  50% {
+    color: #8dff8d;
+  }
+
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes green-text {
+  0% {
+    color: #fff;
+  }
+
+  50% {
+    color: #8dff8d;
+  }
+
+  100% {
+    color: #fff;
+  }
 }
 
 .border_index {

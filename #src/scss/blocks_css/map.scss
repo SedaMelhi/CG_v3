@@ -95,7 +95,13 @@
     &__green{
         color: #D8FFD8;
         animation: green-text infinite 5s linear;
-        
+        filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.3)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.5)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
+        .map__title{
+            animation: green-text infinite 5s linear;
+        }
+        .map__description{
+            animation: green-text infinite 5s linear;
+        }
     }
     &__block{
         padding: 22px 20px 0;
@@ -117,3 +123,14 @@
     }
 }
 
+@keyframes green-text{
+    0%{
+        color: #fff;
+    }
+    50%{
+        color: #8dff8d;
+    }
+    100%{
+        color: #fff;
+    }
+}
