@@ -99,6 +99,11 @@ option {
   padding: 0;
 }
 
+body,
+html {
+  position: fixed;
+}
+
 ul {
   list-style: none;
 }
@@ -173,7 +178,8 @@ body {
 }
 
 .nav-wrap {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   background-color: #000;
   width: 100%;
   padding: 15px 56px 0;
@@ -1523,8 +1529,9 @@ body {
 }
 
 .map__hover {
-  opacity: 0.1;
+  opacity: 0.08;
   position: absolute;
+  border-radius: 12px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -1576,24 +1583,24 @@ body {
   padding: 22px 20px 0;
   height: 100%;
   width: 100%;
-  -webkit-transition: 0.7s ease-in-out;
-  -o-transition: 0.7s ease-in-out;
-  transition: 0.7s ease-in-out;
+  -webkit-transition: 0.7s linear;
+  -o-transition: 0.7s linear;
+  transition: 0.7s linear;
 }
 
 .map__circle {
-  width: 60%;
-  padding-bottom: 100%;
-  background: rgba(5, 255, 0, 0.35);
+  width: 70%;
+  padding-bottom: 70%;
+  background: rgba(5, 255, 0, 0.3);
   -webkit-filter: blur(50px);
           filter: blur(50px);
-  -webkit-box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.35);
-          box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.35);
+  -webkit-box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.3);
+          box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.3);
   position: absolute;
   opacity: 0;
-  -webkit-transition: 0.7s ease-in-out;
-  -o-transition: 0.7s ease-in-out;
-  transition: 0.7s ease-in-out;
+  -webkit-transition: 0.7s linear;
+  -o-transition: 0.7s linear;
+  transition: 0.7s linear;
   left: 10%;
   top: 10%;
   border-radius: 50%;
@@ -1896,9 +1903,8 @@ body {
 .team__item {
   width: 120px;
   height: 152px;
-  background-color: #fff;
+  position: relative;
   margin: 0 32px;
-  border-radius: 12px;
   margin-bottom: 36px;
   font-family: 'Inconsolata';
   font-weight: 600;
@@ -1911,14 +1917,14 @@ body {
   cursor: pointer;
 }
 
-.team__item .team__image {
-  background: url(../img/team/img3.png) center/70% #000 no-repeat;
+.team__item:hover .back {
+  -webkit-transform: rotateY(0deg) perspective(300px);
+          transform: rotateY(0deg) perspective(300px);
 }
 
-.team__item:hover {
-  -webkit-transform: rotateZ(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotateZ(360deg);
+.team__item:hover .front {
+  -webkit-transform: rotateY(-180deg) perspective(300px);
+          transform: rotateY(-180deg) perspective(300px);
 }
 
 .team__image {
@@ -1928,6 +1934,117 @@ body {
   height: calc(100% - 32px);
   margin-top: 1px;
   border-radius: 12px;
+}
+
+.team__image {
+  background: url(../img/team/img3.png) center/70% #000 no-repeat;
+}
+
+.team .front {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateY(0deg) perspective(300px);
+          transform: rotateY(0deg) perspective(300px);
+  -webkit-transition: 0.7s ease-out;
+  -o-transition: 0.7s ease-out;
+  transition: 0.7s ease-out;
+  border-radius: 12px;
+}
+
+.team .back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg) perspective(300px);
+          transform: rotateY(180deg) perspective(300px);
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  -webkit-transition: 0.7s ease-out;
+  -o-transition: 0.7s ease-out;
+  transition: 0.7s ease-out;
+}
+
+.team .back a {
+  color: #02005c;
+}
+
+.team .back__border {
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 12px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.question {
+  font-family: 'Inconsolata';
+  font-weight: 700;
+  font-size: 1.14rem;
+  line-height: 17px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  margin: 12px 9px;
+  background-color: #000;
+}
+
+.question .answer {
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 8px;
+}
+
+.question__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 8px;
+}
+
+.question__top svg {
+  margin-left: 8px;
+}
+
+.faq {
+  padding: 30px 0 80px;
+}
+
+.faq__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 1750px) {

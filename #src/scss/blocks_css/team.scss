@@ -11,9 +11,8 @@
     &__item{
         width: 120px;
         height: 152px;
-        background-color: #fff;
+        position: relative;
         margin: 0 32px;
-        border-radius: 12px;
         margin-bottom: 36px;
         font-family: 'Inconsolata';
         font-weight: 600;
@@ -24,11 +23,11 @@
         line-height: 30px;
         pointer-events: visiblePainted;
         cursor: pointer;
-        .team__image{
-            background: url(../img/team/img3.png) center/70% #000 no-repeat;
+        &:hover .back{
+            transform: rotateY(0deg) perspective(300px);
         }
-        &:hover{
-            transform: rotateZ(360deg);
+        &:hover .front{
+            transform: rotateY(-180deg) perspective(300px);
         }
     }
     &__image{
@@ -38,5 +37,46 @@
         height: calc(100% - 32px);
         margin-top: 1px;
         border-radius: 12px;
+    }
+    &__image{
+        background: url(../img/team/img3.png) center/70% #000 no-repeat;
+    }
+    & .front{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        transform: rotateY(0deg) perspective(300px);
+        transition: 0.7s ease-out;
+        border-radius: 12px;
+    }
+    & .back{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: rotateY(180deg) perspective(300px);
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 1px;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        transition: 0.7s ease-out;
+        a{
+            color: rgb(2, 0, 92);
+        }
+        &__border{
+            width: 100%;
+            border: 2px solid #000;
+            border-radius: 12px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

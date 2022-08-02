@@ -27,7 +27,6 @@
         border-radius: 12px;
         margin-bottom: 20px;
         position: relative;
-        
         overflow: hidden;
         cursor: pointer;
         &:nth-child(1){
@@ -62,8 +61,9 @@
         }
     }
     &__hover{
-        opacity: 0.1;
+        opacity: 0.08;
         position: absolute;
+        border-radius: 12px;
         top: 0;
         left: 0;
         z-index: 1;
@@ -103,17 +103,17 @@
         padding: 22px 20px 0;
         height: 100%;
         width: 100%;
-        transition: 0.7s ease-in-out;
+        transition: 0.7s linear;
     }
     &__circle{
-        width: 60%;
-        padding-bottom: 100%;
-        background: rgba(5, 255, 0, 0.35);
+        width: 70%;
+        padding-bottom: 70%;
+        background: rgba(5, 255, 0, 0.3);
         filter: blur(50px);
-        box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.35);
+        box-shadow: 0px 0px 80px 40px rgba(5, 255, 0, 0.3);
         position: absolute;
         opacity: 0;
-        transition: 0.7s ease-in-out;
+        transition: 0.7s linear;
         left: 10%;
         top: 10%;
         border-radius: 50%;

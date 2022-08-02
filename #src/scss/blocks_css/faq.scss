@@ -1,0 +1,35 @@
+.question{
+    font-family: 'Inconsolata';
+    font-weight: 700;
+    font-size: 1.14rem;
+    line-height: 17px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    margin: 12px 9px;
+    background-color: #000;
+    .answer{
+        font-weight: 400;
+        text-transform: capitalize;
+        padding-top: 8px;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 8px;
+        svg{
+            margin-left: 8px;
+        }
+    }
+}
+
+.faq{
+    padding: 30px 0 80px;
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

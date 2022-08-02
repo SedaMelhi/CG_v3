@@ -33,14 +33,14 @@ content.addEventListener("scroll", function() {
   archs[1].scrollTop = content.scrollTop;
   archs[2].scrollTop = content.scrollTop;
   ////////////для map//////////////
-  // const posTop = map.getBoundingClientRect().top;
-  // if((posTop + (map.clientHeight / 2) <= window.innerHeight && posTop >= 0) || (posTop <= 0 && posTop >= -(map.clientHeight / 2))) {
-  //   document.querySelector(".noise").style.zIndex = "0";
+  const posTop = map.getBoundingClientRect().top;
+  if((posTop + (map.clientHeight / 2) <= window.innerHeight && posTop >= 0) || (posTop <= 0 && posTop >= -(map.clientHeight / 2))) {
+    document.querySelector(".noise").style.zIndex = "0";
     
-  // }else{
-  //   document.querySelector(".noise").style.zIndex = "5";
-  //   document.querySelector(".arch__hidden").classList.remove("arch__visible")
-  // }
+  }else{
+    document.querySelector(".noise").style.zIndex = "5";
+    document.querySelector(".arch__hidden").classList.remove("arch__visible")
+  }
   ////////////для art//////////////
   const art = document.querySelector(".art")
   const artTop = art.getBoundingClientRect().top;
@@ -58,6 +58,7 @@ content.addEventListener("scroll", function() {
     document.getElementById("expect"),
     document.getElementById("roadmap"),
     document.getElementById("team"),
+    document.getElementById("faq"),
     document.querySelector(".dark-wrap")
   ]
   
