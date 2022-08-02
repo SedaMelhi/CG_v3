@@ -170,16 +170,16 @@ if(window.location.href.search("#") > 0){
 
 
 
-let balls = document.querySelectorAll(".map__circle");
+// let balls = document.querySelectorAll(".map__circle");
 
-map.addEventListener("mousemove", function(e) {
-   balls.forEach(ball => {
-      let x = ball.getBoundingClientRect().x
-      let y = ball.getBoundingClientRect().y
-      ball.style.left = e.pageX  - ball.offsetWidth / 2 -  x + 'px';
-      ball.style.top = e.pageY - ball.offsetHeight /2 - y + 'px';
-   })
-})
+// map.addEventListener("mousemove", function(e) {
+//    balls.forEach(ball => {
+//       let x = ball.getBoundingClientRect().x
+//       let y = ball.getBoundingClientRect().y
+//       ball.style.left = e.pageX  - ball.offsetWidth / 2 -  x + 'px';
+//       ball.style.top = e.pageY - ball.offsetHeight /2 - y + 'px';
+//    })
+// })
 
 
 
@@ -212,6 +212,8 @@ menu_items.forEach(item => item.addEventListener("click", function (e) {
       });
       setTimeout(() => menuClick = false, 600)
 }))
+
+///////////////////////////faq///////////////////
 
 
 
