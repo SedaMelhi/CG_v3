@@ -495,8 +495,7 @@ body {
   /* Firefox */
   position: relative;
   border-radius: 1700px 1700px 60px 60px;
-  -webkit-box-shadow: 0px 0px 3px #fff;
-          box-shadow: 0px 0px 3px #fff;
+  border: 1px solid #fff;
   pointer-events: none;
   z-index: 5;
 }
@@ -507,19 +506,18 @@ body {
 
 .arch img {
   border-radius: 1700px 1700px 60px 60px;
-  border: 1px solid #FFFFFF;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
+  border: 1px solid #fff;
+  width: calc(33.3% - 72px);
+  height: calc(100% - 177px);
+  opacity: .8;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
   -webkit-filter: drop-shadow(0 0 3px #fff);
-          filter: drop-shadow(0 0 3px #fff);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  filter: drop-shadow(0 0 3px #fff);
+  position: fixed;
+  top: 135px;
   z-index: 1;
 }
 
@@ -532,7 +530,7 @@ body {
   background-color: #000;
   z-index: 20;
   width: calc(100% - 2px);
-  height: calc(100% - 2px);
+  height: calc(100% - 12px);
   opacity: 1;
   position: -webkit-sticky;
   position: sticky;

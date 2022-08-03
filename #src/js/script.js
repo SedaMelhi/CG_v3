@@ -8,7 +8,7 @@ window.addEventListener("load", function(){
       archHidden = document.querySelectorAll(".arch__hidden"),
       empty = document.querySelector(".middle-dark");
   archHidden.forEach(arch => {
-    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
+    arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight + this.document.querySelector(".arch__left img").scrollHeight}px`;
   })
 
   document.querySelector(".empty").style.height = `${content.scrollHeight - archs[1].scrollHeight}px`;
