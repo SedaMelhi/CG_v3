@@ -16,22 +16,20 @@ window.addEventListener("load", function(){
 
 
 window.addEventListener("resize", function() {
-  archs[0].scrollTop = content.scrollTop;
+ 
   archs[1].scrollTop = content.scrollTop;
-  archs[2].scrollTop = content.scrollTop;
+  
   let diff = (archs[1].scrollHeight - main.scrollHeight) - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight
   document.querySelector(".empty").style.height = `${content.scrollHeight - archs[1].scrollHeight}px`;
-  archHidden.forEach(arch => {
-    arch.style.marginTop = `${diff}px`;
-  })
+ 
 })
 
 let menuClick = false
 
 content.addEventListener("scroll", function() {
-  archs[0].scrollTop = content.scrollTop;
+  
   archs[1].scrollTop = content.scrollTop;
-  archs[2].scrollTop = content.scrollTop;
+  
   ////////////для map//////////////
   // const posTop = map.getBoundingClientRect().top;
   // if((posTop + (map.clientHeight / 2) <= window.innerHeight && posTop >= 0) || (posTop <= 0 && posTop >= -(map.clientHeight / 2))) {
