@@ -60,19 +60,7 @@
             z-index: 0;
         }
     }
-    &__hover{
-        opacity: 0.08;
-        position: absolute;
-        border-radius: 12px;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background: url(../img/image.png) center/cover;
-        background-blend-mode: overlay, normal;
-        backdrop-filter: blur(150px);
-    }
+   
     &__text{
         margin-bottom: 18px;
     }

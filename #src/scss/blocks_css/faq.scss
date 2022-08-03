@@ -16,21 +16,16 @@
         overflow: hidden;
         transition: 0.3s linear;
         padding-top: 8px;
-        display: none;
-        &__open{
-            display: block;
-        }
+        
     }
     &__top{
         display: flex;
-        align-items: center;
+        align-items: center; border-bottom: 1px solid #fff;
+        padding-bottom: 8px;
         svg{
             margin-left: 8px;
         }
-        &__open{
-            border-bottom: 1px solid #fff;
-            padding-bottom: 8px;
-        }
+       
     }
 }
 

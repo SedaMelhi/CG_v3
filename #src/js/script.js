@@ -11,7 +11,7 @@ window.addEventListener("load", function(){
     arch.style.marginTop = `${archs[1].scrollHeight - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight}px`;
   })
 
-  document.querySelector(".empty").style.height = `${main.scrollHeight}px`;
+  document.querySelector(".empty").style.height = `${content.scrollHeight - archs[1].scrollHeight}px`;
   
 
 
@@ -20,7 +20,7 @@ window.addEventListener("resize", function() {
   archs[1].scrollTop = content.scrollTop;
   archs[2].scrollTop = content.scrollTop;
   let diff = (archs[1].scrollHeight - main.scrollHeight) - empty.scrollHeight - document.querySelector(".dark-wrap").scrollHeight
-  document.querySelector(".empty").style.height = `${main.scrollHeight }px`;
+  document.querySelector(".empty").style.height = `${content.scrollHeight - archs[1].scrollHeight}px`;
   archHidden.forEach(arch => {
     arch.style.marginTop = `${diff}px`;
   })
