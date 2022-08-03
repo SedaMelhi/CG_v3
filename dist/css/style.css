@@ -123,7 +123,6 @@ body {
   font-size: 1rem;
   color: #fff;
   background-color: #000;
-  overscroll-behavior-y: none;
 }
 
 .noise {
@@ -233,7 +232,6 @@ body {
   width: 100%;
   position: relative;
   overflow-y: scroll;
-  overscroll-behavior-y: none;
   -ms-overflow-style: none;
   /* IE и Edge */
   scrollbar-width: none;
@@ -496,9 +494,7 @@ body {
   scrollbar-width: none;
   /* Firefox */
   position: relative;
-  overscroll-behavior-y: none;
-  border-radius: 1200px 1200px 10% 10%;
-  border: 1px solid #FFFFFF;
+  border-radius: 1700px 1700px 60px 60px;
   -webkit-box-shadow: 0px 0px 3px #fff;
           box-shadow: 0px 0px 3px #fff;
   pointer-events: none;
@@ -510,7 +506,8 @@ body {
 }
 
 .arch img {
-  border-radius: 1200px 1200px 10% 10%;
+  border-radius: 1700px 1700px 60px 60px;
+  border: 1px solid #FFFFFF;
   width: 100%;
   height: 100%;
   opacity: 0.8;
@@ -518,6 +515,8 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  -webkit-filter: drop-shadow(0 0 3px #fff);
+          filter: drop-shadow(0 0 3px #fff);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -548,7 +547,7 @@ body {
   -webkit-transition-delay: 0s;
        -o-transition-delay: 0s;
           transition-delay: 0s;
-  border-radius: 1200px 1200px 10% 10%;
+  border-radius: 1700px 1700px 60px 60px;
   border: 1px solid #FFFFFF;
   -webkit-box-shadow: 0px 0px 3px #fff;
           box-shadow: 0px 0px 3px #fff;
@@ -556,7 +555,7 @@ body {
 }
 
 .arch__border {
-  border-radius: 1200px 1200px 10% 10%;
+  border-radius: 1700px 1700px 60px 60px;
   border: 1px solid #FFFFFF;
   -webkit-box-shadow: 0px 0px 3px #fff;
           box-shadow: 0px 0px 3px #fff;
