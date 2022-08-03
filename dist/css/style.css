@@ -232,7 +232,7 @@ body {
   width: 100%;
   position: relative;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
   -ms-overflow-style: none;
   /* IE и Edge */
   scrollbar-width: none;
@@ -495,7 +495,7 @@ body {
   scrollbar-width: none;
   /* Firefox */
   position: relative;
-  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
   border-radius: 1200px 1200px 10% 10%;
   border: 1px solid #FFFFFF;
   -webkit-box-shadow: 0px 0px 3px #fff;

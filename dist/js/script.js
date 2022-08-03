@@ -70,40 +70,7 @@ content.addEventListener("scroll", function() {
   
 
 });
-content.addEventListener("wheel", function() {
-  archs[0].scrollTop = content.scrollTop;
-  archs[1].scrollTop = content.scrollTop;
-  archs[2].scrollTop = content.scrollTop;
-  
-  ////////////для art//////////////
-  const art = document.querySelector(".art")
-  const artTop = art.getBoundingClientRect().top;
-  if(artTop + (art.clientHeight - 140) <= window.innerHeight && artTop >= 0) {
-    document.querySelectorAll(".art-img")[0].classList.add("art-img-visible")
-    document.querySelectorAll(".art-img")[1].classList.add("art-img-visible")
-  }else{
-    document.querySelectorAll(".art-img")[0].classList.remove("art-img-visible")
-    document.querySelectorAll(".art-img")[1].classList.remove("art-img-visible")
-  }
-  //////////////menu////////////
-  const sections = [
-    document.getElementById("project"), 
-    document.getElementById("medusa"), 
-    document.getElementById("expect"),
-    document.getElementById("roadmap"),
-    document.getElementById("team"),
-    document.getElementById("faq"),
-    document.querySelector(".dark-wrap")
-  ]
-  
-  sections.forEach(section => {
-    if(! menuClick){
-      scrollSection(section)
-    }
-  })
-  
 
-});
 function scrollSection(section){
   let sectionsTop = section.getBoundingClientRect().top;
   if(sectionsTop + (section.clientHeight/2) <= window.innerHeight && sectionsTop >= 0) {
