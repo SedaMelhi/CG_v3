@@ -31,11 +31,13 @@
     }
 }
 .container{
-    height: 100%;
-    position: sticky;
-    width: 100%;
-    top: 0px;
+    height: calc(100% - 158px);;
+    position: -webkit-sticky;
+    position: fixed;
+    width: calc(100% - 128px);
+    top: var(--top);
     z-index: 1;
+    pointer-events: none;
 }
 .nav{
     &-wrap{
