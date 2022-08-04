@@ -214,32 +214,38 @@ if(window.location.href.search("#") > 0){
 // }))
 const scrolling = (upSelector = "") => {
 let links = document.querySelectorAll('[href^="#"]');
-let speed = 0.25;
+let speed = 0.2;
 
 links.forEach(link => {
     link.addEventListener('click', function(event){
         event.preventDefault();
-
+        
         let witdhTop = content.scrollTop;
         let hash = this.hash;
         let toBlock = document.querySelector(hash).getBoundingClientRect().top;
         let start = null;
         console.log( document.querySelector(hash).style.paddingTop)
         requestAnimationFrame(step);
-
+        speed = 0.2
         function step(time) {
+            
             if (start === null) {
                 start = time;
             } 
-
+            
             let progress = time - start;
             let r = (toBlock < 0 ? Math.max(witdhTop - progress / speed, witdhTop + toBlock) : Math.min(witdhTop + progress / speed, witdhTop + toBlock));
-
+            
+            if(r < toBlock && r > toBlock - 900){
+              console.log('pk')
+              speed += 0.005
+            }
             content.scrollTo(0, r - 100);
-           
             if (r != witdhTop + toBlock) {
-                requestAnimationFrame(step);
+              speed -= 0.005
+              requestAnimationFrame(step);
             } 
+           
             links.forEach(item => {
               if(item.parentNode.classList[1] == "menu__active"){
                 item.parentNode.classList.remove("menu__active")

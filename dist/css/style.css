@@ -152,6 +152,7 @@ body {
 
 .main2 .arch-opacity {
   visibility: hidden;
+  opacity: 0;
 }
 
 .main2 .arch-opacity > div {
@@ -161,7 +162,6 @@ body {
 
 .container {
   height: calc(100% - 158px);
-  position: -webkit-sticky;
   position: fixed;
   width: calc(100% - 128px);
   top: var(--top);

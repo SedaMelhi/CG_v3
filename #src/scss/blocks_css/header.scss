@@ -23,7 +23,7 @@
     margin: 0 auto;
     .arch-opacity{
         visibility: hidden;
-       
+        opacity: 0;
         > div{
             width: calc(33% - 28px);
             margin: 0 auto;
@@ -31,8 +31,7 @@
     }
 }
 .container{
-    height: calc(100% - 158px);;
-    position: -webkit-sticky;
+    height: calc(100% - 158px);
     position: fixed;
     width: calc(100% - 128px);
     top: var(--top);
