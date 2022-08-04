@@ -15,7 +15,7 @@ window.addEventListener("load", function(){
   
 
 
-window.addEventListener("resize", function() {
+this.window.addEventListener("resize", function() {
   archs[0].scrollTop = content.scrollTop;
   archs[1].scrollTop = content.scrollTop;
   archs[2].scrollTop = content.scrollTop;
@@ -24,6 +24,7 @@ window.addEventListener("resize", function() {
   archHidden.forEach(arch => {
     arch.style.marginTop = `${diff}px`;
   })
+  console.log(diff)
 })
 
 let menuClick = false
