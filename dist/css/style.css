@@ -354,10 +354,6 @@ body {
   display: flex;
 }
 
-.main__content {
-  padding-top: 400vh;
-}
-
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1413,20 +1409,6 @@ body {
 .mint {
   min-height: calc(100vh - 180px);
   padding: 0 28px 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 40px;
   font-family: 'Inconsolata';
   text-align: left;
 }
