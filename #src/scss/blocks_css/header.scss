@@ -180,14 +180,15 @@
     position: relative;
     display: flex;
 }
-
+.main__content{
+    padding-top: 400vh;
+}
 .content{
     display: flex;
     justify-content: space-between;
     position: relative;
     align-items: center;
     background-color: #000;
-
     height: calc(100% - 10px);
     &__item{
         height: 100%;

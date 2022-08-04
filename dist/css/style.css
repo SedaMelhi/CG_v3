@@ -354,6 +354,10 @@ body {
   display: flex;
 }
 
+.main__content {
+  padding-top: 400vh;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
