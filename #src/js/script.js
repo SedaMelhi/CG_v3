@@ -184,35 +184,79 @@ if(window.location.href.search("#") > 0){
 
 
 
-menu_items.forEach(item => item.addEventListener("click", function (e) {
-      if(this.getAttribute('href')[0] == "#"){
-          e.preventDefault();
-          href = this.getAttribute('href').substring(1);
-      }else{
-        return 0;
-      }
-      menu_items.forEach(item => {
+// menu_items.forEach(item => item.addEventListener("click", function (e) {
+//       if(this.getAttribute('href')[0] == "#"){
+//           e.preventDefault();
+//           href = this.getAttribute('href').substring(1);
+//       }else{
+//         return 0;
+//       }
+//       menu_items.forEach(item => {
        
-        if (item.parentNode.classList[1] == "menu__active"){
-          item.parentNode.classList.remove("menu__active")
-        }
-      })
-      if(item.hash.substring(1) != "home"){
-        this.parentNode.classList.add("menu__active")
-      }
+//         if (item.parentNode.classList[1] == "menu__active"){
+//           item.parentNode.classList.remove("menu__active")
+//         }
+//       })
+//       if(item.hash.substring(1) != "home"){
+//         this.parentNode.classList.add("menu__active")
+//       }
       
-      const scrollTarget = document.getElementById(href);
-      const topOffset = menu.offsetHeight;
-      const elementPosition = scrollTarget.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - topOffset;
-      menuClick = true
-      content.scrollBy({
-          top: offsetPosition,
-          behavior: 'smooth'
-      });
-      setTimeout(() => menuClick = false, 600)
-}))
+//       const scrollTarget = document.getElementById(href);
+//       const topOffset = menu.offsetHeight;
+//       const elementPosition = scrollTarget.getBoundingClientRect().top;
+//       const offsetPosition = elementPosition - topOffset;
+//       menuClick = true
+//       content.scrollBy({
+//           top: offsetPosition,
+//           behavior: 'smooth'
+//       });
+//       setTimeout(() => menuClick = false, 600)
+// }))
+const scrolling = (upSelector = "") => {
+let links = document.querySelectorAll('[href^="#"]');
+let speed = 0.17;
 
+links.forEach(link => {
+    link.addEventListener('click', function(event){
+        event.preventDefault();
+
+        let witdhTop = content.scrollTop;
+        let hash = this.hash;
+        let toBlock = document.querySelector(hash).getBoundingClientRect().top;
+        let start = null;
+        console.log( document.querySelector(hash).style.paddingTop)
+        requestAnimationFrame(step);
+
+        function step(time) {
+            if (start === null) {
+                start = time;
+            } 
+
+            let progress = time - start;
+            let r = (toBlock < 0 ? Math.max(witdhTop - progress / speed, witdhTop + toBlock) : Math.min(witdhTop + progress / speed, witdhTop + toBlock));
+
+            content.scrollTo(0, r - 100);
+           
+            if (r != witdhTop + toBlock) {
+                requestAnimationFrame(step);
+            } 
+            links.forEach(item => {
+              if(item.parentNode.classList[1] == "menu__active"){
+                item.parentNode.classList.remove("menu__active")
+              }
+            })
+            if(link.hash != "#home"){
+              link.parentNode.classList.add("menu__active")
+            }
+          
+            menuClick = true
+        };
+    });
+});
+
+};
+
+scrolling();
 ///////////////////////////faq///////////////////
 
 
