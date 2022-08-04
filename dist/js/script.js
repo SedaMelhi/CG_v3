@@ -214,7 +214,7 @@ if(window.location.href.search("#") > 0){
 // }))
 const scrolling = (upSelector = "") => {
 let links = document.querySelectorAll('[href^="#"]');
-let speed = 0.17;
+let speed = 0.005;
 
 links.forEach(link => {
     link.addEventListener('click', function(event){
@@ -235,7 +235,10 @@ links.forEach(link => {
             let progress = time - start;
             let r = (toBlock < 0 ? Math.max(witdhTop - progress / speed, witdhTop + toBlock) : Math.min(witdhTop + progress / speed, witdhTop + toBlock));
 
-            content.scrollTo(0, r - 100);
+            content.scrollTo({
+                        top: r-100,
+                        behavior: 'smooth'
+                    });
            
             if (r != witdhTop + toBlock) {
                 requestAnimationFrame(step);
