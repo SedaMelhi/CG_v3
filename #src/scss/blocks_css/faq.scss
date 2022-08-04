@@ -4,24 +4,35 @@
     font-size: 1.14rem;
     line-height: 17px;
     text-transform: uppercase;
-    padding: 6px 12px;
+    padding: 6px 12px 0;
     border: 1px solid #fff;
     border-radius: 6px;
     margin: 12px 9px;
     background-color: #000;
     cursor: pointer;
+    &:hover .answer{
+        transition: 0.4s;
+        padding: 8px 0;
+        height: auto;
+    }
     .answer{
         font-weight: 400;
         text-transform: capitalize;
         overflow: hidden;
         transition: 0.3s linear;
-        padding-top: 8px;
+        //padding-top: 8px;
+        height: 0;
+    }
+    &__open{
         
     }
     &__top{
         display: flex;
-        align-items: center; border-bottom: 1px solid #fff;
+        align-items: center;
+        border-bottom: 1px solid #fff;
         padding-bottom: 8px;
+        position: relative;
+        top: 1px;
         svg{
             margin-left: 8px;
         }
