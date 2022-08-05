@@ -39,9 +39,9 @@ content.addEventListener("scroll", function() {
   const project = document.querySelector("#margin");
   const prTop = project.getBoundingClientRect().top;
   if((prTop + (project.clientHeight - 140) <= window.innerHeight && prTop >= 0) || (prTop <= 0)) {
-    document.querySelector(".content__middle").classList.add("content__middle_opacity");
+    document.querySelector(".middle__bg").classList.add("middle__bg_opacity");
   }else{
-    document.querySelector(".content__middle").classList.remove("content__middle_opacity");
+    document.querySelector(".middle__bg").classList.remove("middle__bg_opacity");
     console.log(1111)
   }
   ////////////для map//////////////
