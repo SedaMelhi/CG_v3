@@ -15,6 +15,10 @@
         border-top: 1px solid #fff;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
+        svg{
+            
+            transform: rotate(180deg);
+        }
     }
     margin: 12px 9px;
     background-color: #000;
@@ -69,6 +73,7 @@
         top: 1px;
         svg{
             margin-left: 8px;
+            transition: 0.3s ease-in-out;
         }
        
     }

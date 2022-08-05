@@ -1996,6 +1996,12 @@ body {
   border-top-right-radius: 6px;
 }
 
+.question__border svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .question .answer {
   font-weight: 400;
   left: -1px;
@@ -2048,6 +2054,9 @@ body {
 
 .question__top svg {
   margin-left: 8px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .faq {
