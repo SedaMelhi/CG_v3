@@ -586,10 +586,18 @@ body {
   -webkit-transition: .8s;
   -o-transition: .8s;
   transition: .8s;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
 }
 
 .middle__bg_top {
   margin-top: 0;
+}
+
+.middle__bg_opacity {
+  opacity: 1;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
 }
 
 .content__middle {
@@ -625,6 +633,12 @@ body {
   font-size: 1rem;
 }
 
+#margin {
+  height: calc(100vh - 180px);
+  margin-top: calc(100vh - 180px);
+  width: 100%;
+}
+
 .project {
   min-height: calc(100vh - 180px);
   width: 100%;
@@ -642,7 +656,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 100px 28px 20px;
-  margin-top: calc(100vh - 180px);
 }
 
 .medusa {
