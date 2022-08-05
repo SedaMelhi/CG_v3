@@ -521,7 +521,7 @@ body {
   /* IE и Edge */
   scrollbar-width: none;
   /* Firefox */
-  background: url("../img/art-юкъер1.png") center/80% no-repeat;
+  background: url("../img/art-юкъер1.png") center 70px/80% no-repeat;
 }
 
 .arch__border {
@@ -578,9 +578,9 @@ body {
   right: 0;
   margin: 0 auto;
   border-radius: 1700px 1700px 60px 60px;
-  -webkit-transition: .6s linear;
-  -o-transition: .6s linear;
-  transition: .6s linear;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+  transition: .3s ease-in;
 }
 
 .middle__bg_opacity {
@@ -681,18 +681,18 @@ body {
 .bottom-line {
   position: -webkit-sticky;
   position: sticky;
-  top: calc(100% - 10px);
+  top: calc(100% - 11px);
   height: 1px;
   -webkit-box-shadow: 0 0 3px #fff;
           box-shadow: 0 0 3px #fff;
   z-index: 100;
-  width: calc(100% - 30px);
+  width: calc(100% - 34px);
   border-radius: 10%;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   margin: 0 auto;
-  background-color: rgba(192, 192, 192, 0.5);
+  background-color: rgba(222, 222, 222, 0.3);
 }
 
 .footer {

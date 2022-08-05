@@ -335,7 +335,7 @@
         overflow-y: scroll;
         -ms-overflow-style: none;  /* IE и Edge */
         scrollbar-width: none;  /* Firefox */
-        background: url("../img/art-юкъер1.png") center/80% no-repeat;
+        background: url("../img/art-юкъер1.png") center 70px/80% no-repeat;
     }
     &__border{
         border-radius: 1700px 1700px 60px 60px;
@@ -380,7 +380,7 @@
         right: 0;
         margin: 0 auto;
         border-radius: 1700px 1700px 60px 60px;
-        transition: .6s linear;    
+        transition: .3s ease-in;    
        
         // &::after{
         //     content: "";
@@ -461,15 +461,15 @@
 }
 .bottom-line{
     position: sticky;
-    top: calc(100% - 10px);
+    top: calc(100% - 11px);
     height: 1px;
     box-shadow: 0 0 3px #fff;
     z-index: 100;
-    width: calc(100% - 30px);
+    width: calc(100% - 34px);
     border-radius: 10%;
     transition: 0.3s;
     margin: 0 auto;
-    background-color: rgba(192, 192, 192, 0.5);
+    background-color: rgba(222, 222, 222, 0.3);
 }
 .footer{
     position: fixed;
