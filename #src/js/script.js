@@ -184,7 +184,7 @@ window.addEventListener("load", function () {
           answer.classList.remove("question__open")
         }
         if(answer != item.querySelector(".answer")){
-          answer.closest(".question").style.opacity = "0.3"
+          answer.closest(".question").style.opacity = "0.1"
           answer.closest(".question").style.filter = "blur(0.4px)"
         }
         if([...item.querySelector(".answer").classList].includes("question__open")){
@@ -195,6 +195,7 @@ window.addEventListener("load", function () {
       })
       
       item.querySelector(".answer").classList.toggle("question__open")
+      item.classList.toggle("question__border")
       item.style.opacity = "1"
       item.style.filter = "blur(0px)"
     }
