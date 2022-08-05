@@ -182,6 +182,7 @@ window.addEventListener("load", function () {
       answers.forEach((answer) => {
         if([...answer.classList].includes("question__open") && answer != item.querySelector(".answer")){
           answer.classList.remove("question__open")
+          item.classList.remove("question__border")
         }
         if(answer != item.querySelector(".answer")){
           answer.closest(".question").style.opacity = "0.1"

@@ -1981,9 +1981,6 @@ body {
   border-radius: 6px;
   margin: 12px 9px;
   background-color: #000;
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
   max-width: 500px;
   cursor: pointer;
   position: relative;
@@ -2023,6 +2020,9 @@ body {
   width: calc(100% + 2px);
   padding-left: 12px;
   padding-right: 12px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .question .question__open {
