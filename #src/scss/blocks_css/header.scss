@@ -335,7 +335,7 @@
         overflow-y: scroll;
         -ms-overflow-style: none;  /* IE и Edge */
         scrollbar-width: none;  /* Firefox */
-        background: url("../img/art-юкъер1.png") center 70px/80% no-repeat;
+        background: url("../img/art-юкъер1.png") center/80% no-repeat;
     }
     &__border{
         border-radius: 1700px 1700px 60px 60px;
@@ -494,6 +494,7 @@
     z-index: 31;
     top:  calc(100% - 85px);
     left: 17%;
+    background-color: #000b;
 }
 .pix{
     left: auto;

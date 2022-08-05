@@ -9,12 +9,15 @@
     border-radius: 6px;
     margin: 12px 9px;
     background-color: #000;
+    transition: 0.3s ease-in-out;
+    max-width: 500px;
     cursor: pointer;
-    &:hover .answer{
-        transition: 0.4s;
-        padding: 8px 0;
-        height: auto;
-    }
+    // &:hover .answer{
+    //     transition: 0.4s;
+    //     padding: 8px 0;
+    //     height: auto;
+    // }
+    
     .answer{
         font-weight: 400;
         text-transform: capitalize;
@@ -22,9 +25,13 @@
         transition: 0.3s linear;
         //padding-top: 8px;
         height: 0;
+        opacity: 0;
     }
-    &__open{
-        
+    .question__open{
+        transition: 0.3s;
+        opacity: 1;
+        padding: 8px 0;
+        height: auto;
     }
     &__top{
         display: flex;
@@ -41,9 +48,15 @@
 }
 
 .faq{
-    padding: 30px 0 80px;
+    min-height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    padding-bottom: 70px;
     &__wrap{
         display: flex;
+        align-items: flex-start;
         flex-wrap: wrap;
         justify-content: center;
     }
