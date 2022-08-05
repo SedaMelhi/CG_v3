@@ -662,7 +662,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 100px 28px 20px;
-  pointer-events: visiblePainted;
 }
 
 .medusa {
@@ -683,7 +682,6 @@ body {
           justify-content: center;
   padding: 100px 28px 20px;
   margin-top: 80px;
-  pointer-events: visiblePainted;
 }
 
 .bottom {
