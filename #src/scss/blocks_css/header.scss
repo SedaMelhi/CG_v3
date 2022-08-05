@@ -32,7 +32,6 @@
 }
 .container{
     height: calc(100% - 160px);
-    position: -webkit-sticky;
     position: fixed;
     width: calc(100% - 128px);
     z-index: 0;
@@ -42,7 +41,7 @@
  
 .nav{
     &-wrap{
-        position: sticky;
+        
         background-color: #000;
         width: 100%;
         padding: 15px 56px 0;
@@ -66,10 +65,10 @@
     border-left: 1px solid #FFFFFF;
 }
 .border{
-    position: sticky;
+    
     background-color: #000;
     width: calc(100% - 112px);
-    top: var(--top);
+  
    
     margin: 0 auto;
     height: calc(100vh - 150px);
@@ -347,6 +346,7 @@
 .middle{
     width: 100%;
     position: relative;
+   
     &__title{
         display: flex;
         justify-content: center;
@@ -368,34 +368,40 @@
         line-height: 150%;
         text-align: center;
     }
-    &__bg{
-        background: url("../img/art-юкъер1.png") center/90% no-repeat;
-        position: fixed;
-        min-height: calc(100vh - 180px);
-        width: 25%;
-        opacity: 0;
-        z-index: 0;
-        top: 160px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        transition: .5s;
+    // &__bg{
         
-        filter: blur(10px);
-        &_top{
-            margin-top: 0;
-        }
-        &_opacity{
+    //     position: fixed;
+    //     min-height: calc(100vh - 180px);
+    //     width: 25%;
+    //     opacity: 0;
+    //     z-index: 0;
+    //     top: 160px;
+    //     left: 0;
+    //     right: 0;
+    //     margin: 0 auto;
+    //     transition: .5s;
+        
+    //     filter: blur(10px);
+    //     &_top{
+    //         margin-top: 0;
+    //     }
+    //     &_opacity{
            
-            opacity: 1;
-            filter: blur(0px);
-        }
+    //         opacity: 1;
+    //         filter: blur(0px);
+    //     }
         
-    }
+    // }
 }
 .content__middle{
     display: flex;
     justify-content: center;
+    
+    &_opacity{   
+        transition: 0.7s;
+        background: url("../img/art-юкъер1.png") center/72% no-repeat;
+       
+    }
 }
 .networks{
     display: flex;
