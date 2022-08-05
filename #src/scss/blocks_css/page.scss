@@ -1,11 +1,7 @@
 .border_index{
     z-index: 6;
 }
-
-.page{
-    height: 100%;
-    width: 100%;
-    z-index: 3;
+.main__content{
     background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     &::before{
@@ -16,7 +12,14 @@
         position: absolute;
         top: -230px;
         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.78));
+       
     }
+}
+.page{
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    position: relative;
     .title{
         font-size: calc(var(--index) * 1.9); //12rem
         &__wrap{

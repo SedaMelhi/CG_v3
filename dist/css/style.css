@@ -1585,15 +1585,12 @@ body {
   z-index: 6;
 }
 
-.page {
-  height: 100%;
-  width: 100%;
-  z-index: 3;
+.main__content {
   background-color: rgba(0, 0, 0, 0.8);
   position: relative;
 }
 
-.page::before {
+.main__content::before {
   content: "";
   width: 100%;
   display: block;
@@ -1603,6 +1600,13 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.78)));
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.78));
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.78));
+}
+
+.page {
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  position: relative;
 }
 
 .page .title {
