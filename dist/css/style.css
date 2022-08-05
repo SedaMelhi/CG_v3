@@ -574,8 +574,6 @@ body {
 
 .middle__bg {
   background: url("../img/art-юкъер1.png") center/90% no-repeat;
-  position: -webkit-sticky;
-  position: sticky;
   min-height: calc(100vh - 180px);
   width: 100%;
   margin-top: calc(100vh - 180px);
