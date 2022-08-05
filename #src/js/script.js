@@ -35,6 +35,15 @@ content.addEventListener("scroll", function() {
   archs[2].scrollTop = content.scrollTop;
 
   content.scrollTop = archs[1].scrollTop
+  //////////////about the project/////////////
+  const project = document.querySelector(".project");
+  const prTop = project.getBoundingClientRect().top;
+  if((prTop + (project.clientHeight - 140) <= window.innerHeight && prTop >= 0) || (prTop <= 0)) {
+    document.querySelector(".middle__bg").style.opacity = "1";
+  }else{
+    document.querySelector(".middle__bg").style.opacity = "0";
+    console.log(1111)
+  }
   ////////////для map//////////////
   // const posTop = map.getBoundingClientRect().top;
   // if((posTop + (map.clientHeight / 2) <= window.innerHeight && posTop >= 0) || (posTop <= 0 && posTop >= -(map.clientHeight / 2))) {

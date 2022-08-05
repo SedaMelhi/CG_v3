@@ -574,11 +574,18 @@ body {
 
 .middle__bg {
   background: url("../img/art-юкъер1.png") center/90% no-repeat;
+  position: fixed;
   min-height: calc(100vh - 180px);
-  width: 100%;
-  margin-top: calc(100vh - 180px);
+  width: 25%;
+  opacity: 0;
   z-index: 0;
-  top: 0;
+  top: 160px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .middle__bg_top {
@@ -635,6 +642,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 100px 28px 20px;
+  margin-top: calc(100vh - 180px);
 }
 
 .medusa {
@@ -1594,12 +1602,12 @@ body {
   content: "";
   width: 100%;
   display: block;
-  height: 230px;
+  height: 270px;
   position: absolute;
-  top: -230px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.78)));
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.78));
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.78));
+  top: -270px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
 
 .page {
