@@ -33,6 +33,8 @@ content.addEventListener("scroll", function() {
   archs[0].scrollTop = content.scrollTop;
   archs[1].scrollTop = content.scrollTop;
   archs[2].scrollTop = content.scrollTop;
+
+  content.scrollTop = archs[1].scrollTop
   ////////////для map//////////////
   // const posTop = map.getBoundingClientRect().top;
   // if((posTop + (map.clientHeight / 2) <= window.innerHeight && posTop >= 0) || (posTop <= 0 && posTop >= -(map.clientHeight / 2))) {

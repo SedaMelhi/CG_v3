@@ -10,6 +10,8 @@
     font-family: 'Inconsolata';
     position: relative;
     transition: .5s ease-in-out; 
+    
+    z-index: 0;
     &__hidden{
         transition: .5s ease-in-out;
         transform: translateY(50%);
@@ -40,7 +42,6 @@
 }
 .cards{
     display: flex;
-    position: sticky;
     width: 290px;
     margin: 0 auto;
     flex-shrink: 0;
