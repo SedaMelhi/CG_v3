@@ -175,31 +175,28 @@ window.addEventListener("load", function () {
   scrolling();
 
   const faq = this.document.querySelector(".faq__wrap"),
-        answers = this.document.querySelectorAll(".answer")
-  faq.addEventListener("click", function(e){
+    answers = this.document.querySelectorAll(".answer")
+  faq.addEventListener("click", function (e) {
     let item = e.target.closest(".question");
-    if(item){
+    if (item) {
       answers.forEach((answer) => {
-        if([...answer.classList].includes("question__open") && answer != item.querySelector(".answer")){
+        if ([...answer.classList].includes("question__open") && answer != item.querySelector(".answer")) {
           answer.classList.remove("question__open")
-          item.classList.remove("question__border")
-          
+          answer.closest(".question").classList.remove("question__border")
+          console.log(26)
         }
-        if(answer != item.querySelector(".answer")){
+        if (answer != item.querySelector(".answer")) {
           answer.closest(".question").style.opacity = "0.15"
-          
         }
-        if([...item.querySelector(".answer").classList].includes("question__open")){
-          console.log(1)
+        if ([...item.querySelector(".answer").classList].includes("question__open")) {
           answer.closest(".question").style.opacity = "1"
-         
         }
       })
-      
+
       item.querySelector(".answer").classList.toggle("question__open")
       item.classList.toggle("question__border")
       item.style.opacity = "1"
-      
+
     }
   })
 
