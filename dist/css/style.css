@@ -914,36 +914,6 @@ body {
           align-items: center;
 }
 
-.cards:hover .card:nth-child(1) {
-  -webkit-transform: translateX(-26.5%);
-      -ms-transform: translateX(-26.5%);
-          transform: translateX(-26.5%);
-}
-
-.cards:hover .card:nth-child(2) {
-  -webkit-transform: translateX(-73.5%);
-      -ms-transform: translateX(-73.5%);
-          transform: translateX(-73.5%);
-}
-
-.cards:hover .card:nth-child(3) {
-  -webkit-transform: translateX(-120.5%);
-      -ms-transform: translateX(-120.5%);
-          transform: translateX(-120.5%);
-}
-
-.cards:hover .card:nth-child(4) {
-  -webkit-transform: translateX(-167.5%);
-      -ms-transform: translateX(-167.5%);
-          transform: translateX(-167.5%);
-}
-
-.cards:hover .card:nth-child(5) {
-  -webkit-transform: translateX(-214.5%);
-      -ms-transform: translateX(-214.5%);
-          transform: translateX(-214.5%);
-}
-
 .cards__hidden {
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
