@@ -581,14 +581,10 @@ body {
   -webkit-transition: .6s linear;
   -o-transition: .6s linear;
   transition: .6s linear;
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
 }
 
 .middle__bg_opacity {
   opacity: 0;
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
 }
 
 .content__middle {
