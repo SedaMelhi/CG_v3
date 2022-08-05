@@ -1981,7 +1981,6 @@ body {
   border-radius: 6px;
   margin: 12px 9px;
   background-color: #000;
-  max-width: 500px;
   cursor: pointer;
   position: relative;
 }
