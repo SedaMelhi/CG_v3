@@ -183,22 +183,23 @@ window.addEventListener("load", function () {
         if([...answer.classList].includes("question__open") && answer != item.querySelector(".answer")){
           answer.classList.remove("question__open")
           item.classList.remove("question__border")
+          
         }
         if(answer != item.querySelector(".answer")){
-          answer.closest(".question").style.opacity = "0.1"
-          answer.closest(".question").style.filter = "blur(0.4px)"
+          answer.closest(".question").style.opacity = "0.15"
+          
         }
         if([...item.querySelector(".answer").classList].includes("question__open")){
           console.log(1)
           answer.closest(".question").style.opacity = "1"
-          answer.closest(".question").style.filter = "blur(0px)"
+         
         }
       })
       
       item.querySelector(".answer").classList.toggle("question__open")
       item.classList.toggle("question__border")
       item.style.opacity = "1"
-      item.style.filter = "blur(0px)"
+      
     }
   })
 
