@@ -380,7 +380,7 @@
         right: 0;
         margin: 0 auto;
         border-radius: 1700px 1700px 60px 60px;
-        transition: .6s;    
+        transition: .6s linear;    
         filter: blur(10px);
         // &::after{
         //     content: "";
