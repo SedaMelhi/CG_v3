@@ -1885,18 +1885,31 @@ body {
   text-transform: uppercase;
   color: #000;
   line-height: 30px;
-  pointer-events: visiblePainted;
   cursor: pointer;
 }
 
 .team__item:hover .back {
-  -webkit-transform: rotateY(0deg) perspective(300px);
-          transform: rotateY(0deg) perspective(300px);
+  opacity: 0.97;
+  -webkit-filter: blur(0);
+          filter: blur(0);
 }
 
-.team__item:hover .front {
-  -webkit-transform: rotateY(-180deg) perspective(300px);
-          transform: rotateY(-180deg) perspective(300px);
+.team__item:hover .back a {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.team__item:hover .back h3 {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.team__item:hover .back h2 {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .team__image {
@@ -1915,10 +1928,8 @@ body {
 .team .front {
   height: 100%;
   width: 100%;
-  position: absolute;
   background-color: #fff;
-  top: 0;
-  left: 0;
+  padding-top: 1px;
   -webkit-transform: rotateY(0deg) perspective(300px);
           transform: rotateY(0deg) perspective(300px);
   -webkit-transition: 0.7s ease-out;
@@ -1928,33 +1939,70 @@ body {
 }
 
 .team .back {
-  height: 100%;
-  width: 100%;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
   position: absolute;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: rotateY(180deg) perspective(300px);
-          transform: rotateY(180deg) perspective(300px);
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 1px;
+  width: 100%;
+  height: 100%;
+  background-color: #000e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  line-height: 1.5rem;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  opacity: 0;
+}
+
+.team .back h3 {
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  font-size: 0.9rem;
+  margin: 0;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.team .back h2 {
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
   font-size: 1.1rem;
-  text-transform: capitalize;
-  -webkit-transition: 0.7s ease-out;
-  -o-transition: 0.7s ease-out;
-  transition: 0.7s ease-out;
+  margin: 0;
+  margin-top: 10px;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .team .back a {
-  color: #02005c;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
-.team .back__border {
-  width: 100%;
-  border: 2px solid #000;
-  border-radius: 12px;
-  height: 100%;
+.faq {
+  min-height: calc(100vh - 180px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1962,12 +2010,26 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-bottom: 170px;
+}
+
+.faq__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .question {
@@ -2010,15 +2072,15 @@ body {
   z-index: 1;
   text-transform: capitalize;
   overflow: hidden;
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  line-height: 1.3;
+  line-height: 1.4;
   height: 0;
   opacity: 0;
   position: absolute;
@@ -2028,9 +2090,9 @@ body {
 }
 
 .question .question__open {
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
   opacity: 1;
   padding-bottom: 8px;
   padding-top: 8px;
@@ -2053,40 +2115,9 @@ body {
 
 .question__top svg {
   margin-left: 8px;
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-
-.faq {
-  min-height: calc(100vh - 180px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 170px;
-}
-
-.faq__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 @media screen and (max-width: 1750px) {
