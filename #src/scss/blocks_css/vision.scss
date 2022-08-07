@@ -51,10 +51,10 @@
     svg{
         path{
             fill: #fff;
-            fill-opacity: 1;
+            fill-opacity: 0;
         }
         @for $i from 1 to 14{
-            $time: $i;
+            $time: $i/3;
             & path:nth-child(#{$i}){
                animation: light 3s ease-in infinite #{$time}s;
             }
@@ -89,6 +89,7 @@
         width: 180px;
         img{
             width: 100%;
+            display: block;
         }
     }
 }

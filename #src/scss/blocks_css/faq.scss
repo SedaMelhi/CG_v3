@@ -10,6 +10,9 @@
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: center;
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 }
 
@@ -21,7 +24,11 @@
     text-transform: uppercase;
     padding: 6px 12px 0;
     border: 1px solid #fff;
+    position: relative;
     border-radius: 6px;
+    margin: 12px 9px;
+    background-color: #000;
+    cursor: pointer;
     &__border{
         border-radius: 0;
         border: none;
@@ -30,16 +37,14 @@
         border-top: 1px solid #fff;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
+       
         
         svg{
             
             transform: rotate(180deg);
         }
     }
-    margin: 12px 9px;
-    background-color: #000;
-    cursor: pointer;
-    position: relative;
+   
     // &:hover .answer{
     //     transition: 0.4s;
     //     padding: 8px 0;
@@ -80,6 +85,7 @@
     &__top{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         border-bottom: 1px solid #fff;
         padding-bottom: 8px;
         position: relative;

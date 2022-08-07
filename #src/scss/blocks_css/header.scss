@@ -114,6 +114,7 @@
     position: relative; 
     svg{
         fill: #fff;
+        filter: drop-shadow(0px 0px 1px #fff);
     }
     &__item{
         display: flex;
@@ -121,6 +122,7 @@
         align-items: center;
         padding: 4px 8px;
         border-radius: 6px;
+        filter: drop-shadow(0px 0px 3px #fff);
         > a{
             margin: 0 9px;
         }
@@ -139,7 +141,30 @@
         
     }
 }
-
+.middle-stars{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 0;
+    width: 25%;
+    z-index: 24;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    .stars{
+        position: static;
+        top: 0;
+        height: calc(100% - 270px);
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        min-height: auto;
+        display: none;
+    }
+}
 .vertical-line{
     width: 1px;
     height: 100%;
@@ -263,7 +288,7 @@
         font-size: calc(var(--index) * 6); //12rem
         text-shadow: 0px 0px 4px #fff;
         margin-bottom: 10px;
-        padding-top: 50px;
+        padding-top: 20px;
     }
 }
 .mint-btn{
@@ -277,12 +302,40 @@
     font-family: 'ROMANUS';
     font-size: 1.6rem;
     color: #000;
-    margin: 20px 0;
+    margin: 13px 0;
 }
 
 .connect{
-    font-family: 'ROMANUS';
-    font-size: 1.4rem;
+    font-size: 1rem;
+    position: relative;
+    filter: drop-shadow(0px 0px 3px #fff);
+    a{
+        transition: 0.3s linear;
+        opacity: 1;
+        filter: blur(0);
+    }
+    span{
+        transition: 0.3s linear all;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        margin: 0 auto;
+        letter-spacing: 0.2rem;
+        filter: drop-shadow(0px 0px 5px #fff) blur(3px);
+        
+    }
+    &__opacity{
+        a{
+            filter: blur(3px);
+            opacity: 0;
+        }
+        span{
+            opacity: 0.9;
+            filter: drop-shadow(0px 0px 5px #fff) blur(0);
+        }
+    }
 }
 .arch{  
     width: 100%;
@@ -356,8 +409,12 @@
         line-height: 3.14rem;
         text-transform: uppercase;
         text-align: center;
+        filter: drop-shadow(0px 0px 3px #fff);
         h1{
             margin: 0 22px;
+        }
+        svg{
+            filter: drop-shadow(0px 0px 1.5px #fff);
         }
     }
     &__description{

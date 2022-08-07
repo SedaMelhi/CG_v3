@@ -17,10 +17,13 @@ window.addEventListener("load", function () {
     //about the project - для появления головы медузы из второй арки//
     const project = document.querySelector("#margin"); //пустой блок перед about the project 
     const prTop = project.getBoundingClientRect().top;
-    if ((prTop + (project.clientHeight - 140) <= window.innerHeight && prTop >= 0) || (prTop <= 0)) {
+    const mapTop = map.getBoundingClientRect().top;
+    if (((prTop + (project.clientHeight - 140) <= window.innerHeight && prTop >= 0) || (prTop <= 0)) && !((mapTop + (project.clientHeight - 140) <= window.innerHeight && mapTop >= 0) || (mapTop <= 0) ) ) {
       document.querySelector(".middle__bg").classList.add("middle__bg_opacity");
+      document.querySelector(".middle-stars .stars").style.display = "flex";
     } else {
       document.querySelector(".middle__bg").classList.remove("middle__bg_opacity");
+      document.querySelector(".middle-stars .stars").style.display = "none";
     }
 
     ////////////для art - для появления картинок в блоке арт//////////////
@@ -173,30 +176,46 @@ window.addEventListener("load", function () {
     });
   };
   scrolling();
+  //кнопка connect//
+  const connect = this.document.querySelector(".connect");
+  connect.addEventListener('click', connectOpacity)
+  function connectOpacity(){
+    connect.classList.toggle("connect__opacity")
+    setTimeout(() => connect.classList.toggle("connect__opacity"), 2000)
+    connect.removeEventListener("click", connectOpacity)
+    setTimeout(() => connect.addEventListener('click', connectOpacity), 2200)
+  }
 
+  /////////открываем и закрываем блоки вопросов////
   const faq = this.document.querySelector(".faq__wrap"),
-    answers = this.document.querySelectorAll(".answer")
+    answers = this.document.querySelectorAll(".answer");
   faq.addEventListener("click", function (e) {
     let item = e.target.closest(".question");
+    let span = item.querySelector("span")
     if (item) {
       answers.forEach((answer) => {
         if ([...answer.classList].includes("question__open") && answer != item.querySelector(".answer")) {
           answer.classList.remove("question__open")
           answer.closest(".question").classList.remove("question__border")
-          console.log(26)
+          //answer.closest(".question").style.width = "auto";
         }
         if (answer != item.querySelector(".answer")) {
           answer.closest(".question").style.opacity = "0.15"
+          
         }
         if ([...item.querySelector(".answer").classList].includes("question__open")) {
           answer.closest(".question").style.opacity = "1"
         }
       })
-
       item.querySelector(".answer").classList.toggle("question__open")
       item.classList.toggle("question__border")
       item.style.opacity = "1"
-
+      // if(span.getClientRects().length > 4 && item.style.width != "500px"){
+      //   item.style.width = "500px"
+      // }else{
+      //   item.style.width = "auto"
+      // }
+      
     }
   })
 
