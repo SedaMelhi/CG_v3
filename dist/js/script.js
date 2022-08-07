@@ -62,7 +62,7 @@ window.addEventListener("load", function () {
     let sectionsTop = section.getBoundingClientRect().top;
     if (sectionsTop + (section.clientHeight / 2) <= window.innerHeight && sectionsTop >= 0) {
       menu_items.forEach(item => {
-        if (item.hash.substring(1) == section.id && item.hash.substring(1) != "home") {
+        if (item.hash.substring(1) == section.id && item.hash.substring(1) != "home" ) {
           item.parentNode.classList.add("menu__active")
         }
         if (item.hash.substring(1) != section.id) {
@@ -166,7 +166,7 @@ window.addEventListener("load", function () {
               item.parentNode.classList.remove("menu__active")
             }
           })
-          if (link.hash != "#home") {
+          if (link.hash != "#home" && link.hash != "#mint") {
             link.parentNode.classList.add("menu__active")
           }
           menuClick = true
