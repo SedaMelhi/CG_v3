@@ -1948,9 +1948,10 @@ body {
 .art__image {
   margin: 0 9px;
   margin-bottom: 18px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 12px;
   width: 180px;
+  border: 1px solid #fff;
 }
 
 .art__image img {

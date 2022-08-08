@@ -36,7 +36,7 @@ window.addEventListener("load", function () {
       document.querySelectorAll(".art-img")[0].classList.remove("art-img-visible")
       document.querySelectorAll(".art-img")[1].classList.remove("art-img-visible")
     }
-
+    
     //////////////menu - для выделения элементов меню при скролле мышью////////////
     const sections = [
       document.getElementById("project"),
