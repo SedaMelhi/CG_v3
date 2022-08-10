@@ -2450,6 +2450,18 @@ body {
   margin-bottom: 0;
 }
 
+.mobile .middle__description {
+  font-size: 1.5rem;
+}
+
+.mobile .full-image {
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 1222px 1222px 12px 12px;
+  -webkit-filter: drop-shadow(0px 0px 3px #fff);
+          filter: drop-shadow(0px 0px 3px #fff);
+}
+
 @media screen and (max-width: 1750px) {
   .art {
     max-width: 1100px;
