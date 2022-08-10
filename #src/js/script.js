@@ -3,12 +3,12 @@ window.addEventListener("load", function () {
     main = document.querySelector(".main__content"),
     content = document.querySelector(".border_second"),
     map = document.querySelector(".map"),
-    menu_items = [...document.querySelectorAll(".menu__item a"), document.querySelector(".home")],
-    menu = document.querySelector(".menu"),
-    empty = document.querySelector(".middle-dark");
-  document.querySelector(".empty").style.height = `${main.scrollHeight }px`;
+    menu_items = [...document.querySelectorAll(".menu__item a"), document.querySelector(".home")];
+  document.querySelector(".empty").style.height = `${document.querySelector(".main2").scrollHeight - archs[1].scrollHeight}px`;
 
-
+  content.addEventListener("resize", function () {
+    document.querySelector(".empty").style.height = `${document.querySelector(".main2").scrollHeight - archs[1].scrollHeight}px`;
+  })
   let menuClick = false
 
   content.addEventListener("scroll", function () {

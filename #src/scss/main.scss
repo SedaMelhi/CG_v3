@@ -29,3 +29,22 @@ body{
     color: #fff;
     background-color: #000;
 }
+@media screen and(max-width: 1180px) {
+    html{
+        font-size: 12px;
+    }
+}
+.mobile{
+    display: none;
+}
+.main{
+    display: block;
+}
+@media screen and(max-width: 865px) {
+    .main{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+}

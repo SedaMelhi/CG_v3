@@ -209,8 +209,9 @@
     &__wrap{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        
-        width: 276px;
+        margin: 0 auto;
+        max-width: 324px;
+        padding: 0 24px;
         gap: 36px;
         justify-items: center;
     }
@@ -219,6 +220,7 @@
         opacity: 0;
         transform: translateY(70%);
         animation: show 0.5s forwards ease-in-out 0.35s;  
+        width: 100%;
     }
     &__hidden{
         animation: artist-hidden 0.8s forwards linear;
@@ -263,7 +265,7 @@
     
 }
 .artist{
-    width: 120px;
+    width: 100%;
     background: #FFF;
     border: 1px solid #FFF;
     border-radius: 12px;
@@ -286,7 +288,7 @@
     &__title{
         height: 0px;
         font-weight: 600;
-        font-size: 1.28rem;
+        font-size: 1.15rem;
         line-height: 30px;
         text-align: center;
         text-transform: uppercase;
@@ -334,4 +336,20 @@
     transition: 0.6s;
     transition-delay: 0s;
     border-radius: 2%;
+}
+
+@media screen and(max-width: 1080px) {
+    .artist{
+        &__title{
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and(max-width: 960px) {
+    .artist{
+        &__title{
+            font-size: 0.8rem;
+        }
+    }
 }
