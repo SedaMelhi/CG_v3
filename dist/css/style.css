@@ -2465,17 +2465,17 @@ body {
 .mobile-card {
   width: 100% !important;
   margin: 0 auto;
-  height: 465px;
+  height: 51vh;
   font-family: 'Inconsolata';
   background: #FFFFFF;
   border: 1.12281px solid #FFFFFF;
-  border-radius: 249.263px 249.263px 13.4737px 13.4737px;
+  border-radius: 500px 500px 13.4737px 13.4737px;
   color: #000;
 }
 
 .mobile-card__img {
   height: calc(100% - 80px);
-  border-radius: 249.263px 249.263px 13.4737px 13.4737px;
+  border-radius: 500px 500px 13.4737px 13.4737px;
 }
 
 .mobile-card__num {
@@ -2551,12 +2551,16 @@ body {
 
 .swiper-pagination {
   position: static;
-  margin: 50px 0;
+  margin: 40px 0 30px;
 }
 
 .swiper-pagination-bullet-active {
   background: rgba(255, 255, 255, 0.9);
   opacity: 1;
+}
+
+.swiper {
+  z-index: 0;
 }
 
 @media screen and (max-width: 1750px) {
