@@ -118,7 +118,7 @@
         filter: drop-shadow(0px 0px 3px #fff); 
     } 
     .first{
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         &__img{
@@ -131,7 +131,7 @@
             border: 1px solid #fff;
             border-radius: 1222px 1222px 12px 12px;
             box-shadow: 0px 0px 3px #fff; 
-            flex-grow: 0.7;
+            flex-grow: 0.6;
             background: url(../img/art1.jpg) top center/cover no-repeat;
             font-family: 'Inconsolata';
             font-weight: 900;
@@ -221,7 +221,7 @@
     
 }
 .mobile-cards{
-    height: 100vh;
+    
     &__title{
         font-family: 'Norse';
         font-weight: 400;
