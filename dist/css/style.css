@@ -2462,20 +2462,24 @@ body {
           filter: drop-shadow(0px 0px 3px #fff);
 }
 
-.mobile-card {
+.swiper-slide {
   width: 100% !important;
+}
+
+.mobile-card {
+  width: 93%;
   margin: 0 auto;
-  height: 51vh;
+  height: 55vh;
   font-family: 'Inconsolata';
   background: #FFFFFF;
   border: 1.12281px solid #FFFFFF;
-  border-radius: 500px 500px 13.4737px 13.4737px;
+  border-radius: 500px 500px 10% 10%;
   color: #000;
 }
 
 .mobile-card__img {
-  height: calc(100% - 80px);
-  border-radius: 500px 500px 13.4737px 13.4737px;
+  height: calc(100% - 60px);
+  border-radius: 500px 500px 10% 10%;
 }
 
 .mobile-card__num {
@@ -2494,9 +2498,9 @@ body {
 
 .mobile-card__title {
   font-weight: 600;
-  font-size: 4.4rem;
-  height: 80px;
-  line-height: 80px;
+  font-size: 3rem;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -2551,7 +2555,7 @@ body {
 
 .swiper-pagination {
   position: static;
-  margin: 40px 0 30px;
+  margin: 30px 0 20px;
 }
 
 .swiper-pagination-bullet-active {
