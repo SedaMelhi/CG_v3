@@ -167,6 +167,21 @@
 }
 .swiper-slide{
     width: 100%!important;
+    &:nth-child(1) .mobile-card__img{
+        background: url(../img/artist/avatar.png) top center/cover no-repeat;
+    }
+    &:nth-child(2) .mobile-card__img{
+        background: url(../img/artist/avatar2.png) top center/cover no-repeat;
+    }
+    &:nth-child(3) .mobile-card__img{
+        background: url(../img/artist/avatar3.png) top center/cover no-repeat;
+    }
+    &:nth-child(4) .mobile-card__img{
+        background: url(../img/artist/avatar4.png) top center/cover no-repeat;
+    }
+    &:nth-child(5) .mobile-card__img{
+        background: url(../img/artist/avatar5.png) top center/cover no-repeat;
+    }
 }
 .mobile-card{
     max-width: 370px;
@@ -202,21 +217,7 @@
         text-align: center;
         text-transform: uppercase;
     }
-    &:nth-child(1) .mobile-card__img{
-        background: url(../img/artist/avatar.png) top center/cover no-repeat;
-    }
-    &:nth-child(2) .mobile-card__img{
-        background: url(../img/artist/avatar2.png) top center/cover no-repeat;
-    }
-    &:nth-child(3) .mobile-card__img{
-        background: url(../img/artist/avatar3.png) top center/cover no-repeat;
-    }
-    &:nth-child(4) .mobile-card__img{
-        background: url(../img/artist/avatar4.png) top center/cover no-repeat;
-    }
-    &:nth-child(5) .mobile-card__img{
-        background: url(../img/artist/avatar5.png) top center/cover no-repeat;
-    }
+    
 }
 .mobile-cards{
     height: 100vh;
