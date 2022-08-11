@@ -2422,9 +2422,9 @@ body {
   border-radius: 1222px 1222px 12px 12px;
   -webkit-box-shadow: 0px 0px 3px #fff;
           box-shadow: 0px 0px 3px #fff;
-  -webkit-box-flex: 0.6;
-      -ms-flex-positive: 0.6;
-          flex-grow: 0.6;
+  -webkit-box-flex: 0.57;
+      -ms-flex-positive: 0.57;
+          flex-grow: 0.57;
   background: url(../img/art1.jpg) top center/cover no-repeat;
   font-family: 'Inconsolata';
   font-weight: 900;
@@ -2487,9 +2487,9 @@ body {
 }
 
 .mobile-card {
-  max-width: 370px;
+  max-width: 360px;
   margin: 0 auto;
-  height: 443px;
+  height: 423px;
   font-family: 'Inconsolata';
   background: #FFFFFF;
   border: 1.12281px solid #FFFFFF;
