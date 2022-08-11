@@ -2462,6 +2462,103 @@ body {
           filter: drop-shadow(0px 0px 3px #fff);
 }
 
+.mobile-card {
+  width: 100% !important;
+  margin: 0 auto;
+  height: 465px;
+  font-family: 'Inconsolata';
+  background: #FFFFFF;
+  border: 1.12281px solid #FFFFFF;
+  border-radius: 249.263px 249.263px 13.4737px 13.4737px;
+  color: #000;
+}
+
+.mobile-card__img {
+  height: calc(100% - 80px);
+  border-radius: 249.263px 249.263px 13.4737px 13.4737px;
+}
+
+.mobile-card__num {
+  position: absolute;
+  width: 42.95px;
+  height: 40.98px;
+  right: 22.34px;
+  bottom: 101.95px;
+  background: #fff;
+  border-radius: 26.7424px;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 40.98px;
+  text-align: center;
+}
+
+.mobile-card__title {
+  font-weight: 600;
+  font-size: 4.4rem;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mobile-card:nth-child(1) .mobile-card__img {
+  background: url(../img/artist/avatar.png) top center/cover no-repeat;
+}
+
+.mobile-card:nth-child(2) .mobile-card__img {
+  background: url(../img/artist/avatar2.png) top center/cover no-repeat;
+}
+
+.mobile-card:nth-child(3) .mobile-card__img {
+  background: url(../img/artist/avatar3.png) top center/cover no-repeat;
+}
+
+.mobile-card:nth-child(4) .mobile-card__img {
+  background: url(../img/artist/avatar4.png) top center/cover no-repeat;
+}
+
+.mobile-card:nth-child(5) .mobile-card__img {
+  background: url(../img/artist/avatar5.png) top center/cover no-repeat;
+}
+
+.mobile-cards {
+  height: 100vh;
+}
+
+.mobile-cards__title {
+  font-family: 'Norse';
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 6px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+
+.swiper-pagination {
+  position: static;
+  margin: 50px 0;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+}
+
 @media screen and (max-width: 1750px) {
   .art {
     max-width: 1100px;

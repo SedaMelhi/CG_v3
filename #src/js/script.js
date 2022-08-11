@@ -210,12 +210,6 @@ window.addEventListener("load", function () {
       item.querySelector(".answer").classList.toggle("question__open")
       item.classList.toggle("question__border")
       item.style.opacity = "1"
-      // if(span.getClientRects().length > 4 && item.style.width != "500px"){
-      //   item.style.width = "500px"
-      // }else{
-      //   item.style.width = "auto"
-      // }
-      
     }
   })
 
@@ -233,3 +227,18 @@ window.addEventListener("load", function () {
 //       ball.style.top = e.pageY - ball.offsetHeight /2 - y + 'px';
 //    })
 // })
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  spaceBetween: 24,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+ 
+});

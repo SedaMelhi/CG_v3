@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <title></title>
 </head>
@@ -257,10 +258,16 @@
             </div>
         </div>
     </div> 
+
+
+
+
+
+
     <div class="mobile">
         <div class="dark-top"><img src="img/top.svg"></div>
         <div class="mobile-top">
-            <img src="img/top.svg">
+            <img src="img/ClubGorgon.png">
         </div>
         
         <div class="mobile-arch">
@@ -281,6 +288,77 @@
                 @@include('blocks/_project.html')
                 <img src="./img/art1.jpg" class="full-image">
                 @@include('blocks/_medusa.html')
+                <div class="expect" id="expect">
+                    <div class="top" id="top"></div>
+                    <div class="expect__text expect__visible">
+                        <div class="middle__title">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50016 15.9333C13.3293 15.9333 16.4335 12.8291 16.4335 8.99992C16.4335 5.17074 13.3293 2.06659 9.50016 2.06659C5.67099 2.06659 2.56683 5.17074 2.56683 8.99992C2.56683 12.8291 5.67099 15.9333 9.50016 15.9333ZM9.50016 17.6666C14.2866 17.6666 18.1668 13.7864 18.1668 8.99992C18.1668 4.21345 14.2866 0.333252 9.50016 0.333252C4.71369 0.333252 0.833496 4.21345 0.833496 8.99992C0.833496 13.7864 4.71369 17.6666 9.50016 17.6666Z" fill="white"/>
+                            </svg>    
+                            <h1>WHAT TO EXPECT</h1>
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50016 15.9333C13.3293 15.9333 16.4335 12.8291 16.4335 8.99992C16.4335 5.17074 13.3293 2.06659 9.50016 2.06659C5.67099 2.06659 2.56683 5.17074 2.56683 8.99992C2.56683 12.8291 5.67099 15.9333 9.50016 15.9333ZM9.50016 17.6666C14.2866 17.6666 18.1668 13.7864 18.1668 8.99992C18.1668 4.21345 14.2866 0.333252 9.50016 0.333252C4.71369 0.333252 0.833496 4.21345 0.833496 8.99992C0.833496 13.7864 4.71369 17.6666 9.50016 17.6666Z" fill="white"/>
+                            </svg>  
+                        </div>
+                        <div class="middle__description">
+                            As a member of Club Gorgon you will be able to mint exclusive NFT artwork by curated artists from all over the world.
+                            This membership will grant you access to members only on-chain and off-chain events as well as voting rights in the form of airdropped governance tokens and fractional ownership over the DAOs treasury
+                            (in the future). In addition, members will be eligible for monthly free NFT art airdrops.
+                        </div>
+                    </div>
+                </div>
+               <div class="mobile-cards">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide mobile-card">
+                        <div class="mobile-card__img">
+                            <div class="mobile-card__num">1</div>
+                        </div>
+                        <div class="mobile-card__title">
+                            Quevedo SKULLS
+                        </div>
+                      </div>
+                      <div class="swiper-slide mobile-card">
+                         <div class="mobile-card__img">
+                            <div class="mobile-card__num">2</div>
+                        </div>
+                        <div class="mobile-card__title">
+                            uno SOPHIA
+                        </div>
+                      </div>
+                      <div class="swiper-slide mobile-card">
+                         <div class="mobile-card__img">
+                            <div class="mobile-card__num">3</div>
+                        </div>
+                        <div class="mobile-card__title">
+                            thais akanne
+                        </div>
+                      </div>
+                      <div class="swiper-slide mobile-card">
+                         <div class="mobile-card__img">
+                            <div class="mobile-card__num">4</div>
+                        </div>
+                        <div class="mobile-card__title">
+                            Quevedo Clowns
+                        </div>
+                      </div>
+                      <div class="swiper-slide mobile-card">
+                         <div class="mobile-card__img">
+                            <div class="mobile-card__num">1</div>
+                        </div>
+                        <div class="mobile-card__title">
+                            Nevski.Most
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="mobile-cards__title">
+                    MONTHLY airdrops
+                  </div>
+               </div>
             </div>
             
             <div class="mobile-bottom"></div>
@@ -317,6 +395,7 @@
        
         <div class="mobile-bottom"></div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 
