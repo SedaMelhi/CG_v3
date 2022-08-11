@@ -2467,9 +2467,9 @@ body {
 }
 
 .mobile-card {
-  width: 93%;
+  max-width: 370px;
   margin: 0 auto;
-  height: 55vh;
+  height: 443px;
   font-family: 'Inconsolata';
   background: #FFFFFF;
   border: 1.12281px solid #FFFFFF;
@@ -2555,7 +2555,7 @@ body {
 
 .swiper-pagination {
   position: static;
-  margin: 30px 0 20px;
+  margin: 40px 0 20px;
 }
 
 .swiper-pagination-bullet-active {
