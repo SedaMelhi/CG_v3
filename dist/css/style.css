@@ -2676,7 +2676,13 @@ body {
 }
 
 .mobile-map .title__wrap {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+}
+
+.mobile-map .map .subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
 }
 
 .mobile-map .page__border {
