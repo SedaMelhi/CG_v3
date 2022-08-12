@@ -2464,6 +2464,7 @@ body {
 
 .swiper-slide {
   width: 100% !important;
+  padding: 0 12px;
 }
 
 .swiper-slide:nth-child(1) .mobile-card__img {
@@ -2496,6 +2497,21 @@ body {
   border-radius: 500px 500px 10% 10%;
   color: #000;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 3px #fff;
+          box-shadow: 0px 0px 3px #fff;
+}
+
+.mobile-card_black {
+  background-color: #000;
 }
 
 .mobile-card__img {
@@ -2529,11 +2545,28 @@ body {
 .mobile-cards__title {
   font-family: 'Norse';
   font-weight: 400;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
+  color: #fff;
+  height: calc(100% - 8px);
+  width: calc(100% - 8px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid;
+  border-radius: 500px 500px 10% 10%;
+  -webkit-box-shadow: 0px 0px 3px #fff;
+          box-shadow: 0px 0px 3px #fff;
+  padding: 0 10px;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -2562,6 +2595,70 @@ body {
 
 .swiper {
   z-index: 0;
+}
+
+.arrow-left {
+  margin-left: 10px;
+  width: 27px;
+}
+
+.arrow-left span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-top: 3.5px solid #fff;
+  border-right: 3.5px solid #fff;
+  margin: -1px;
+  -webkit-animation: arrow-left 1s infinite;
+          animation: arrow-left 1s infinite;
+  float: left;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arrow-left span {
+  border: none;
+  border-top: 2.5px solid #fff;
+  border-right: 2.5px solid #fff;
+}
+
+.arrow-left span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.arrow-left span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+@-webkit-keyframes arrow-left {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-left {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 1750px) {
