@@ -354,6 +354,8 @@
         z-index: 0;
         &__wrap{
             display: block;
+            width: 100%;
+            overflow-x: hidden;
         }
         &__item{
             width: 100%;

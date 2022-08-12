@@ -2696,6 +2696,8 @@ body {
 
 .mobile-map .map__wrap {
   display: block;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .mobile-map .map__item {
