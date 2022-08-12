@@ -2338,6 +2338,8 @@ body {
   height: 48px;
   padding-bottom: 5px;
   bottom: 0;
+  -webkit-box-shadow: 0px -20px 15px #000;
+          box-shadow: 0px -20px 15px #000;
 }
 
 .mobile-nav svg {
@@ -2467,23 +2469,23 @@ body {
   padding: 0 12px;
 }
 
-.swiper-slide:nth-child(2) .mobile-card__img {
+.swiper-slide:nth-child(1) .mobile-card__img {
   background: url(../img/artist/avatar.png) top center/cover no-repeat;
 }
 
-.swiper-slide:nth-child(3) .mobile-card__img {
+.swiper-slide:nth-child(2) .mobile-card__img {
   background: url(../img/artist/avatar2.png) top center/cover no-repeat;
 }
 
-.swiper-slide:nth-child(4) .mobile-card__img {
+.swiper-slide:nth-child(3) .mobile-card__img {
   background: url(../img/artist/avatar3.png) top center/cover no-repeat;
 }
 
-.swiper-slide:nth-child(5) .mobile-card__img {
+.swiper-slide:nth-child(4) .mobile-card__img {
   background: url(../img/artist/avatar4.png) top center/cover no-repeat;
 }
 
-.swiper-slide:nth-child(6) .mobile-card__img {
+.swiper-slide:nth-child(5) .mobile-card__img {
   background: url(../img/artist/avatar5.png) top center/cover no-repeat;
 }
 
@@ -2521,15 +2523,15 @@ body {
 
 .mobile-card__num {
   position: absolute;
-  width: 42.95px;
-  height: 40.98px;
+  width: 43px;
+  height: 41px;
   right: 22px;
   bottom: 82px;
   background: #fff;
-  border-radius: 26.7424px;
+  border-radius: 26px;
   font-weight: 600;
   font-size: 3rem;
-  line-height: 40.98px;
+  line-height: 41px;
   text-align: center;
 }
 
@@ -2550,27 +2552,23 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  color: #fff;
-  height: calc(100% - 8px);
-  width: calc(100% - 8px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid;
-  border-radius: 500px 500px 10% 10%;
-  -webkit-box-shadow: 0px 0px 3px #fff;
-          box-shadow: 0px 0px 3px #fff;
-  padding: 0 10px;
 }
 
-.mobile-cards__title > div {
-  padding-top: 15px;
+.footer_mobile {
+  top: calc(100% - 102px);
+}
+
+.footer_mobile .networks {
+  width: calc(100% - 70px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer_mobile .networks a {
+  font-size: 2.4rem;
+  -webkit-filter: drop-shadow(0px 0px 3px #fff);
+          filter: drop-shadow(0px 0px 3px #fff);
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,

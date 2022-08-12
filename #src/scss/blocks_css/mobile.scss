@@ -80,6 +80,7 @@
             height: 48px;
             padding-bottom: 5px;
             bottom: 0;
+            box-shadow: 0px -20px 15px #000;
         }
         svg{
             fill: #fff;
@@ -168,19 +169,19 @@
 .swiper-slide{
     width: 100%!important;
     padding: 0 12px;
-    &:nth-child(2) .mobile-card__img{
+    &:nth-child(1) .mobile-card__img{
         background: url(../img/artist/avatar.png) top center/cover no-repeat;
     }
-    &:nth-child(3) .mobile-card__img{
+    &:nth-child(2) .mobile-card__img{
         background: url(../img/artist/avatar2.png) top center/cover no-repeat;
     }
-    &:nth-child(4) .mobile-card__img{
+    &:nth-child(3) .mobile-card__img{
         background: url(../img/artist/avatar3.png) top center/cover no-repeat;
     }
-    &:nth-child(5) .mobile-card__img{
+    &:nth-child(4) .mobile-card__img{
         background: url(../img/artist/avatar4.png) top center/cover no-repeat;
     }
-    &:nth-child(6) .mobile-card__img{
+    &:nth-child(5) .mobile-card__img{
         background: url(../img/artist/avatar5.png) top center/cover no-repeat;
     }
 }
@@ -207,15 +208,15 @@
     }
     &__num{
         position: absolute;
-        width: 42.95px;
-        height: 40.98px;
+        width: 43px;
+        height: 41px;
         right: 22px;
         bottom: 82px;
         background: #fff;
-        border-radius: 26.7424px;
+        border-radius: 26px;
         font-weight: 600;
         font-size: 3rem;
-        line-height: 40.98px;
+        line-height: 41px;
         text-align: center;
     }
     &__title{
@@ -238,23 +239,33 @@
         text-align: center;
         text-transform: uppercase;
         color: #fff;
-        color: #fff;
-        height: calc(100% - 8px);
-        width: calc(100% - 8px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid;
-        border-radius: 500px 500px 10% 10%;
-        box-shadow: 0px 0px 3px #fff;
-        padding: 0 10px;
-        > div{
-            padding-top: 15px;
-        }
+        // height: calc(100% - 8px);
+        // width: calc(100% - 8px);
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // border: 1px solid;
+        // border-radius: 500px 500px 10% 10%;
+        // box-shadow: 0px 0px 3px #fff;
+        // padding: 0 10px;
+        // > div{
+        //     padding-top: 15px;
+        // }
 
     }
 }
-
+.footer_mobile{
+    top: calc(100% - 102px);
+    .networks{
+        width: calc(100% - 70px);
+        justify-content: space-between;
+        a{
+            font-size: 2.4rem;
+            filter: drop-shadow(0px 0px 3px #fff);
+            
+        }
+    }
+}
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 6px;
 }
