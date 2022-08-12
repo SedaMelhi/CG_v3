@@ -2569,6 +2569,10 @@ body {
   padding: 0 10px;
 }
 
+.mobile-cards__title > div {
+  padding-top: 15px;
+}
+
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 6px;
