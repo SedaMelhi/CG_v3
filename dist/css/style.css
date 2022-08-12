@@ -2667,6 +2667,10 @@ body {
   }
 }
 
+.mobile-map {
+  margin-bottom: 150px;
+}
+
 .mobile-map .page {
   z-index: 0;
 }
