@@ -2731,6 +2731,7 @@ body {
 
 .mobile-arts {
   padding-bottom: 150px;
+  overflow-x: hidden;
 }
 
 .mobile-arts .art {
