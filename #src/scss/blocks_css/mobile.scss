@@ -387,8 +387,32 @@
     overflow-x: hidden;
     .art{
         margin-top: 0;
+        z-index: 0;
     }
     .art__image{
         width: calc(50% - 20px);
+    }
+    .swiper-wrapper{
+        z-index: 0;
+    }
+}
+
+.faq-mobile{
+    .page{
+        z-index: 0;
+    }
+    .page__border{
+        width: 100%;
+    }
+    .question{
+        width: 100%;
+        font-size: 1.4rem;
+        text-align: left;
+    }
+    .page .title{
+        font-size: 4rem;
+    }
+    .title__wrap{
+        margin-bottom: 35px;
     }
 }

@@ -187,9 +187,9 @@ window.addEventListener("load", function () {
   }
 
   /////////открываем и закрываем блоки вопросов////
-  const faq = this.document.querySelector(".faq__wrap"),
+  const faqs = this.document.querySelectorAll(".faq__wrap"),
     answers = this.document.querySelectorAll(".answer");
-  faq.addEventListener("click", function (e) {
+  faqs.forEach((faq) => faq.addEventListener("click", function (e) {
     let item = e.target.closest(".question");
     let span = item.querySelector("span")
     if (item) {
@@ -211,7 +211,7 @@ window.addEventListener("load", function () {
       item.classList.toggle("question__border")
       item.style.opacity = "1"
     }
-  })
+  }))
 
 })
 

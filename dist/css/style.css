@@ -2736,10 +2736,37 @@ body {
 
 .mobile-arts .art {
   margin-top: 0;
+  z-index: 0;
 }
 
 .mobile-arts .art__image {
   width: calc(50% - 20px);
+}
+
+.mobile-arts .swiper-wrapper {
+  z-index: 0;
+}
+
+.faq-mobile .page {
+  z-index: 0;
+}
+
+.faq-mobile .page__border {
+  width: 100%;
+}
+
+.faq-mobile .question {
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.faq-mobile .page .title {
+  font-size: 4rem;
+}
+
+.faq-mobile .title__wrap {
+  margin-bottom: 35px;
 }
 
 @media screen and (max-width: 1750px) {
