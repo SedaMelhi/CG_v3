@@ -245,7 +245,21 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-const swiper2 = new Swiper('.mobile-map .map__wrap', {
+const swiperMap = new Swiper('.mobile-map .map__wrap', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  spaceBetween: 24,
+  slidesPerView: '1',
+  setWrapperSize: true,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+
+
+const swiperArt = new Swiper('.mobile-arts', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
