@@ -128,6 +128,17 @@ body {
   display: block;
 }
 
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  z-index: 100;
+}
+
 .noise {
   height: 100vh;
   width: 100vw;
@@ -2327,7 +2338,6 @@ body {
   text-transform: uppercase;
   background-color: #000;
   border-radius: 23px;
-  padding: 0 16px;
   border: 1px solid #fff;
 }
 
@@ -2360,22 +2370,26 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   cursor: pointer;
   z-index: 2;
   -webkit-transition: 0.3s linear;
   -o-transition: 0.3s linear;
   transition: 0.3s linear;
+  padding: 0px 8px;
 }
 
 .mobile-nav__item_active {
-  padding: 0px 16px;
   background-color: #ffff;
   color: #000;
 }
 
 .mobile-nav__item_active svg {
   fill: #000;
+}
+
+.mobile-nav__item_active a {
+  color: #000;
 }
 
 .mobile-art {

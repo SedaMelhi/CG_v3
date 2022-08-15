@@ -1,16 +1,30 @@
 window.addEventListener("load", function () {
+  this.document.querySelector(".load").style.display = "none";
   const archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main__content"),
     content = document.querySelector(".border_second"),
     map = document.querySelector(".map"),
-    menu_items = [...document.querySelectorAll(".menu__item a"), document.querySelector(".home")];
+    menu_items = [...document.querySelectorAll(".menu__item a"), ...document.querySelectorAll(".mobile-nav__item a"), document.querySelector(".home")];
   document.querySelector(".empty").style.height = `${document.querySelector(".main2").scrollHeight - archs[1].scrollHeight}px`;
 
   content.addEventListener("resize", function () {
     document.querySelector(".empty").style.height = `${document.querySelector(".main2").scrollHeight - archs[1].scrollHeight}px`;
   })
   let menuClick = false
-
+  this.document.querySelector(".mobile").addEventListener("scroll", function () {
+    const sections = [
+      document.getElementById("mobile-project"),
+      document.getElementById("mobile-medusa"),
+      document.getElementById("mobile-roadmap"),
+      document.getElementById("mobile-faq")
+    ]
+    sections.forEach(section => {
+      //проверка не нажат ли якорь, что бы не выделять лишние элементы меню
+      if (!menuClick) {
+        scrollSectionMobile(section)
+      }
+    })
+  })
   content.addEventListener("scroll", function () {
     archs[1].scrollTop = content.scrollTop;
 
@@ -62,11 +76,26 @@ window.addEventListener("load", function () {
     let sectionsTop = section.getBoundingClientRect().top;
     if (sectionsTop + (section.clientHeight / 2) <= window.innerHeight && sectionsTop >= 0) {
       menu_items.forEach(item => {
+        
         if (item.hash.substring(1) == section.id && item.hash.substring(1) != "home" ) {
           item.parentNode.classList.add("menu__active")
         }
         if (item.hash.substring(1) != section.id) {
           item.parentNode.classList.remove("menu__active")
+        }
+      })
+    }
+  }
+  function scrollSectionMobile(section) {
+    let sectionsTop = section.getBoundingClientRect().top;
+    if (sectionsTop + (section.clientHeight / 2) <= window.innerHeight && sectionsTop >= 0) {
+      menu_items.forEach(item => {
+        
+        if (item.hash.substring(1) == section.id && item.hash.substring(1) != "home" ) {
+          item.parentNode.classList.add("mobile-nav__item_active")
+        }
+        if (item.hash.substring(1) != section.id) {
+          item.parentNode.classList.remove("mobile-nav__item_active")
         }
       })
     }
@@ -141,34 +170,65 @@ window.addEventListener("load", function () {
       link.addEventListener('click', function (event) {
         event.preventDefault();
         let witdhTop = content.scrollTop;
+        let mobile = document.querySelector(".mobile");
+        let mobileWidthTop = mobile.scrollTop;
         let hash = this.hash;
         let toBlock = document.querySelector(hash).getBoundingClientRect().top;
         let start = null;
         requestAnimationFrame(step);
         speed = 0.2
-
         function step(time) {
           if (start === null) {
             start = time;
           }
+          let r;
           let progress = time - start;
-          let r = (toBlock < 0 ? Math.max(witdhTop - progress / speed, witdhTop + toBlock) : Math.min(witdhTop + progress / speed, witdhTop + toBlock));
+          if(hash.substring(0, 7) != "#mobile"){
+            r = (toBlock < 0 ? Math.max(witdhTop - progress / speed, witdhTop + toBlock) : Math.min(witdhTop + progress / speed, witdhTop + toBlock));
+          }else{
+            r = (toBlock < 0 ? Math.max(mobileWidthTop - progress / speed, mobileWidthTop + toBlock) : Math.min(mobileWidthTop + progress / speed, mobileWidthTop + toBlock));
+          }
+          
           if (r < toBlock && r > toBlock - 900) {
             speed += 0.005
           }
-          content.scrollTo(0, r - 100);
-          if (r != witdhTop + toBlock) {
-            speed -= 0.005
-            requestAnimationFrame(step);
+          if(hash.substring(0, 7) != "#mobile"){
+            content.scrollTo(0, r - 100);
+          }else{
+            mobile.scrollTo(0, r - 100);
           }
-          links.forEach(item => {
-            if (item.parentNode.classList[1] == "menu__active") {
-              item.parentNode.classList.remove("menu__active")
+          if(hash.substring(0, 7) != "#mobile"){
+            if (r != witdhTop + toBlock) {
+              speed -= 0.005
+              requestAnimationFrame(step);
             }
-          })
-          if (link.hash != "#home" && link.hash != "#mint") {
-            link.parentNode.classList.add("menu__active")
+          }else{
+            if (r != mobileWidthTop + toBlock) {
+              speed -= 0.005
+              requestAnimationFrame(step);
+            }
           }
+          if(hash.substring(0, 7) != "#mobile"){
+            links.forEach(item => {
+              if (item.parentNode.classList[1] == "menu__active") {
+                item.parentNode.classList.remove("menu__active")
+              }
+            })
+            if (link.hash != "#home" && link.hash != "#mint") {
+              link.parentNode.classList.add("menu__active")
+            }
+          }else{
+            links.forEach(item => {
+              if (item.parentNode.classList[1] == "mobile-nav__item_active") {
+                item.parentNode.classList.remove("mobile-nav__item_active")
+              }
+            })
+            if (link.hash != "#home" && link.hash != "#mint") {
+              link.parentNode.classList.add("mobile-nav__item_active")
+            }
+          }
+          
+          
           menuClick = true
           setTimeout(() => menuClick = false, 600)
         };
