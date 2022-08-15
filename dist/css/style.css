@@ -2330,7 +2330,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: calc(90% - 3px);
+  width: 91%;
   margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2377,6 +2377,10 @@ body {
   -o-transition: 0.3s linear;
   transition: 0.3s linear;
   padding: 0px 8px;
+}
+
+.mobile-nav__item:last-child {
+  padding-right: 15px;
 }
 
 .mobile-nav__item_active {
