@@ -47,6 +47,9 @@ body{
     .mobile{
         display: flex;
     }
+    html{
+        scroll-behavior: smooth;
+    }
 }
 
 @media screen and(max-width: 600px) {

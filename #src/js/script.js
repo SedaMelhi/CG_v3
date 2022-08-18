@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
     document.querySelector(".empty").style.height = `${document.querySelector(".main2").scrollHeight - archs[1].scrollHeight}px`;
   })
   let menuClick = false
-  this.document.querySelector(".mobile").addEventListener("scroll", function () {
+  this.window.addEventListener("scroll", function () {
     const sections = [
       document.getElementById("mobile-project"),
       document.getElementById("mobile-medusa"),
@@ -168,70 +168,55 @@ window.addEventListener("load", function () {
 
     links.forEach(link => {
       link.addEventListener('click', function (event) {
-        event.preventDefault();
         let witdhTop = content.scrollTop;
-        let mobile = document.querySelector(".mobile");
-        let mobileWidthTop = mobile.scrollTop;
         let hash = this.hash;
         let toBlock = document.querySelector(hash).getBoundingClientRect().top;
         let start = null;
-        requestAnimationFrame(step);
         speed = 0.2
+        if(hash.substring(0, 7) != "#mobile"){
+          event.preventDefault();
+          requestAnimationFrame(step);
+        }else{
+          menuClick = true
+          setTimeout(() => menuClick = false, 600)
+          links.forEach(item => {
+            if (item.parentNode.classList[1] == "mobile-nav__item_active") {
+              item.parentNode.classList.remove("mobile-nav__item_active")
+            }
+          })
+          if (link.hash != "#home" && link.hash != "#mint") {
+            link.parentNode.classList.add("mobile-nav__item_active")
+          }
+        }
         function step(time) {
           if (start === null) {
             start = time;
           }
           let r;
           let progress = time - start;
-          if(hash.substring(0, 7) != "#mobile"){
-            r = (toBlock < 0 ? Math.max(witdhTop - progress / speed, witdhTop + toBlock) : Math.min(witdhTop + progress / speed, witdhTop + toBlock));
-          }else{
-            r = (toBlock < 0 ? Math.max(mobileWidthTop - progress / speed, mobileWidthTop + toBlock) : Math.min(mobileWidthTop + progress / speed, mobileWidthTop + toBlock));
-          }
-          
+          r = (toBlock < 0 ? Math.max(witdhTop - progress / speed, witdhTop + toBlock) : Math.min(witdhTop + progress / speed, witdhTop + toBlock));
           if (r < toBlock && r > toBlock - 900) {
             speed += 0.005
           }
-          if(hash.substring(0, 7) != "#mobile"){
-            content.scrollTo(0, r - 100);
-          }else{
-            mobile.scrollTo(0, r - 100);
+          content.scrollTo(0, r - 100);
+          if (r != witdhTop + toBlock) {
+            speed -= 0.005
+            requestAnimationFrame(step);
           }
-          if(hash.substring(0, 7) != "#mobile"){
-            if (r != witdhTop + toBlock) {
-              speed -= 0.005
-              requestAnimationFrame(step);
+          links.forEach(item => {
+            if (item.parentNode.classList[1] == "menu__active") {
+              item.parentNode.classList.remove("menu__active")
             }
-          }else{
-            if (r != mobileWidthTop + toBlock) {
-              speed -= 0.005
-              requestAnimationFrame(step);
-            }
-          }
-          if(hash.substring(0, 7) != "#mobile"){
-            links.forEach(item => {
-              if (item.parentNode.classList[1] == "menu__active") {
-                item.parentNode.classList.remove("menu__active")
-              }
-            })
-            if (link.hash != "#home" && link.hash != "#mint") {
-              link.parentNode.classList.add("menu__active")
-            }
-          }else{
-            links.forEach(item => {
-              if (item.parentNode.classList[1] == "mobile-nav__item_active") {
-                item.parentNode.classList.remove("mobile-nav__item_active")
-              }
-            })
-            if (link.hash != "#home" && link.hash != "#mint") {
-              link.parentNode.classList.add("mobile-nav__item_active")
-            }
+          })
+          if (link.hash != "#home" && link.hash != "#mint") {
+            link.parentNode.classList.add("menu__active")
           }
           
           
           menuClick = true
           setTimeout(() => menuClick = false, 600)
         };
+        
       });
     });
   };
