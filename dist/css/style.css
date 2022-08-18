@@ -2805,14 +2805,12 @@ body {
 .mobile-map .map__item {
   width: 100%;
   pointer-events: none;
+  background-image: -o-radial-gradient(rgba(5, 255, 0, 0.4), rgba(5, 255, 0, 0));
+  background-image: radial-gradient(rgba(5, 255, 0, 0.4), rgba(5, 255, 0, 0));
 }
 
 .mobile-map .map__block {
   padding: 15px 10px 0;
-}
-
-.mobile-map .map__circle {
-  opacity: 0.8;
 }
 
 .mobile-map .map__item .map__block {

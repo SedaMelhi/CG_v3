@@ -372,13 +372,12 @@
         &__item{
             width: 100%;
             pointer-events: none;
+            background-image: radial-gradient(rgba(5, 255, 0, 0.4), rgba(5, 255, 0, 0));
         }
         &__block{
             padding: 15px 10px 0;
         }
-        &__circle{
-            opacity: 0.8;
-        }
+       
     }
     .map__item .map__block{
         background-color: #fff0;
