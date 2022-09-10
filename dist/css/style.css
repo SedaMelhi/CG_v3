@@ -2419,6 +2419,18 @@ body {
           filter: drop-shadow(0px 0px 3px #fff);
 }
 
+.mobile .art2 {
+  min-height: 120vh;
+  width: calc(100% + 6px);
+  margin-top: 150px;
+  margin-left: -3px;
+  border: 1px solid #fff;
+  border-radius: 1222px 1222px 12px 12px;
+  -webkit-box-shadow: 0px 0px 3px #fff;
+          box-shadow: 0px 0px 3px #fff;
+  background: url(../img/art2.png) top right/cover no-repeat;
+}
+
 .mobile .first {
   min-height: 100vh;
   display: -webkit-box;
