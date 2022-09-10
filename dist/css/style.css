@@ -2305,7 +2305,7 @@ body {
   background-image: -o-linear-gradient(#000f, #0000);
   background-image: linear-gradient(#000f, #0000);
   pointer-events: none;
-  z-index: 1;
+  z-index: 4;
 }
 
 .dark-top img {
@@ -2334,7 +2334,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 5;
   top: -15px;
   pointer-events: none;
   mix-blend-mode: difference;
@@ -2500,6 +2500,7 @@ body {
 .mobile .first__img {
   overflow: hidden;
   position: relative;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2985,7 +2986,7 @@ body {
 }
 
 .team-mobile {
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 
 .team-mobile .title__wrap h1 {
@@ -3096,8 +3097,12 @@ body {
   margin-bottom: 30px;
 }
 
+.team__line > div {
+  width: 33.3%;
+}
+
 .team__line i {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .team__line img {
@@ -3106,7 +3111,7 @@ body {
 }
 
 .team__line p {
-  margin: 4px 0;
+  margin: 5px 0;
 }
 
 .team__text-left {
@@ -3199,7 +3204,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 3rem;
+  font-size: 2rem;
+  font-family: monospace;
+  font-weight: 400;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3208,7 +3215,6 @@ body {
           align-items: center;
   height: 100%;
   margin: auto;
-  font-family: 'Norse';
   text-shadow: 0 0 1px white;
 }
 

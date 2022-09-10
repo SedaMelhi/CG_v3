@@ -7,7 +7,7 @@
     margin: 0 auto;
     background-image: linear-gradient(#000f, #0000);
     pointer-events: none;
-    z-index: 1;
+    z-index: 4;
     img{
         opacity: 0;
         width: 100%;
@@ -27,7 +27,7 @@
         left: 0;
         right: 0;
         margin: 0 auto;
-        z-index: 2;
+        z-index: 5;
         top: -15px;
         pointer-events: none;
         mix-blend-mode: difference;
@@ -159,6 +159,7 @@
             }
             overflow: hidden;
             position: relative;
+            z-index: 3;
             display: flex;
             min-height: 430px;
             flex-direction: column;
@@ -552,7 +553,7 @@
             
         }
     }
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 @for $i from 1 to 9 {
     $time: $i/5;
@@ -576,15 +577,18 @@
         line-height: 1.7rem;
         font-family: 'Inconsolata';
         margin-bottom: 30px;
+        > div{
+            width: 33.3%;
+        }
         i{
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
         img{
             margin: 0 13px;
             width: 80px;
         }
         p{
-            margin: 4px 0;
+            margin: 5px 0;
         }
     }
     &__text{
