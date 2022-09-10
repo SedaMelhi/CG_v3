@@ -2384,6 +2384,7 @@ body {
   background-color: #000;
   border-radius: 23px;
   border: 1px solid #fff;
+  z-index: 4;
 }
 
 .mobile-nav__wrap {
