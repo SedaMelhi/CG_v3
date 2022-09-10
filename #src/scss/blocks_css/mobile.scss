@@ -306,25 +306,23 @@
 }
 
 .arrow-left{
-    margin-left: 10px;
-    width: 27px;
+    margin-left: 8px;
+    margin-top: -2px;
+    width: 14px;
+    transform: rotate(90deg);
 }
 .arrow-left span {
     display: block;
-    width: 12px;
-    height: 12px;
-    border-top: 3.5px solid #fff;
-    border-right: 3.5px solid #fff;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
     margin: -1px;
     animation: arrow-left 1s infinite;
     float: left;
     transform: rotate(45deg);
 }
-.arrow-left span{
-    border: none;
-    border-top: 2.5px solid #fff;
-    border-right: 2.5px solid #fff;
-}
+
 .arrow-left span:nth-child(2){
     animation-delay: 0.1s;
 }
@@ -514,8 +512,8 @@
     &__hidden{
         .team__line{
             display: none;
-            opacity: 1;
-            transform: translateY(0px);
+            opacity: 0;
+            transform: translateY(-70px);
             
         }
     }
@@ -564,7 +562,13 @@
     }
     &__more{
         font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        align-items: center;
         cursor: pointer;
-        filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
+        font-family: 'Inconsolata';
+        filter: drop-shadow(0px 0px 6px #fff);
     }
 }
+

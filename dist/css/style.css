@@ -2706,16 +2706,20 @@ body {
 }
 
 .arrow-left {
-  margin-left: 10px;
-  width: 27px;
+  margin-left: 8px;
+  margin-top: -2px;
+  width: 14px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .arrow-left span {
   display: block;
-  width: 12px;
-  height: 12px;
-  border-top: 3.5px solid #fff;
-  border-right: 3.5px solid #fff;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
   margin: -1px;
   -webkit-animation: arrow-left 1s infinite;
           animation: arrow-left 1s infinite;
@@ -2723,12 +2727,6 @@ body {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-}
-
-.arrow-left span {
-  border: none;
-  border-top: 2.5px solid #fff;
-  border-right: 2.5px solid #fff;
 }
 
 .arrow-left span:nth-child(2) {
@@ -2972,10 +2970,10 @@ body {
 
 .team-mobile__hidden .team__line {
   display: none;
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-          transform: translateY(0px);
+  opacity: 0;
+  -webkit-transform: translateY(-70px);
+      -ms-transform: translateY(-70px);
+          transform: translateY(-70px);
 }
 
 .team__line_visible:nth-child(1) {
@@ -3097,9 +3095,20 @@ body {
 
 .team__more {
   font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-  -webkit-filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
-          filter: drop-shadow(0px 0px 4px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 10px rgba(5, 255, 0, 0.7)) drop-shadow(0px 0px 20px rgba(5, 255, 0, 0.7));
+  font-family: 'Inconsolata';
+  -webkit-filter: drop-shadow(0px 0px 6px #fff);
+          filter: drop-shadow(0px 0px 6px #fff);
 }
 
 @media screen and (max-width: 1750px) {
