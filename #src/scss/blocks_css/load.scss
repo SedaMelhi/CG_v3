@@ -1,0 +1,62 @@
+:root {
+    --main-color: #111;
+    --loader-color: #4CAF50;
+    --back-color: #A5D6A7;
+    --time: 3s;
+    --size: 3px;
+  }
+.load{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .animate {
+      display:flex;
+      flex-direction: column;
+      font-size: 3rem;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+      margin: auto;
+      font-family: 'Norse';
+      text-shadow: 0 0 1px white;
+    }
+}
+@keyframes load {
+  0%{
+      opacity: 0.08;
+      filter: blur(5px);
+      letter-spacing: 3px;
+  }
+}
+.loader {
+    overflow: hidden;
+    width: 100%;
+    height: 5px;
+    display: flex;
+    margin-top: 5px;
+  }
+  
+  .loader__element {
+      height: var(--size);
+      width: 100%;
+      background: var(--back-color);
+  
+  }
+  
+  .loader__element:before {
+      content: '';
+      display: block;
+      background-color: var(--loader-color);
+      height: var(--size);
+      width: 0;
+    animation: getWidth var(--time) ease-in infinite;
+  }
+  
+  @keyframes getWidth {
+      100% { width: 100%; }
+  }

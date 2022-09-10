@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "Norse";
+  src: url(../fonts/Norse.woff);
+  src: url(../fonts/Norse.woff) format(woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Inika";
   src: url(../fonts/Inika-Regular.woff);
   src: url(../fonts/Inika-Regular.woff) format(woff);
@@ -20,14 +28,6 @@
   font-family: "Inconsolata";
   src: url(../fonts/Inconsolata-Medium.woff);
   src: url(../fonts/Inconsolata-Medium.woff) format(woff);
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Norse";
-  src: url(../fonts/Norse.woff);
-  src: url(../fonts/Norse.woff) format(woff);
   font-weight: 400;
   font-style: normal;
 }
@@ -126,61 +126,6 @@ body {
 
 .main {
   display: block;
-}
-
-.load {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.load .animate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  margin: auto;
-  font-family: Helvetica, sans-serif, Arial;
-  -webkit-animation: load 1.2s infinite 0s ease-in-out;
-          animation: load 1.2s infinite 0s ease-in-out;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  text-shadow: 0 0 1px white;
-}
-
-@-webkit-keyframes load {
-  0% {
-    opacity: 0.08;
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-    letter-spacing: 3px;
-  }
-}
-
-@keyframes load {
-  0% {
-    opacity: 0.08;
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-    letter-spacing: 3px;
-  }
 }
 
 .no-scroll {
@@ -3109,6 +3054,108 @@ body {
   font-family: 'Inconsolata';
   -webkit-filter: drop-shadow(0px 0px 6px #fff);
           filter: drop-shadow(0px 0px 6px #fff);
+}
+
+:root {
+  --main-color: #111;
+  --loader-color: #4CAF50;
+  --back-color: #A5D6A7;
+  --time: 3s;
+  --size: 3px;
+}
+
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.load .animate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: auto;
+  font-family: 'Norse';
+  text-shadow: 0 0 1px white;
+}
+
+@-webkit-keyframes load {
+  0% {
+    opacity: 0.08;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    letter-spacing: 3px;
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0.08;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    letter-spacing: 3px;
+  }
+}
+
+.loader {
+  overflow: hidden;
+  width: 100%;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+}
+
+.loader__element {
+  height: var(--size);
+  width: 100%;
+  background: var(--back-color);
+}
+
+.loader__element:before {
+  content: '';
+  display: block;
+  background-color: var(--loader-color);
+  height: var(--size);
+  width: 0;
+  -webkit-animation: getWidth var(--time) ease-in infinite;
+          animation: getWidth var(--time) ease-in infinite;
+}
+
+@-webkit-keyframes getWidth {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes getWidth {
+  100% {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1750px) {

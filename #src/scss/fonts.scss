@@ -1,4 +1,11 @@
 @font-face{
+    font-family: "Norse";
+    src: url(../fonts/Norse.woff);
+    src: url(../fonts/Norse.woff) format(woff);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
     font-family: "Inika";
     src: url(../fonts/Inika-Regular.woff);
     src: url(../fonts/Inika-Regular.woff) format(woff);
@@ -19,13 +26,7 @@
     font-weight: 400;
     font-style: normal;
 }
-@font-face{
-    font-family: "Norse";
-    src: url(../fonts/Norse.woff);
-    src: url(../fonts/Norse.woff) format(woff);
-    font-weight: 400;
-    font-style: normal;
-}
+
 .fab {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

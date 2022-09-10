@@ -411,3 +411,5 @@ more.addEventListener("click", function(){
     block.classList.add("team__line_visible");
   })
 })
+
+
