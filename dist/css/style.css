@@ -2972,10 +2972,10 @@ body {
 
 .team-mobile__hidden .team__line {
   display: none;
-  opacity: 0;
-  -webkit-transform: translateY(-80px);
-      -ms-transform: translateY(-80px);
-          transform: translateY(-80px);
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .team__line_visible:nth-child(1) {
