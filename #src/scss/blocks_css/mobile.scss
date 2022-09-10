@@ -132,7 +132,7 @@
             border: 1px solid #fff;
             border-radius: 1222px 1222px 12px 12px;
             box-shadow: 0px 0px 3px #fff; 
-            flex-grow: 0.53;
+            flex-grow: 0.7;
             background: url(../img/art1.jpg) top center/cover no-repeat;
             font-family: 'Inconsolata';
             font-weight: 900;
@@ -268,7 +268,8 @@
     }
 }
 .footer_mobile{
-    top: calc(100% - 102px);
+    top: auto;
+    bottom: 50px;
     .networks{
         width: calc(100% - 70px);
         justify-content: space-between;
