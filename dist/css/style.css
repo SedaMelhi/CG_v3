@@ -3068,18 +3068,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.7rem;
   font-family: 'Inconsolata';
   margin-bottom: 30px;
 }
 
 .team__line i {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .team__line img {
   margin: 0 13px;
+  width: 80px;
 }
 
 .team__text-left {

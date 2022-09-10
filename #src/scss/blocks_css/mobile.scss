@@ -539,15 +539,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         line-height: 1.7rem;
         font-family: 'Inconsolata';
         margin-bottom: 30px;
         i{
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         img{
             margin: 0 13px;
+            width: 80px;
         }
     }
     &__text{
