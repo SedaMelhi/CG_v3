@@ -16,7 +16,8 @@ window.addEventListener("load", function () {
       document.getElementById("mobile-project"),
       document.getElementById("mobile-medusa"),
       document.getElementById("mobile-roadmap"),
-      document.getElementById("mobile-faq")
+      document.getElementById("mobile-faq"),
+      document.getElementById("first")
     ]
     sections.forEach(section => {
       //проверка не нажат ли якорь, что бы не выделять лишние элементы меню
@@ -51,7 +52,7 @@ window.addEventListener("load", function () {
       document.querySelectorAll(".art-img")[1].classList.remove("art-img-visible")
     }
     
-    //////////////menu - для выделения элементов меню при скролле мышью////////////
+    //////////////menu - для выделения элементов меню при скролле////////////
     const sections = [
       document.getElementById("project"),
       document.getElementById("medusa"),
@@ -88,10 +89,9 @@ window.addEventListener("load", function () {
   }
   function scrollSectionMobile(section) {
     let sectionsTop = section.getBoundingClientRect().top;
-    if (sectionsTop + (section.clientHeight / 2) <= window.innerHeight && sectionsTop >= 0) {
+    if (sectionsTop + 250 <= window.innerHeight && sectionsTop >= 0) {
       menu_items.forEach(item => {
-        
-        if (item.hash.substring(1) == section.id && item.hash.substring(1) != "home" ) {
+        if (item.hash.substring(1) == section.id && item.hash.substring(1) != "home" && item.hash.substring(1) != "first") {
           item.parentNode.classList.add("mobile-nav__item_active")
         }
         if (item.hash.substring(1) != section.id) {
