@@ -619,9 +619,9 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
   -webkit-filter: blur(20px);
           filter: blur(20px);
   -o-object-fit: cover;
@@ -2457,7 +2457,7 @@ body {
 }
 
 .mobile .art2 {
-  min-height: 90vh;
+  min-height: 95vh;
   width: calc(100% + 6px);
   margin-top: 150px;
   margin-left: -3px;
@@ -2479,10 +2479,31 @@ body {
           flex-direction: column;
 }
 
+.mobile .first-link {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.mobile .first__text {
+  position: absolute;
+  padding: 0 20px;
+  -webkit-transform: scale(1.2, 1);
+      -ms-transform: scale(1.2, 1);
+          transform: scale(1.2, 1);
+  opacity: 0;
+}
+
 .mobile .first__img {
+  overflow: hidden;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 430px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2499,10 +2520,6 @@ body {
   border-radius: 1222px 1222px 12px 12px;
   -webkit-box-shadow: 0px 0px 3px #fff;
           box-shadow: 0px 0px 3px #fff;
-  -webkit-box-flex: 0.7;
-      -ms-flex-positive: 0.7;
-          flex-grow: 0.7;
-  background: url(../img/art1.jpg) top center/cover no-repeat;
   font-family: 'Inconsolata';
   font-weight: 900;
   font-size: 1.8rem;
@@ -2511,7 +2528,19 @@ body {
   text-transform: uppercase;
   color: #FFF;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  padding: 26px 40px;
+}
+
+.mobile .first__img img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .mobile-content {
@@ -2520,11 +2549,11 @@ body {
 }
 
 .mobile__text {
-  padding-top: 60px;
+  padding-top: 70px;
 }
 
 .mobile .mint-btn {
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 
 .mobile .middle__description {
@@ -3114,8 +3143,6 @@ body {
 .animation .header__title {
   opacity: 1;
   letter-spacing: 0;
-  -webkit-filter: blur(0);
-          filter: blur(0);
   -webkit-transition: 1s ease-out;
   -o-transition: 1s ease-out;
   transition: 1s ease-out;
@@ -3130,6 +3157,21 @@ body {
   -webkit-transition: 1s ease-out;
   -o-transition: 1s ease-out;
   transition: 1s ease-out;
+}
+
+.animation .first__img img {
+  -webkit-animation: arch-visible 1.5s ease-out forwards 0.5s;
+          animation: arch-visible 1.5s ease-out forwards 0.5s;
+}
+
+.animation .first__text {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: 1.2s ease-out 0.5s;
+  -o-transition: 1.2s ease-out 0.5s;
+  transition: 1.2s ease-out 0.5s;
 }
 
 .load {

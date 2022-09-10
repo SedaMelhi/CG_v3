@@ -1,16 +1,23 @@
 window.addEventListener("load", function () {
-  this.document.querySelector(".load").style.display = "none";
-  this.document.querySelector("body").classList.add("animation")
+  document.querySelector(".load").style.display = "none";
+  document.querySelector("body").classList.add("animation");
+  //для высоты первого изображения в мобильном дизайне
+  console.log()
+  document.querySelector(".first__img").style.height = `calc(100vh - ${document.querySelector(".mobile-top-opacity").scrollHeight}px - 45px)`;
   const archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main__content"),
     content = document.querySelector(".border_second"),
     map = document.querySelector(".map"),
     menu_items = [...document.querySelectorAll(".menu__item a"), ...document.querySelectorAll(".mobile-nav__item a"), document.querySelector(".home")];
+ 
   document.querySelector(".empty").style.height = `${document.querySelector(".main2").scrollHeight - archs[1].scrollHeight}px`;
-
   content.addEventListener("resize", function () {
     document.querySelector(".empty").style.height = `${document.querySelector(".main2").scrollHeight - archs[1].scrollHeight}px`;
   })
+  window.addEventListener("resize", function () {
+    document.querySelector(".first__img").style.height = `calc(100vh - ${document.querySelector(".mobile-top-opacity").scrollHeight}px - 45px)`;
+  })
+  
   let menuClick = false
   this.window.addEventListener("scroll", function () {
     const sections = [
@@ -18,7 +25,7 @@ window.addEventListener("load", function () {
       document.getElementById("mobile-medusa"),
       document.getElementById("mobile-roadmap"),
       document.getElementById("mobile-faq"),
-      document.getElementById("first")
+      document.getElementById("mobile-first")
     ]
     sections.forEach(section => {
       //проверка не нажат ли якорь, что бы не выделять лишние элементы меню
@@ -92,7 +99,7 @@ window.addEventListener("load", function () {
     let sectionsTop = section.getBoundingClientRect().top;
     if (sectionsTop + 250 <= window.innerHeight && sectionsTop >= 0) {
       menu_items.forEach(item => {
-        if (item.hash.substring(1) == section.id && item.hash.substring(1) != "home" && item.hash.substring(1) != "first") {
+        if (item.hash.substring(1) == section.id && item.hash.substring(1) != "home" && item.hash.substring(1) != "mobile-first") {
           item.parentNode.classList.add("mobile-nav__item_active")
         }
         if (item.hash.substring(1) != section.id) {
@@ -185,7 +192,7 @@ window.addEventListener("load", function () {
               item.parentNode.classList.remove("mobile-nav__item_active")
             }
           })
-          if (link.hash != "#home" && link.hash != "#mint") {
+          if (link.hash != "#home" && link.hash != "#mint" && link.hash != "#mobile-first") {
             link.parentNode.classList.add("mobile-nav__item_active")
           }
         }

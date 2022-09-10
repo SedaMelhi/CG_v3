@@ -5,7 +5,6 @@
   .header__title{
     opacity: 1;
     letter-spacing: 0;
-    filter: blur(0);
     transition: 1s ease-out;
   }
   .header__description, .mint-btn, .connect{
@@ -13,6 +12,17 @@
     filter: blur(0);
     transition: 1s ease-out;
   }
+  .first__img{
+    img{
+      animation: arch-visible 1.5s ease-out forwards 0.5s;
+    }
+  }
+  .first__text{
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: 1.2s ease-out 0.5s;
+  }
+
 }
 .load{
     position: fixed;
