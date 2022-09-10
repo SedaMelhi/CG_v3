@@ -3083,6 +3083,10 @@ body {
   width: 80px;
 }
 
+.team__line p {
+  margin: 4px 0;
+}
+
 .team__text-left {
   text-align: right;
 }
