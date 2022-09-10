@@ -2384,7 +2384,6 @@ body {
   background-color: #000;
   border-radius: 23px;
   border: 1px solid #fff;
-  z-index: 4;
 }
 
 .mobile-nav__wrap {
@@ -2394,7 +2393,7 @@ body {
   height: 48px;
   padding-bottom: 5px;
   bottom: 0;
-  z-index: 4;
+  z-index: 5;
   -webkit-box-shadow: 0px -20px 15px #000;
           box-shadow: 0px -20px 15px #000;
 }
@@ -2506,7 +2505,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 430px;
+  min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
