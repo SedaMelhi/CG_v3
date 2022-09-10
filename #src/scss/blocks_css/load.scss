@@ -1,10 +1,4 @@
-:root {
-    --main-color: #111;
-    --loader-color: #4CAF50;
-    --back-color: #A5D6A7;
-    --time: 3s;
-    --size: 3px;
-  }
+
 .load{
     position: fixed;
     width: 100%;
@@ -42,19 +36,19 @@
   }
   
   .loader__element {
-      height: var(--size);
+      height: 3px;
       width: 100%;
-      background: var(--back-color);
+      background: rgb(159, 159, 159);
   
   }
   
   .loader__element:before {
       content: '';
       display: block;
-      background-color: var(--loader-color);
-      height: var(--size);
+      background-color: #fff;
+      height: 3px;
       width: 0;
-    animation: getWidth var(--time) ease-in infinite;
+    animation: getWidth 3s ease-in infinite;
   }
   
   @keyframes getWidth {
