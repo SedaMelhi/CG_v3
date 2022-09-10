@@ -1,4 +1,19 @@
-
+.animation{
+  .arch img{
+    animation: arch-visible 1.5s ease-out forwards;
+  }
+  .header__title{
+    opacity: 1;
+    letter-spacing: 0;
+    filter: blur(0);
+    transition: 1s ease-out;
+  }
+  .header__description, .mint-btn, .connect{
+    opacity: 1;
+    filter: blur(0);
+    transition: 1s ease-out;
+  }
+}
 .load{
     position: fixed;
     width: 100%;

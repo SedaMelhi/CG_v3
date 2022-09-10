@@ -1,5 +1,6 @@
 window.addEventListener("load", function () {
   this.document.querySelector(".load").style.display = "none";
+  this.document.querySelector("body").classList.add("animation")
   const archs = document.querySelectorAll(".arch"),
     main = document.querySelector(".main__content"),
     content = document.querySelector(".border_second"),
