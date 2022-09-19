@@ -555,6 +555,11 @@
             
         }
     }
+    &__img{
+        img{
+            border-radius: 14px;
+        }
+    }
     padding-bottom: 100px;
 }
 @for $i from 1 to 9 {

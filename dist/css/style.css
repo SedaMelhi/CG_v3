@@ -110,7 +110,7 @@ a {
 }
 
 html {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 body {
@@ -1297,7 +1297,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  max-width: 324px;
+  max-width: 350px;
   padding: 0 24px;
   gap: 36px;
   justify-items: center;
@@ -1418,13 +1418,13 @@ body {
 }
 
 .artist:nth-child(1) .artist__number {
-  -webkit-animation: scale 0.3s forwards linear 0.76667s;
-          animation: scale 0.3s forwards linear 0.76667s;
+  -webkit-animation: scale 0.3s forwards linear 0.7s;
+          animation: scale 0.3s forwards linear 0.7s;
 }
 
 .artist:nth-child(2) .artist__number {
-  -webkit-animation: scale 0.3s forwards linear 0.83333s;
-          animation: scale 0.3s forwards linear 0.83333s;
+  -webkit-animation: scale 0.3s forwards linear 0.8s;
+          animation: scale 0.3s forwards linear 0.8s;
 }
 
 .artist:nth-child(3) .artist__number {
@@ -1433,8 +1433,12 @@ body {
 }
 
 .artist:nth-child(4) .artist__number {
-  -webkit-animation: scale 0.3s forwards linear 0.96667s;
-          animation: scale 0.3s forwards linear 0.96667s;
+  -webkit-animation: scale 0.3s forwards linear 0.10s;
+          animation: scale 0.3s forwards linear 0.10s;
+}
+.artist:nth-child(5) .artist__number {
+  -webkit-animation: scale 0.3s forwards linear 0.11s;
+          animation: scale 0.3s forwards linear 0.11s;
 }
 
 .artist__image {
@@ -1528,7 +1532,9 @@ body {
 .artist:nth-child(4) .artist__image {
   background: #020202 url(../img/avatar4.png) center/cover no-repeat;
 }
-
+.artist:nth-child(5) .artist__image {
+  background: #020202 url(../img/artist/avatar5.png) center/cover no-repeat;
+}
 .arch__middle_anim {
   -webkit-transition: 0.6s;
   -o-transition: 0.6s;
@@ -2047,7 +2053,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 870px;
+  max-width: 920px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2055,14 +2061,14 @@ body {
 }
 
 .team__item {
-  width: 110px;
-  height: 142px;
+  width: 120px;
+  height: 152px;
   position: relative;
   margin: 0 32px;
   margin-bottom: 36px;
   font-family: 'Inconsolata';
   font-weight: 600;
-  font-size: 1.14rem;
+  font-size: 1rem;
   text-align: center;
   text-transform: capitalize;
   color: #000;
@@ -2095,18 +2101,31 @@ body {
 }
 
 .team__image {
-  width: calc(100% - 2px);
+  width: calc(100% - 4px);
   margin: 0 auto;
   background-color: #000;
   height: calc(100% - 32px);
-  margin-top: 1px;
+  margin-top: 2px;
   border-radius: 12px;
 }
-
-.team__image {
-  background: url(../img/team/img3.png) center/70% #000 no-repeat;
+.artist a{
+  display: block;
 }
-
+.team__item:nth-child(1) .team__image {
+  background: url(../img/team/1.png) center/cover #000 no-repeat;
+}
+.team__item:nth-child(2) .team__image {
+  background: url(../img/team/2.png) top/cover #000 no-repeat;
+}
+.team__item:nth-child(3) .team__image {
+  background: url(../img/team/3.png) center/cover #000 no-repeat;
+}
+.team__item:nth-child(4) .team__image {
+  background: url(../img/team/4.png) center/cover #000 no-repeat;
+}
+.team__item:nth-child(5) .team__image {
+  background: url(../img/team/5.png) center/cover #000 no-repeat;
+}
 .team .front {
   height: 100%;
   width: 100%;
@@ -3002,6 +3021,10 @@ body {
           transform: translateY(-70px);
 }
 
+.team-mobile__img img {
+  border-radius: 14px;
+}
+
 .team__line_visible:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3275,6 +3298,18 @@ body {
   }
 }
 
+@media screen and (max-width: 2000px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 1750px) {
   .art {
     max-width: 1100px;
@@ -3282,6 +3317,12 @@ body {
 
   .art__image {
     width: 160px;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  html {
+    font-size: 14px;
   }
 }
 

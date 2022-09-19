@@ -411,13 +411,13 @@ const swiperArt = new Swiper('.mobile-arts', {
 
 
 
-const more = document.querySelector(".team__more");
-const teamBlocks = document.querySelectorAll(".team-mobile__hidden .team__line");
-more.addEventListener("click", function(){
-  more.style.display = "none";
-  teamBlocks.forEach(block => {
-    block.classList.add("team__line_visible");
-  })
-})
+// const more = document.querySelector(".team__more");
+// const teamBlocks = document.querySelectorAll(".team-mobile__hidden .team__line");
+// more.addEventListener("click", function(){
+//   more.style.display = "none";
+//   teamBlocks.forEach(block => {
+//     block.classList.add("team__line_visible");
+//   })
+// })
 
 
